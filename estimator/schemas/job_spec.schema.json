@@ -10,7 +10,7 @@
       "properties": {
         "address": { "type": "string" },
         "zip": { "type": "string" },
-        "dwelling_type": { "type": "string", "enum": ["apartment", "house", "condo", "storage_unit"] },
+        "dwelling_type": { "type": "string", "enum": ["apartment", "house", "condo", "townhouse", "duplex", "mobile_home", "dormitory", "storage_unit"] },
         "floor": { "type": "integer" },
         "elevator": { "type": "boolean" }
       },
@@ -21,7 +21,7 @@
       "properties": {
         "address": { "type": "string" },
         "zip": { "type": "string" },
-        "dwelling_type": { "type": "string", "enum": ["apartment", "house", "condo", "storage_unit"] },
+        "dwelling_type": { "type": "string", "enum": ["apartment", "house", "condo", "townhouse", "duplex", "mobile_home", "dormitory", "storage_unit"] },
         "floor": { "type": "integer" },
         "elevator": { "type": "boolean" }
       },
