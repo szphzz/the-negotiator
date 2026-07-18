@@ -1,0 +1,27 @@
+{
+  "origin": {
+    "address": "123 Main St, Rock Hill, SC",
+    "zip": "29730",
+    "dwelling_type": "apartment",
+    "floor": 2
+  },
+  "destination": {
+    "zip": "28202",
+    "dwelling_type": "apartment",
+    "floor": 1
+  },
+  "move_date": "2026-08-15",
+  "inventory": {
+    "num_bedrooms": 2,
+    "large_items": [
+      { "name": "sofa", "quantity": 1 }
+    ]
+  },
+  "access_conditions": {
+    "origin_stairs_flights": 1
+  },
+  "service_level": {
+    "service_type": "full_service"
+  },
+  "user_confirmed": false
+}

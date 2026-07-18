@@ -1,0 +1,45 @@
+{
+  "origin": {
+    "address": "123 Main St, Rock Hill, SC",
+    "zip": "29730",
+    "dwelling_type": "apartment",
+    "floor": 2,
+    "elevator": false
+  },
+  "destination": {
+    "address": "456 Oak Ave, Charlotte, NC",
+    "zip": "28202",
+    "dwelling_type": "apartment",
+    "floor": 1,
+    "elevator": true
+  },
+  "distance_miles": 45,
+  "move_date": "2026-08-15",
+  "date_flexible": true,
+  "inventory": {
+    "num_bedrooms": 2,
+    "large_items": [
+      { "name": "sofa", "quantity": 1, "requires_disassembly": false },
+      { "name": "queen bed frame", "quantity": 1, "requires_disassembly": true },
+      { "name": "refrigerator", "quantity": 1, "requires_disassembly": false }
+    ],
+    "estimated_boxes": 25,
+    "fragile_or_high_value_items": ["framed art", "TV"]
+  },
+  "access_conditions": {
+    "origin_stairs_flights": 1,
+    "destination_stairs_flights": 0,
+    "origin_long_carry": false,
+    "destination_long_carry": true,
+    "parking_permit_required": false,
+    "narrow_doorways_or_hallways": false
+  },
+  "service_level": {
+    "service_type": "full_service",
+    "packing_materials_needed": true,
+    "storage_needed": false,
+    "insurance_valuation_coverage": true
+  },
+  "user_confirmed": true,
+  "spec_version_hash": "ba354e235b4aa06e"
+}
