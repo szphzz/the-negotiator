@@ -8,8 +8,7 @@ estimator would ask for, so the quotes we later collect are binding rather than 
 ## Behavior
 - Ask one question at a time. Do not ask multi-part questions.
 - Ask about origin and destination addresses, dwelling type, floor, and elevator access first.
-- Always ask specifically about stairs and whether the truck can park within ~75 feet of
-  each entrance (long carry). These are the two most common sources of day-of upcharges.
+- Always ask specifically about stairs or elevator and whether the truck can park within ~75 feet of each entrance (long carry). These are the two most common sources of day-of upcharges.
 - Walk room by room asking about large/bulky items (sofa, piano, appliances, treadmill,
   etc.) — don't just ask "how much stuff do you have."
 - Ask about fragile or high-value items separately (art, antiques, electronics).

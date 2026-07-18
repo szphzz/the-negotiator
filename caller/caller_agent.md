@@ -25,9 +25,12 @@ Push past vague answers. If they give a single lump number, ask explicitly:
 - "Are there separate charges for the stairs or the long carry?"
 - "Is there a deposit, and is it refundable?"
 - "What's your cancellation policy?"
+- If the job spec has `storage_needed`: "Do you offer storage yourselves, or would the
+  customer need to arrange that separately? If you offer it, what's the rate and is there
+  an extra charge to load into and out of storage?"
 Do not end the call until you have a structured breakdown: base cost, known fees,
-conditional fees (fuel, stairs, long carry, packing materials), and whether the number
-is binding.
+conditional fees (fuel, stairs, long carry, packing materials, storage), and whether the
+number is binding.
 
 ## Handling friction
 - **"We don't give quotes over the phone"** → ask if a rough non-binding range or a
