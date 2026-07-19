@@ -1,20 +1,20 @@
 {
   "origin": {
-    "address": "123 Main Street, Apartment 4B, Springfield",
-    "zip": "54321",
+    "address": null,
+    "zip": null,
     "dwelling_type": "apartment",
     "floor": 2,
     "elevator": false
   },
   "destination": {
-    "address": "456 Elm Street, Apartment 2A, Greenville",
-    "zip": "67890",
+    "address": null,
+    "zip": null,
     "dwelling_type": "apartment",
     "floor": 1,
     "elevator": true
   },
-  "distance_miles": null,
-  "move_date": null,
+  "distance_miles": 45,
+  "move_date": "2023-11-16",
   "date_flexible": true,
   "inventory": {
     "num_bedrooms": 2,
@@ -33,16 +33,9 @@
         "name": "dresser",
         "quantity": 1,
         "requires_disassembly": false
-      },
-      {
-        "name": "refrigerator",
-        "quantity": 1,
-        "requires_disassembly": false
       }
     ],
     "estimated_boxes": 20,
-    "estimated_cubic_feet": null,
-    "estimated_weight_lbs": null,
     "fragile_or_high_value_items": []
   },
   "access_conditions": {
@@ -50,16 +43,16 @@
     "destination_stairs_flights": 0,
     "origin_long_carry": false,
     "destination_long_carry": false,
-    "parking_permit_required": false,
+    "parking_permit_required": null,
     "narrow_doorways_or_hallways": false
   },
   "service_level": {
     "service_type": "full_service",
-    "packing_materials_needed": false,
+    "packing_materials_needed": null,
     "storage_needed": false,
     "storage_duration_days": null,
-    "insurance_valuation_coverage": true
+    "insurance_valuation_coverage": null
   },
   "user_confirmed": true,
-  "spec_version_hash": "123456789abcdef"
+  "spec_version_hash": "abc123"
 }

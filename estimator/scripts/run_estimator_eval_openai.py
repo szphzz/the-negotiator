@@ -27,7 +27,7 @@ try:
 except ImportError:
     sys.exit("Missing dependency. Install with:\n    pip install openai --break-system-packages")
 
-MODEL = "gpt-4o"  # swap to whatever model your credits cover, e.g. "gpt-4o-mini" for cheaper/faster runs
+MODEL = "gpt-4o-mini"  # swap to whatever model your credits cover, e.g. "gpt-4o-mini" for cheaper/faster runs
 DIR = Path(__file__).parent.parent
 
 PERSONAS = {

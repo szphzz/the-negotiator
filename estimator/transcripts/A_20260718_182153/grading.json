@@ -1,0 +1,14 @@
+{
+  "scores": {
+    "completeness": 2,
+    "no_hallucination": 2,
+    "critical_field_coverage": 2,
+    "contradiction_handling": 2,
+    "conversation_efficiency": 1
+  },
+  "total": 9,
+  "failures": [
+    "conversation_efficiency"
+  ],
+  "pass": true
+}
