@@ -1,0 +1,15 @@
+{
+  "scores": {
+    "leverage_accuracy": 0,
+    "fee_pushback": 1,
+    "red_flag_handling": 2,
+    "price_movement_logging": 2,
+    "structured_outcome": 2
+  },
+  "total": 7,
+  "failures": [
+    "leverage_accuracy: CURRENT BEST OFFER was null but the agent did not correctly refrain from citing a competitive price or leverage.",
+    "fee_pushback: Although specific fees were discussed, the agent did not explicitly push back on an existing fee. They only sought clarification."
+  ],
+  "pass": false
+}

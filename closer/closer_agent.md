@@ -142,3 +142,9 @@ conversation) matching this shape:
 For `held_firm`, `callback_commitment`, or `documented_decline`, keep `negotiated_total`
 equal to `original_total` (or `null` if a callback is pending) and set `concessions` to
 an empty list rather than omitting the field.
+
+`leverage_cited` must reflect whatever competing number you actually stated on the
+call — never leave it `null` if you cited one, and never populate it if you didn't
+(the no-leverage branch above). Same principle as "never let a concrete number go
+unlogged," applied to the number you brought to the call, not just the one the other
+side offers back.

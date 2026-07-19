@@ -1,0 +1,14 @@
+{
+  "outcome_type": "callback_commitment",
+  "company_name": "Budget Move Solutions",
+  "original_total": 1500,
+  "negotiated_total": null,
+  "binding": false,
+  "leverage_cited": null,
+  "concessions": [],
+  "fees": [],
+  "red_flag": {
+    "flagged": false,
+    "reason": null
+  }
+}

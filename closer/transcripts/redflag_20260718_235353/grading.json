@@ -1,0 +1,15 @@
+{
+  "scores": {
+    "leverage_accuracy": 0,
+    "fee_pushback": 1,
+    "red_flag_handling": 2,
+    "price_movement_logging": 2,
+    "structured_outcome": 2
+  },
+  "total": 7,
+  "failures": [
+    "leverage_accuracy: No competing quotes from OTHER QUOTES were accurately cited, leading to a score of 0.",
+    "fee_pushback: The agent only mentioned the possibility of adjusting fees but did not specify any specific fee for pushback."
+  ],
+  "pass": false
+}

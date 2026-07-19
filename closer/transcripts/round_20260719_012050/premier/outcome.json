@@ -1,0 +1,18 @@
+{
+  "outcome_type": "held_firm",
+  "company_name": "Premier Relocation Services",
+  "original_total": 3650,
+  "negotiated_total": 3650,
+  "binding": false,
+  "leverage_cited": {
+    "competitor_total": 1500,
+    "competitor_binding": false,
+    "description": "non-binding quote from Budget Move Solutions for the same move"
+  },
+  "concessions": [],
+  "fees": [],
+  "red_flag": {
+    "flagged": false,
+    "reason": null
+  }
+}

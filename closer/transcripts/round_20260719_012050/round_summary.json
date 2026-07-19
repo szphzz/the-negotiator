@@ -1,0 +1,57 @@
+{
+  "call_order": [
+    "premier",
+    "carolina",
+    "quickhaul",
+    "budget"
+  ],
+  "final_current_best_offer": {
+    "quote_id": "budget",
+    "company_name": "Budget Move Solutions",
+    "total": 1500,
+    "binding": false,
+    "source": "negotiated"
+  },
+  "final_quotes": {
+    "carolina": {
+      "company_name": "Carolina Movers Co.",
+      "total": 2200,
+      "binding": true,
+      "red_flag": {
+        "flagged": false,
+        "reason": null
+      },
+      "source": "negotiated"
+    },
+    "budget": {
+      "company_name": "Budget Move Solutions",
+      "total": 1500,
+      "binding": false,
+      "red_flag": {
+        "flagged": false,
+        "reason": null
+      },
+      "source": "negotiated"
+    },
+    "premier": {
+      "company_name": "Premier Relocation Services",
+      "total": 3650,
+      "binding": false,
+      "red_flag": {
+        "flagged": false,
+        "reason": null
+      },
+      "source": "negotiated"
+    },
+    "quickhaul": {
+      "company_name": "QuickHaul Express",
+      "total": 950,
+      "binding": false,
+      "red_flag": {
+        "flagged": true,
+        "reason": "$950 is 51% below the session median of $1,950"
+      },
+      "source": "negotiated"
+    }
+  }
+}

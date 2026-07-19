@@ -1,0 +1,29 @@
+{
+  "outcome_type": "held_firm",
+  "company_name": "Budget Move Solutions",
+  "original_total": 1500,
+  "negotiated_total": 1500,
+  "binding": false,
+  "leverage_cited": null,
+  "concessions": [
+    {
+      "item": "overtime fee",
+      "before": "$50/hour",
+      "after": "waived"
+    }
+  ],
+  "fees": [
+    {
+      "name": "fuel surcharge",
+      "amount": 100
+    },
+    {
+      "name": "long carry fee",
+      "amount": 150
+    }
+  ],
+  "red_flag": {
+    "flagged": false,
+    "reason": null
+  }
+}

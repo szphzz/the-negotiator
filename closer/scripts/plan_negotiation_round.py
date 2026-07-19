@@ -87,10 +87,12 @@ def start_round(gathered_quotes: dict) -> dict:
 
 
 def advance_round(state: dict, call_result: dict) -> dict:
-    """call_result: {quote_id, total, binding, red_flag?} - the real outcome of the
-    call that was just placed against state["queue"][0]. Updates the stored quote for
-    that company, recomputes current_best_offer, advances the queue, and returns the
-    new state for the next call."""
+    """call_result: {quote_id, total, binding, red_flag?, source?} - the real outcome of
+    the call that was just placed against state["queue"][0]. source defaults to
+    "negotiated"; pass "callback_pending" (or similar) when the call didn't produce an
+    actual renegotiated number (e.g. the company committed to calling back instead).
+    Updates the stored quote for that company, recomputes current_best_offer, advances
+    the queue, and returns the new state for the next call."""
     quotes = dict(state["quotes"])
     qid = call_result["quote_id"]
     if state["queue"][0] != qid:
@@ -101,7 +103,7 @@ def advance_round(state: dict, call_result: dict) -> dict:
         "total": call_result["total"],
         "binding": call_result["binding"],
         "red_flag": call_result.get("red_flag", quotes[qid].get("red_flag")),
-        "source": "negotiated",
+        "source": call_result.get("source", "negotiated"),
     }
 
     return {

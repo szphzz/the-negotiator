@@ -1,0 +1,20 @@
+{
+  "outcome_type": "partial_concession",
+  "company_name": "Budget Move Solutions",
+  "original_total": 1500,
+  "negotiated_total": 1200,
+  "binding": false,
+  "leverage_cited": null,
+  "concessions": [
+    {
+      "item": "overtime hourly rate",
+      "before": "50",
+      "after": "0"
+    }
+  ],
+  "fees": [],
+  "red_flag": {
+    "flagged": false,
+    "reason": null
+  }
+}

@@ -17,6 +17,8 @@ Requires a confirmed job spec at schemas/examples/valid_spec_example.json (or po
 setup in closer/negotiation_scenarios.md) - the closer needs real quotes to leverage.
 """
 
+from __future__ import annotations
+
 import argparse
 import json
 import re
@@ -29,14 +31,18 @@ try:
 except ImportError:
     sys.exit("Missing dependency. Install with:\n    pip install openai --break-system-packages")
 
+from plan_negotiation_round import compute_current_best
+
 MODEL = "gpt-4o-mini"
 CLOSER_DIR = Path(__file__).parent.parent
 TRANSCRIPTS_DIR = CLOSER_DIR / "transcripts"
 DEFAULT_JOB_SPEC = CLOSER_DIR.parent / "schemas" / "examples" / "valid_spec_example.json"
 
 # The gathered quote set every scenario negotiates against - matches the shared setup
-# in closer/negotiation_scenarios.md. The scenario under test is called back; the
-# OTHER two entries are the real leverage available on that call.
+# in closer/negotiation_scenarios.md. The scenario under test is called back; whether
+# the OTHER entries are usable as leverage on that call depends on current_best_offer
+# (see compute_leverage below) - a company already holding the cheapest quote in the
+# set gets no price leverage cited against it, per closer_orchestration.md.
 GATHERED_QUOTES = {
     "carolina": {
         "company_name": "Carolina Movers Co.",
@@ -115,15 +121,21 @@ stairs fee, and requires cash payment with no receipt.""",
 
 EVALUATOR_SYSTEM = """You are grading a negotiation-callback agent's performance. This
 agent already has an original quote from this company (gathered by a separate calling
-agent) and is calling back to negotiate using other real quotes as leverage. You will
-be given ORIGINAL QUOTE, OTHER QUOTES, PERSONA TYPE, TRANSCRIPT, and EXTRACTED OUTCOME.
+agent) and is calling back to negotiate using current_best_offer - the single cheapest
+eligible quote across the whole gathered set - as leverage, where one exists. You will
+be given ORIGINAL QUOTE, OTHER QUOTES, CURRENT BEST OFFER, PERSONA TYPE, TRANSCRIPT,
+and EXTRACTED OUTCOME.
 
 Score 0-2 each:
 
-- leverage_accuracy: every competing number the agent cited on the call matches a real
-  quote from OTHER QUOTES exactly (amount and binding/non-binding status) - no rounding
-  up, no invented company, no borrowed number that doesn't exist. Any mismatch is an
-  automatic 0.
+- leverage_accuracy: if CURRENT BEST OFFER is non-null, the agent must cite that exact
+  number (amount and binding/non-binding status) as its price leverage - no rounding,
+  no invented company, and no substituting a different real quote instead (even one
+  that's factually accurate is a misuse if it isn't current_best_offer, since it isn't
+  actually a competing improvement over this company's own number). If CURRENT BEST
+  OFFER is null, the agent must not fabricate "can you beat this" price-leverage
+  framing around any other quote - it should negotiate fees/terms only. Any mismatch
+  or misuse is an automatic 0.
 - fee_pushback: did the agent push on at least one specific fee or term (deposit,
   surcharge, cancellation policy), not just the headline total? A call that only
   repeats "can you do better on the total" without ever naming a specific fee scores
@@ -151,12 +163,43 @@ Output ONLY this JSON, no other text:
 pass is true only if total >= 8 AND leverage_accuracy == 2."""
 
 
-def load_closer_prompt(job_spec: dict, target_key: str | None) -> str:
+def compute_leverage(target_key: str | None) -> dict | None:
+    """The current_best_offer to hand this call, per closer_orchestration.md: the
+    cheapest eligible quote across the WHOLE gathered set (including the target
+    itself). Returns None if the target company already holds that number - there's
+    nothing cheaper to cite, so this call gets fee/terms-only framing instead of
+    price leverage."""
+    quotes_for_orchestration = {
+        qid: {"company_name": q["company_name"], "total": q["original_total"], "binding": q["binding"]}
+        for qid, q in GATHERED_QUOTES.items()
+    }
+    current_best = compute_current_best(quotes_for_orchestration)
+    if current_best is None or current_best["quote_id"] == target_key:
+        return None
+    return current_best
+
+
+_LEVERAGE_AUTO = object()  # sentinel: "compute it from GATHERED_QUOTES" vs. an explicit override
+
+
+def load_closer_prompt(
+    job_spec: dict,
+    target_key: str | None,
+    current_best_offer=_LEVERAGE_AUTO,
+    quotes: dict | None = None,
+) -> str:
+    """quotes/current_best_offer let a live round driver (see
+    run_negotiation_round.py) inject the ratcheted, per-call-updated quote set and
+    leverage instead of the static GATHERED_QUOTES snapshot used for one-off testing
+    here. Defaults preserve the original single-call behavior."""
     base = (CLOSER_DIR / "closer_agent.md").read_text()
     benchmarks = json.loads((CLOSER_DIR / "config" / "market_benchmarks.json").read_text())
 
-    other_quotes = {k: v for k, v in GATHERED_QUOTES.items() if k != target_key}
-    original_quote = GATHERED_QUOTES.get(target_key)
+    quotes = quotes if quotes is not None else GATHERED_QUOTES
+    other_quotes = {k: v for k, v in quotes.items() if k != target_key}
+    original_quote = quotes.get(target_key)
+    if current_best_offer is _LEVERAGE_AUTO:
+        current_best_offer = compute_leverage(target_key)
 
     context = f"\n\n## The job you are calling about\n```json\n{json.dumps(job_spec, indent=2)}\n```"
     context += f"\n\n## Market benchmarks / red-flag config\n```json\n{json.dumps(benchmarks, indent=2)}\n```"
@@ -164,7 +207,16 @@ def load_closer_prompt(job_spec: dict, target_key: str | None) -> str:
         context += f"\n\n## This company's original quote (from The Caller)\n```json\n{json.dumps(original_quote, indent=2)}\n```"
     else:
         context += "\n\n## This company's original quote\nThis is a fresh quote gathered outside the original call set - $950, no fee breakdown given yet."
-    context += f"\n\n## Other real quotes available as leverage\n```json\n{json.dumps(other_quotes, indent=2)}\n```"
+    context += f"\n\n## Other real quotes gathered so far (full set, for grounding only - never invent numbers outside this set)\n```json\n{json.dumps(other_quotes, indent=2)}\n```"
+    if current_best_offer:
+        context += f"\n\n## current_best_offer (the ONE number to cite as price leverage on this call)\n```json\n{json.dumps(current_best_offer, indent=2)}\n```"
+    else:
+        context += (
+            "\n\n## current_best_offer\nnull - this company's original quote already holds "
+            "the best number gathered so far. Per closer_agent.md's 'no leverage available' "
+            "branch: skip the \"can you beat this\" framing entirely and negotiate purely on "
+            "fees, deposit terms, and extras instead."
+        )
 
     return base + context
 
@@ -175,10 +227,14 @@ def chat(client, system: str, messages: list) -> str:
     return resp.choices[0].message.content
 
 
-def run_conversation(client, scenario_key: str, job_spec: dict, max_turns: int, show_transcript: bool):
-    scenario = SCENARIOS[scenario_key]
-    closer_system = load_closer_prompt(job_spec, scenario["target_quote_key"])
-
+def run_conversation(
+    client,
+    closer_system: str,
+    counterparty_system: str,
+    counterparty_label: str,
+    max_turns: int,
+    show_transcript: bool,
+):
     closer_history = [{"role": "user", "content": "Begin the callback: reference the earlier quote and open the negotiation."}]
     counterparty_history = []
     transcript_lines = []
@@ -195,9 +251,9 @@ def run_conversation(client, scenario_key: str, job_spec: dict, max_turns: int, 
             break
 
         counterparty_history.append({"role": "user", "content": closer_text})
-        counterparty_text = chat(client, scenario["system"], counterparty_history)
+        counterparty_text = chat(client, counterparty_system, counterparty_history)
         counterparty_history.append({"role": "assistant", "content": counterparty_text})
-        transcript_lines.append(f"COUNTERPARTY ({scenario['name']}): {counterparty_text}")
+        transcript_lines.append(f"COUNTERPARTY ({counterparty_label}): {counterparty_text}")
         if show_transcript:
             print(f"[COUNTERPARTY]: {counterparty_text}")
 
@@ -222,10 +278,14 @@ def grade(client, scenario_key: str, transcript: str, extracted: dict) -> dict:
     target_key = scenario["target_quote_key"]
     original_quote = GATHERED_QUOTES.get(target_key, {"note": "fresh quote not in original call set - $950, no breakdown"})
     other_quotes = {k: v for k, v in GATHERED_QUOTES.items() if k != target_key}
+    current_best_offer = compute_leverage(target_key)
 
     user_content = (
         f"ORIGINAL QUOTE:\n{json.dumps(original_quote, indent=2)}\n\n"
         f"OTHER QUOTES:\n{json.dumps(other_quotes, indent=2)}\n\n"
+        f"CURRENT BEST OFFER (the only legitimate price-leverage number for this call; "
+        f"null means this company already holds the best price and no price leverage "
+        f"should be cited):\n{json.dumps(current_best_offer, indent=2) if current_best_offer else 'null'}\n\n"
         f"PERSONA TYPE: {scenario['name']}\n\n"
         f"TRANSCRIPT:\n{transcript}\n\n"
         f"EXTRACTED OUTCOME:\n{json.dumps(extracted, indent=2) if extracted else 'NONE - agent never produced a structured outcome'}"
@@ -293,9 +353,11 @@ def main():
     job_spec = json.loads(Path(args.job_spec).read_text())
     client = OpenAI()
 
-    print(f"Calling back scenario: {SCENARIOS[args.scenario]['name']}...")
+    scenario = SCENARIOS[args.scenario]
+    print(f"Calling back scenario: {scenario['name']}...")
+    closer_system = load_closer_prompt(job_spec, scenario["target_quote_key"])
     transcript, final_closer_text = run_conversation(
-        client, args.scenario, job_spec, args.turns, args.show_transcript
+        client, closer_system, scenario["system"], scenario["name"], args.turns, args.show_transcript
     )
     extracted = extract_json_block(final_closer_text)
 

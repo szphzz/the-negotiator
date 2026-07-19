@@ -1,0 +1,18 @@
+{
+  "outcome_type": "held_firm",
+  "company_name": "QuickHaul Express",
+  "original_total": 950,
+  "negotiated_total": 950,
+  "binding": false,
+  "leverage_cited": {
+    "competitor_total": 1500,
+    "competitor_binding": false,
+    "description": "quote from another mover for the same move"
+  },
+  "concessions": [],
+  "fees": [],
+  "red_flag": {
+    "flagged": false,
+    "reason": null
+  }
+}

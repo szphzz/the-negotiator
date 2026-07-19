@@ -1,0 +1,61 @@
+CLOSER: Hello, I'm calling on behalf of [customer name]. You quoted us $1,500 for the move on August 15, 2026. I wanted to see if there's any flexibility on the deposit, fees, or if you could offer a longer hold on that price?
+COUNTERPARTY (Concedes on fees, not base price (Budget Move Solutions)): Hello! Thank you for calling Budget Move Solutions. I appreciate your follow-up on the quote. While our quoted amount is $1,500, I’m happy to discuss the details with you.
+
+If you’re looking for flexibility, I can waive the $50/hour overtime fee as a concession. However, I must mention that the quote does include a fuel surcharge and a long-carry fee, which are standard for moves based on distance and accessibility.
+
+As for holding the price, I can assist you with that, but we would need to confirm the details of the move and any potential changes that may arise. Please let me know how you would like to proceed!
+CLOSER: Thank you for considering that concession. Waiving the $50/hour overtime fee is appreciated. 
+
+Since the original quoted amount is non-binding, could you provide more details about the fuel surcharge and the long-carry fee? I'm also interested in knowing if there's any possibility of making the deposit lower or refundable. It would also be helpful to know if you could hold the price for a longer period, say 48-72 hours, to allow the client to compare with other quotes.
+COUNTERPARTY (Concedes on fees, not base price (Budget Move Solutions)): I'm glad you found the concession helpful! Regarding the fuel surcharge, this fee is typically based on the current fuel rates and the distance of your move. It's applied to cover the rising cost of fuel that can impact transportation during the move.
+
+As for the long-carry fee, it applies when the loading or unloading distance between the truck and your home exceeds a certain distance, which helps cover the time and effort involved for our movers.
+
+Unfortunately, the deposit is generally set at our standard rate, and it isn't typically refundable. However, I can certainly hold the quoted price for 48-72 hours to give you time to compare other quotes. Please let me know what you think, and how you would like to proceed!
+CLOSER: Thank you for the clarification on the fuel surcharge and long-carry fee. It's helpful to understand how those fees are structured.
+
+The ability to hold the quoted price for 48-72 hours is great to hear. However, since this quote is non-binding, I would still like to ask if there’s any flexibility on the deposit terms. Could you consider making it a lower percentage or perhaps refundable under certain conditions? This would really help in making a decision.
+COUNTERPARTY (Concedes on fees, not base price (Budget Move Solutions)): I understand that a lower or refundable deposit would be beneficial for making your decision easier. However, our deposit policy is generally set, and I'm unable to make adjustments to the percentage or offer a refund under any circumstances. 
+
+That said, I appreciate your interest and the effort to work with us! If you’re ready to proceed or need assistance with anything else, please let me know. I'm here to help!
+CLOSER: I appreciate your understanding and the clarity on the deposit policy. Just to recap, you are holding the quoted price of $1,500 for 48-72 hours, and the only concession available is waiving the $50/hour overtime fee.
+
+Since I don't see any further adjustments possible on the deposit or fees, it seems like you are firm on the total. Thank you for your time and assistance. If something changes or if I need to discuss further, I may reach out again. 
+
+I will take this information back to [customer name] and follow up with my decision based on this call. 
+
+Before we wrap up, could you confirm this quote in writing for us?
+COUNTERPARTY (Concedes on fees, not base price (Budget Move Solutions)): Absolutely, I can confirm the details for you! To recap:
+
+- The quoted price is $1,500, which includes a fuel surcharge and a long-carry fee.
+- I’m holding this quoted price for 48-72 hours.
+- The concession available is waiving the $50/hour overtime fee.
+- The deposit terms are firm and set at our standard rate.
+
+I will prepare a written confirmation of this quote and send it to you shortly. Please ensure I have the correct email address or any specific details you want included in the confirmation.
+
+Thank you for considering Budget Move Solutions! If you have any further questions or need assistance in the future, feel free to reach out.
+CLOSER: Thank you for the confirmation and detailed recap. Please send the written confirmation to [customer's email address].
+
+I appreciate your time and willingness to discuss options with me today. If any new information arises or if I need to revisit this in the future, I’ll be in touch. Have a great day! 
+
+Here's the structured outcome from this call:
+
+```json
+{
+  "outcome_type": "held_firm",
+  "company_name": "Budget Move Solutions",
+  "original_total": 1500,
+  "negotiated_total": 1500,
+  "binding": false,
+  "leverage_cited": null,
+  "concessions": [
+    { "item": "overtime fee", "before": "$50/hour", "after": "waived" }
+  ],
+  "fees": [
+    { "name": "fuel surcharge", "amount": 100 },
+    { "name": "long carry fee", "amount": 150 }
+  ],
+  "red_flag": { "flagged": false, "reason": null }
+}
+```

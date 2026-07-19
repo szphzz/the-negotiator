@@ -1,0 +1,15 @@
+{
+  "scores": {
+    "leverage_accuracy": 0,
+    "fee_pushback": 1,
+    "red_flag_handling": 2,
+    "price_movement_logging": 2,
+    "structured_outcome": 2
+  },
+  "total": 7,
+  "failures": [
+    "leverage_accuracy: No leverage quotes from OTHER QUOTES were accurately cited during the negotiation.",
+    "fee_pushback: Although the agent pushed back by mentioning other fees, they did not specify a fee in the request for a reduction, scoring a maximum of 1."
+  ],
+  "pass": false
+}

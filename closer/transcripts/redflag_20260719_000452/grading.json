@@ -1,0 +1,15 @@
+{
+  "scores": {
+    "leverage_accuracy": 0,
+    "fee_pushback": 1,
+    "red_flag_handling": 2,
+    "price_movement_logging": 2,
+    "structured_outcome": 2
+  },
+  "total": 7,
+  "failures": [
+    "The agent cited a competitor offer ($1500) without referencing the current best offer ($1500) correctly, treating it as a negotiable leverage when it should not have been, since this company already has the better price.",
+    "The agent did not push on any specific fee or term besides the mention of potential fees, resulting in a score of 1 for fee_pushback."
+  ],
+  "pass": false
+}
