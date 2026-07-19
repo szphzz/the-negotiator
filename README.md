@@ -80,6 +80,34 @@ pip install openai jsonschema --break-system-packages
 export OPENAI_API_KEY=your_key_here
 ```
 
+## Hearing a run (OpenAI TTS)
+
+Two ways to hear a conversation instead of only reading its transcript, both via
+OpenAI's TTS API and neither touching what dialogue gets generated — they only add
+"you can hear it" on top of the existing text pipeline:
+
+- **Live, while it runs**: pass `--live-audio` to `run_pipeline.py`. Each turn is
+  spoken aloud via `afplay` (macOS only) the moment it's generated, shown in an
+  always-on-top subtitle window (`pipeline/scripts/live_subtitles.py`), and saved to
+  `pipeline/runs/<timestamp>_audio/` — so a full live run leaves behind the same kind
+  of playable archive the post-hoc path produces.
+
+  ```bash
+  python pipeline/run_pipeline.py --live-audio
+  ```
+
+- **After the fact, from a saved transcript**: [pipeline/scripts/generate_audio.py](pipeline/scripts/generate_audio.py)
+  turns any existing `transcript.txt` into one audio file per turn plus an
+  `audio_manifest.json`, playable in order to reconstruct the conversation.
+
+  ```bash
+  python pipeline/scripts/generate_audio.py path/to/transcript.txt
+  python pipeline/scripts/generate_audio.py path/to/transcript.txt --voice-map ESTIMATOR:onyx,CUSTOMER:nova
+  ```
+
+Both share one role→voice map (`ESTIMATOR`/`CALLER`/`CLOSER` → `onyx`,
+`CUSTOMER`/`COUNTERPARTY` → `nova`) in `pipeline/scripts/generate_audio.py`.
+
 ## Voice demo (Estimator ↔ Customer, OpenAI Realtime API)
 
 ElevenLabs Agents isn't wired up yet, so [pipeline/voice/](pipeline/voice/) is a
@@ -118,6 +146,7 @@ python pipeline/run_pipeline.py
 python pipeline/run_pipeline.py --customer-persona vague --show-transcript
 python pipeline/run_pipeline.py --companies carolina,budget --no-redflag
 python pipeline/run_pipeline.py --turns-estimator 20 --turns-caller 10 --turns-closer 10
+python pipeline/run_pipeline.py --live-audio
 ```
 
 Output for each run lands in `pipeline/runs/<timestamp>/`: the confirmed job spec, the
@@ -154,6 +183,8 @@ estimator/   Job-spec intake (voice interview + document intake), evaluator, tra
 caller/      Company outreach agent, counterparty personas, evaluator, transcripts
 closer/      Callback/negotiation agent, orchestration logic, config, transcripts
 dataset/     Google Places-based moving company research (real data, not simulated)
-pipeline/    End-to-end driver chaining Estimator → Caller → Closer → report
+pipeline/    End-to-end driver chaining Estimator → Caller → Closer → report,
+             plus scripts/ for live (--live-audio) and post-hoc (generate_audio.py)
+             text-to-speech playback of a run
 schemas/     Canonical job_spec and comparison_report JSON Schemas, with examples
 ```
