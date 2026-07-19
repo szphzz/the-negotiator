@@ -235,7 +235,11 @@ def run_conversation(
     counterparty_label: str,
     max_turns: int,
     show_transcript: bool,
+    on_turn=None,
 ):
+    """on_turn(role: str, text: str), if given, is called right after each turn is
+    generated - e.g. to speak it aloud live (see pipeline/scripts/live_audio.py).
+    Optional and side-effect-only; does not change this function's return value."""
     closer_history = [{"role": "user", "content": "Begin the callback: reference the earlier quote and open the negotiation."}]
     counterparty_history = []
     transcript_lines = []
@@ -247,6 +251,8 @@ def run_conversation(
         transcript_lines.append(f"CLOSER: {closer_text}")
         if show_transcript:
             print(f"\n[CLOSER]: {closer_text}")
+        if on_turn:
+            on_turn("CLOSER", closer_text)
 
         if re.search(r'\{\s*"outcome_type"', closer_text):
             break
@@ -257,6 +263,8 @@ def run_conversation(
         transcript_lines.append(f"COUNTERPARTY ({counterparty_label}): {counterparty_text}")
         if show_transcript:
             print(f"[COUNTERPARTY]: {counterparty_text}")
+        if on_turn:
+            on_turn("COUNTERPARTY", counterparty_text)
 
         closer_history.append({"role": "user", "content": counterparty_text})
 

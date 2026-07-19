@@ -144,7 +144,10 @@ def chat(client, system: str, messages: list) -> str:
     return resp.choices[0].message.content
 
 
-def run_conversation(client, persona_key: str, job_spec: dict, max_turns: int, show_transcript: bool):
+def run_conversation(client, persona_key: str, job_spec: dict, max_turns: int, show_transcript: bool, on_turn=None):
+    """on_turn(role: str, text: str), if given, is called right after each turn is
+    generated - e.g. to speak it aloud live (see pipeline/scripts/live_audio.py).
+    Optional and side-effect-only; does not change this function's return value."""
     persona = PERSONAS[persona_key]
     caller_system = load_caller_prompt(job_spec)
 
@@ -159,6 +162,8 @@ def run_conversation(client, persona_key: str, job_spec: dict, max_turns: int, s
         transcript_lines.append(f"CALLER: {caller_text}")
         if show_transcript:
             print(f"\n[CALLER]: {caller_text}")
+        if on_turn:
+            on_turn("CALLER", caller_text)
 
         # Check if caller produced a final structured outcome
         if re.search(r'\{\s*"outcome_type"', caller_text):
@@ -170,6 +175,8 @@ def run_conversation(client, persona_key: str, job_spec: dict, max_turns: int, s
         transcript_lines.append(f"COUNTERPARTY ({persona['name']}): {counterparty_text}")
         if show_transcript:
             print(f"[COUNTERPARTY]: {counterparty_text}")
+        if on_turn:
+            on_turn("COUNTERPARTY", counterparty_text)
 
         caller_history.append({"role": "user", "content": counterparty_text})
 

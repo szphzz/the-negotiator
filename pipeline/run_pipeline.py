@@ -46,7 +46,7 @@ from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
-for sub in ("estimator/scripts", "caller/scripts", "closer/scripts"):
+for sub in ("estimator/scripts", "caller/scripts", "closer/scripts", "pipeline/scripts"):
     sys.path.insert(0, str(ROOT / sub))
 
 try:
@@ -60,6 +60,8 @@ import run_closer_eval_openai as closer_eval
 import validate_job_spec as validator
 import plan_negotiation_round as planner
 import build_comparison_report as reporter
+import live_audio
+import live_subtitles
 
 INITIAL_SPEC_PATH = ROOT / "estimator" / "initial_job_spec.json"
 PIPELINE_RUNS_DIR = ROOT / "pipeline" / "runs"
@@ -128,9 +130,13 @@ def load_initial_spec() -> dict:
     return json.loads(INITIAL_SPEC_PATH.read_text())
 
 
-def run_estimator_stage(client, initial_spec: dict, customer_persona: str, max_turns: int, show_transcript: bool):
+def run_estimator_stage(client, initial_spec: dict, customer_persona: str, max_turns: int, show_transcript: bool,
+                         speak_fn=None):
     """Runs the voice-interview conversation seeded with initial_spec as document-intake
-    context, extracts the final job spec, and returns (spec, transcript, run_dir)."""
+    context, extracts the final job spec, and returns (spec, transcript, run_dir).
+
+    speak_fn(role: str, text: str), if given, is called right after each turn is
+    generated - e.g. to speak it aloud live (see pipeline/scripts/live_audio.py)."""
     estimator_system = estimator_eval.load_estimator_prompt()
     customer_system = CUSTOMER_PERSONAS[customer_persona]
 
@@ -152,6 +158,8 @@ def run_estimator_stage(client, initial_spec: dict, customer_persona: str, max_t
         transcript_lines.append(f"ESTIMATOR: {estimator_text}")
         if show_transcript:
             print(f"\n[ESTIMATOR]: {estimator_text}")
+        if speak_fn:
+            speak_fn("ESTIMATOR", estimator_text)
 
         if "```json" in estimator_text or __import__("re").search(r'\{\s*"origin"', estimator_text):
             break
@@ -162,6 +170,8 @@ def run_estimator_stage(client, initial_spec: dict, customer_persona: str, max_t
         transcript_lines.append(f"CUSTOMER: {customer_text}")
         if show_transcript:
             print(f"[CUSTOMER]: {customer_text}")
+        if speak_fn:
+            speak_fn("CUSTOMER", customer_text)
 
         estimator_history.append({"role": "user", "content": customer_text})
 
@@ -197,14 +207,15 @@ def validate_confirmed_spec(spec: dict | None) -> list[str]:
     return problems
 
 
-def run_caller_stage(client, confirmed_spec: dict, companies: list[str], max_turns: int, show_transcript: bool) -> dict:
+def run_caller_stage(client, confirmed_spec: dict, companies: list[str], max_turns: int, show_transcript: bool,
+                      speak_fn=None) -> dict:
     """Calls each requested company and returns {quote_id: {..., outcome, transcript_ref}}."""
     results = {}
     for quote_id in companies:
         company = CALLER_COMPANIES[quote_id]
         print(f"\n=== Calling {company['company_name']} ({company['caller_persona']}) ===")
         transcript, final_text = caller_eval.run_conversation(
-            client, company["caller_persona"], confirmed_spec, max_turns, show_transcript
+            client, company["caller_persona"], confirmed_spec, max_turns, show_transcript, on_turn=speak_fn
         )
         extracted = caller_eval.extract_json_block(final_text)
         run_dir = caller_eval.save_run(
@@ -264,7 +275,7 @@ def display_quotes(state: dict) -> dict:
 
 
 def run_closer_round(client, confirmed_spec: dict, itemized: dict, scenario_for_quote: dict,
-                      threshold_pct: float, max_turns: int, show_transcript: bool):
+                      threshold_pct: float, max_turns: int, show_transcript: bool, speak_fn=None):
     """Runs one full negotiation round over every itemized quote, ratcheting
     current_best_offer call by call per closer_orchestration.md. Returns
     (final_state, {quote_id: closer_outcome_dict})."""
@@ -297,7 +308,7 @@ def run_closer_round(client, confirmed_spec: dict, itemized: dict, scenario_for_
             confirmed_spec, qid, current_best_offer=leverage, quotes=display_quotes(state)
         )
         transcript, final_text = closer_eval.run_conversation(
-            client, closer_system, scenario["system"], scenario["name"], max_turns, show_transcript
+            client, closer_system, scenario["system"], scenario["name"], max_turns, show_transcript, on_turn=speak_fn
         )
         extracted = closer_eval.extract_json_block(final_text)
         closer_outcomes[qid] = extracted or {}
@@ -414,6 +425,10 @@ def main():
     parser.add_argument("--turns-caller", type=int, default=14)
     parser.add_argument("--turns-closer", type=int, default=14)
     parser.add_argument("--show-transcript", action="store_true")
+    parser.add_argument("--live-audio", action="store_true",
+                         help="Speak each turn aloud via OpenAI TTS as soon as it's generated "
+                              "(macOS only - uses afplay), instead of only saving text. Also "
+                              "saves every turn's audio file to pipeline/runs/<timestamp>_audio/.")
     args = parser.parse_args()
 
     companies = [c.strip() for c in args.companies.split(",") if c.strip()]
@@ -423,67 +438,86 @@ def main():
 
     client = OpenAI()  # reads OPENAI_API_KEY from env
 
-    # --- Stage 1: Estimator ---
-    print("=== ESTIMATOR: intake interview ===")
-    initial_spec = load_initial_spec()
-    confirmed_spec, _, estimator_run_dir = run_estimator_stage(
-        client, initial_spec, args.customer_persona, args.turns_estimator, args.show_transcript
-    )
+    speak_fn = None
+    subtitle_window = None
+    if args.live_audio:
+        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        audio_dir = PIPELINE_RUNS_DIR / f"{ts}_audio"
+        next_turn_number = live_audio.make_turn_counter()
+        subtitle_window = live_subtitles.SubtitleWindow()
+        speak_fn = lambda role, text: live_audio.speak_turn(
+            client, role, text, next_turn_number(), audio_dir, subtitles=subtitle_window
+        )
+        print(f"Live audio + subtitles ON - each turn will play aloud immediately, saved to {audio_dir}/")
 
-    problems = validate_confirmed_spec(confirmed_spec)
-    if problems:
-        print("\nSTOPPING - confirmed job spec failed validation, no calls will be placed:")
-        for p in problems:
-            print(f"  - {p}")
-        sys.exit(1)
+    try:
+        # --- Stage 1: Estimator ---
+        print("=== ESTIMATOR: intake interview ===")
+        initial_spec = load_initial_spec()
+        confirmed_spec, _, estimator_run_dir = run_estimator_stage(
+            client, initial_spec, args.customer_persona, args.turns_estimator, args.show_transcript,
+            speak_fn=speak_fn,
+        )
 
-    confirmed_spec["spec_version_hash"] = validator.compute_spec_hash(confirmed_spec)
-    print(f"\nConfirmed job spec is valid. hash={confirmed_spec['spec_version_hash']}")
-    print(f"Estimator transcript saved to: {estimator_run_dir}")
+        problems = validate_confirmed_spec(confirmed_spec)
+        if problems:
+            print("\nSTOPPING - confirmed job spec failed validation, no calls will be placed:")
+            for p in problems:
+                print(f"  - {p}")
+            sys.exit(1)
 
-    # --- Stage 2: Caller ---
-    print("\n=== CALLER: gathering quotes ===")
-    caller_results = run_caller_stage(client, confirmed_spec, companies, args.turns_caller, args.show_transcript)
+        confirmed_spec["spec_version_hash"] = validator.compute_spec_hash(confirmed_spec)
+        print(f"\nConfirmed job spec is valid. hash={confirmed_spec['spec_version_hash']}")
+        print(f"Estimator transcript saved to: {estimator_run_dir}")
 
-    itemized = {
-        qid: {"company_name": r["company_name"], "total": r["outcome"]["total_estimate"], "binding": r["outcome"]["binding"]}
-        for qid, r in caller_results.items()
-        if r["outcome"].get("outcome_type") == "itemized_quote" and CALLER_COMPANIES[qid]["closer_scenario"]
-    }
-    scenario_for_quote = {qid: CALLER_COMPANIES[qid]["closer_scenario"] for qid in itemized}
+        # --- Stage 2: Caller ---
+        print("\n=== CALLER: gathering quotes ===")
+        caller_results = run_caller_stage(
+            client, confirmed_spec, companies, args.turns_caller, args.show_transcript, speak_fn=speak_fn
+        )
 
-    if args.include_redflag:
-        itemized[QUICKHAUL_QUOTE_ID] = dict(QUICKHAUL_QUOTE)
-        scenario_for_quote[QUICKHAUL_QUOTE_ID] = QUICKHAUL_CLOSER_SCENARIO
+        itemized = {
+            qid: {"company_name": r["company_name"], "total": r["outcome"]["total_estimate"], "binding": r["outcome"]["binding"]}
+            for qid, r in caller_results.items()
+            if r["outcome"].get("outcome_type") == "itemized_quote" and CALLER_COMPANIES[qid]["closer_scenario"]
+        }
+        scenario_for_quote = {qid: CALLER_COMPANIES[qid]["closer_scenario"] for qid in itemized}
 
-    # --- Stage 3: Closer ---
-    benchmarks = json.loads((ROOT / "closer" / "config" / "market_benchmarks.json").read_text())
-    threshold_pct = benchmarks["red_flag_rule"]["session_comparison"]["threshold_pct_below_median"]
-    _, closer_outcomes = run_closer_round(
-        client, confirmed_spec, itemized, scenario_for_quote, threshold_pct,
-        args.turns_closer, args.show_transcript,
-    )
+        if args.include_redflag:
+            itemized[QUICKHAUL_QUOTE_ID] = dict(QUICKHAUL_QUOTE)
+            scenario_for_quote[QUICKHAUL_QUOTE_ID] = QUICKHAUL_CLOSER_SCENARIO
 
-    # --- Stage 4: Report ---
-    print("\n=== REPORT: building ranked comparison ===")
-    quotes_input = build_quotes_input(caller_results, closer_outcomes, args.include_redflag)
-    report = reporter.build_report(quotes_input, confirmed_spec)
-    errors = reporter.validate_report(report)
-    if errors:
-        print(f"SCHEMA WARNINGS ({len(errors)}):")
-        for err in errors:
-            field_path = ".".join(str(p) for p in err.path) or "(root)"
-            print(f"  - {field_path}: {err.message}")
+        # --- Stage 3: Closer ---
+        benchmarks = json.loads((ROOT / "closer" / "config" / "market_benchmarks.json").read_text())
+        threshold_pct = benchmarks["red_flag_rule"]["session_comparison"]["threshold_pct_below_median"]
+        _, closer_outcomes = run_closer_round(
+            client, confirmed_spec, itemized, scenario_for_quote, threshold_pct,
+            args.turns_closer, args.show_transcript, speak_fn=speak_fn,
+        )
 
-    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    run_dir = PIPELINE_RUNS_DIR / ts
-    run_dir.mkdir(parents=True, exist_ok=True)
-    (run_dir / "confirmed_job_spec.json").write_text(json.dumps(confirmed_spec, indent=2))
-    (run_dir / "quotes_input.json").write_text(json.dumps(quotes_input, indent=2))
-    (run_dir / "comparison_report.json").write_text(json.dumps(report, indent=2))
+        # --- Stage 4: Report ---
+        print("\n=== REPORT: building ranked comparison ===")
+        quotes_input = build_quotes_input(caller_results, closer_outcomes, args.include_redflag)
+        report = reporter.build_report(quotes_input, confirmed_spec)
+        errors = reporter.validate_report(report)
+        if errors:
+            print(f"SCHEMA WARNINGS ({len(errors)}):")
+            for err in errors:
+                field_path = ".".join(str(p) for p in err.path) or "(root)"
+                print(f"  - {field_path}: {err.message}")
 
-    print(f"\n{report['recommendation_explanation']}")
-    print(f"\nPipeline run complete. Full artifacts saved to: {run_dir}")
+        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        run_dir = PIPELINE_RUNS_DIR / ts
+        run_dir.mkdir(parents=True, exist_ok=True)
+        (run_dir / "confirmed_job_spec.json").write_text(json.dumps(confirmed_spec, indent=2))
+        (run_dir / "quotes_input.json").write_text(json.dumps(quotes_input, indent=2))
+        (run_dir / "comparison_report.json").write_text(json.dumps(report, indent=2))
+
+        print(f"\n{report['recommendation_explanation']}")
+        print(f"\nPipeline run complete. Full artifacts saved to: {run_dir}")
+    finally:
+        if subtitle_window:
+            subtitle_window.close()
 
 
 if __name__ == "__main__":
