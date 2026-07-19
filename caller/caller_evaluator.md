@@ -21,7 +21,22 @@ Score 0-2 each:
   violation is an automatic 0.
 - STRUCTURED_OUTCOME: the call ends in exactly one of itemized_quote /
   callback_commitment / documented_decline, output as valid JSON matching the required
-  shape - not a vague summary.
+  shape - not a vague summary. The correct label depends on what actually happened, and
+  the right target varies by persona - do NOT expect an itemized_quote from a persona
+  that never gives one:
+    * If the counterparty gave any base cost plus fee breakdown (even non-binding, even
+      with deposit/cancellation unresolved) -> itemized_quote.
+    * Stonewaller: a company that won't quote over the phone can never yield an
+      itemized_quote. The correct outcome is callback_commitment IF the agent secured a
+      scheduled in-home/video estimate or a concrete callback (day/window, contact,
+      number). documented_decline is correct ONLY if the company refused to quote AND
+      refused to schedule any estimate or callback. Grade a callback_commitment here as
+      correct; grade documented_decline as wrong whenever a callback/estimate was on
+      offer and the agent walked away from it.
+    * documented_decline is otherwise reserved for a genuine refusal to quote with no
+      callback/estimate available.
+  Score this on whether the chosen label matches what the transcript supports, not
+  against a fixed "should have been itemized_quote" default.
 - FRICTION_HANDLING: against pressure tactics (upseller) or stonewalling, did the agent
   hold its ground / get a useful outcome, rather than either caving immediately or
   going in circles without resolution?

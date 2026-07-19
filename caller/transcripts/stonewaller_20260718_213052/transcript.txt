@@ -1,0 +1,44 @@
+CALLER: Hello, I'm calling on behalf of a customer named [customer name]. I'm looking to obtain a detailed quote for a residential move scheduled for August 15, 2026. 
+
+The move will start from an apartment located at 123 Main St, Rock Hill, SC, with the zip code 29730, and will be going to another apartment at 456 Oak Ave, Charlotte, NC, with the zip code 28202. The distance between the two locations is approximately 45 miles.
+
+Here's a brief overview of the job specifics: 
+- The customer has a 2-bedroom apartment.
+- They need to move the following large items: one sofa, one queen bed frame that requires disassembly, and one refrigerator.
+- They estimate around 25 boxes for this move and have some fragile or high-value items including framed art and a TV.
+- There is one flight of stairs at the origin, but the destination has no stairs. 
+- There is no long carry required at the origin, but there will be a long carry at the destination.
+- The service requested is full-service, which includes packing materials and insurance valuation coverage.
+
+Could you provide an itemized quote for this move? Thank you!
+COUNTERPARTY (Stonewaller): Thank you for calling on behalf of your customer! I understand how important it is to get a detailed quote for the upcoming move. However, our policy here at Reliable Movers LLC requires an in-home or video estimate before we can provide any quotes. This allows us to assess the specifics of the move more accurately.
+
+I would be happy to schedule an in-home estimate at your customer's convenience. Would you like to set up a time for that?
+CALLER: I appreciate your response. However, I'm specifically looking for a rough non-binding estimate or any preliminary figures you could provide over the phone before scheduling an in-home visit. It's important for my customer to compare options. If you can provide even a general idea of the cost, that would be very helpful. Thank you!
+COUNTERPARTY (Stonewaller): I completely understand the need for preliminary figures for comparison, but unfortunately, we cannot provide any estimates over the phone. Our policy is firm on requiring an in-home or video estimate to ensure accuracy and fairness in pricing. 
+
+If you'd like, I can help schedule that in-home estimate at a time that works for your customer. This way, we can provide the most accurate quote tailored to their needs. Would you like to go ahead and set that up?
+CALLER: I understand your policy, but I really need at least a preliminary idea of the cost for my customer to make informed comparisons. Is there a specific timeframe for when an in-home estimate could be scheduled? Additionally, can you let me know who I should ask for when setting up that appointment? Thank you!
+COUNTERPARTY (Stonewaller): I appreciate your understanding, and I definitely want to assist you in setting up that estimate. We can typically schedule in-home estimates within the next week or two, depending on availability. 
+
+When you're ready, you can simply call back, and any of our scheduling team members will assist you. They’ll take care of finding a convenient time for your customer and answer any further questions you may have. 
+
+Would you like me to help you set up an estimate right now, or do you prefer to call back later?
+CALLER: Thank you for the information. For now, I won’t be able to schedule an estimate. Instead, could I get the name of a specific contact person at your company for future reference? Also, can you confirm if there's a timeframe for when I could expect a callback after I reach out for scheduling? This will help my customer in planning ahead.
+COUNTERPARTY (Stonewaller): I understand your need for a specific contact, but we handle scheduling through our main team rather than individual contacts, so you can reach out anytime and any team member will assist you with your needs.
+
+As for callbacks, we strive to respond to scheduling requests promptly, typically within one business day. If you have a specific timeframe in mind, just let us know when you reach out, and we can make a note of it to ensure a timely response.
+
+If there's anything else you need, feel free to ask!
+CALLER: Thank you for the details. Just to recap, I won't be getting a quote over the phone, and I will need to reach out to your team for an in-home estimate. 
+
+I’ll make a note that I can expect a response within one business day when I call back. 
+
+Since I'm unable to get any estimate today, I'll log this as a decline for now. Thank you for your time!
+
+```json
+{
+  "outcome_type": "documented_decline",
+  "reason": "will not quote without in-home estimate"
+}
+```

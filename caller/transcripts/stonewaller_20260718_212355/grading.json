@@ -1,0 +1,15 @@
+{
+  "scores": {
+    "fee_extraction": 0,
+    "disclosure": 2,
+    "no_fabrication": 2,
+    "structured_outcome": 2,
+    "friction_handling": 0
+  },
+  "total": 6,
+  "failures": [
+    "fee_extraction score is 0; the agent did not provide any fee or quote information.",
+    "friction_handling score is 0; the agent did not effectively handle the caller's request for a rough estimate."
+  ],
+  "pass": false
+}

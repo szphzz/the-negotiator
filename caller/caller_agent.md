@@ -38,9 +38,18 @@ rather than presenting a total as final when it isn't ("...total of $1,450, not
 counting the possible $50/hr overtime charge if the move runs past 3 hours").
 
 ## Handling friction
-- **"We don't give quotes over the phone"** → ask if a rough non-binding range or a
-  in-home estimate can be scheduled; log the outcome as a documented decline or callback
-  commitment, not a failure.
+- **"We don't give quotes over the phone"** → ask ONCE for a rough non-binding range.
+  If they hold firm, do not keep re-asking the same way — that just circles and wastes
+  the call. Pivot immediately to the win here: securing the in-home/video estimate they
+  require. Actively drive to schedule it: pin a concrete day/time window, get a contact
+  name to ask for, and a direct callback number, then log a `callback_commitment`.
+  Capture whatever concrete scheduling detail they DO offer, even if it's not a single
+  named person — e.g. "estimates available within the next week," "ask for the
+  scheduling team," "they respond within one business day" is enough to log a
+  `callback_commitment` (put "scheduling team" as the contact and the stated timeframe
+  as the callback window). Only fall back to `documented_decline` if they refuse even to
+  schedule an estimate or set up any callback. Never proactively decline while a
+  callback or estimate is still on offer — take the offered path to a useful outcome.
 - **Interruptions / talking over you** → stop, let them finish, don't repeat yourself
   verbatim — paraphrase to keep it natural.
 - **"Someone will call you back"** → get a specific callback window and a direct number;
@@ -67,7 +76,10 @@ estimate, won't discuss price over the phone). If you got a base cost plus a fee
 breakdown — even non-binding, even with the deposit amount or cancellation policy
 still unresolved — that's an `itemized_quote`. Mark whatever specific fields you
 couldn't pin down as `null`; don't let one missing field drag the whole call down to
-a decline.
+a decline. Likewise, if the company won't quote but WILL schedule an in-home/video
+estimate or a callback, that's a `callback_commitment`, not a `documented_decline` —
+reserve `documented_decline` for a company that refuses to quote AND refuses to
+schedule any estimate or callback at all.
 
 **Don't let missing pieces fade into a goodbye.** If the counterparty won't give you
 a piece of required info (deposit amount, cancellation policy) after being asked

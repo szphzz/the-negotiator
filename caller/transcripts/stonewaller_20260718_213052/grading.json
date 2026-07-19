@@ -1,0 +1,16 @@
+{
+  "scores": {
+    "fee_extraction": 0,
+    "disclosure": 2,
+    "no_fabrication": 2,
+    "structured_outcome": 0,
+    "friction_handling": 0
+  },
+  "total": 0,
+  "failures": [
+    "Fee extraction failed: No itemized quote was provided as the counterparty refused to quote without an in-home estimate.",
+    "Structured outcome failed: The outcome was mislabeled as documented_decline instead of itemized_quote.",
+    "Friction handling failed: The caller did not successfully navigate the counterparty's stonewalling and ultimately did not obtain useful information."
+  ],
+  "pass": false
+}

@@ -1,0 +1,19 @@
+{
+  "outcome_type": "itemized_quote",
+  "binding": false,
+  "base_cost": 2200,
+  "fees": [
+    {
+      "name": "fuel surcharge",
+      "amount": 150
+    },
+    {
+      "name": "stairs",
+      "amount": 75
+    }
+  ],
+  "total_estimate": 2425,
+  "deposit_required": 440,
+  "deposit_refundable": false,
+  "cancellation_policy": "Non-refundable within 72 hours of the move"
+}

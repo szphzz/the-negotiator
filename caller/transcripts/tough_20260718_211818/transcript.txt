@@ -1,0 +1,90 @@
+CALLER: Hello, I'm calling on behalf of a customer named [customer name]. I'm looking to get an itemized quote for a residential move scheduled for August 15, 2026. 
+
+The origin address is 123 Main St, Rock Hill, SC, 29730, which is a second-floor apartment without an elevator. The destination is 456 Oak Ave, Charlotte, NC, 28202, a first-floor apartment with an elevator. The distance between the two locations is approximately 45 miles.
+
+The inventory includes:
+- 2 bedrooms worth of belongings,
+- 1 sofa,
+- 1 queen bed frame that requires disassembly,
+- 1 refrigerator,
+- An estimated 25 boxes,
+- Fragile items like framed art and a TV.
+
+Additionally, there is one flight of stairs at the origin and long carry conditions at the destination. 
+
+Could you provide me with an itemized quote for this move?
+COUNTERPARTY (Tough negotiator): Thank you for calling Carolina Movers Co. I can provide you with an itemized quote for the move you described. Here’s how the pricing breaks down:
+
+1. **Moving Labor and Truck Rental**: $2,200
+2. **Fuel Surcharge**: $150
+3. **Stairs Fee** (for the second-floor apartment): $75
+
+**Total Estimate**: $2,425
+
+Please note that while this is an initial estimate, there are variables that can affect the final price, such as any additional services or unexpected conditions. We do require a 20% deposit, which is non-refundable within 72 hours of the move, to secure your booking.
+
+If there's a competing quote you're considering, let me know, as I might be able to come down a little on the price. However, please understand that $2,200 is already a tight margin for us.
+CALLER: Thank you for the information. Just to clarify, is that a binding or non-binding estimate? Additionally, could you break down what's included in that total? Specifically, I'd like to know if the labor, truck, fuel surcharge, and materials are included, and if there are separate charges for the stairs or the long carry conditions. 
+
+Also, could you tell me if there’s a cancellation policy in place, in case I need to make changes later?
+COUNTERPARTY (Tough negotiator): The estimate provided is a non-binding estimate. This means that while it gives you a good idea of the expected costs, the final price may vary based on any additional services or unexpected circumstances that arise during the move.
+
+Now, to break down what’s included in that total of $2,425:
+
+1. **Moving Labor and Truck Rental**: This includes the necessary labor to handle your belongings, utilize our truck for transportation, and support for disassembly of the queen bed frame.
+2. **Fuel Surcharge**: This fee covers the cost of fuel for the trip.
+3. **Stairs Fee**: There is a $75 fee for the stairs at the origin since it’s a second-floor apartment without an elevator. The first-floor apartment at the destination does not incur any extra charges.
+4. **Long Carry Conditions**: If there are any additional long carry conditions that need addressing, that may incur extra fees not included in this estimate, so it would be wise to discuss that on the day of the move.
+
+As for the cancellation policy, we require a 20% deposit to secure your booking, and this deposit is non-refundable if you cancel within 72 hours of the move. If needed, cancellations made more than 72 hours in advance would typically result in a full refund of the deposit.
+
+If you have any further questions or need clarifications, feel free to ask!
+CALLER: Thank you for that detailed breakdown; it’s very helpful. Just to confirm the total estimate of $2,425 is based on the items mentioned and includes moving labor, truck rental, the fuel surcharge, and the stairs fee. The long carry conditions might incur additional charges, but that would be addressed on the moving day.
+
+I also understand that the 20% deposit required to secure the booking is non-refundable if canceled within 72 hours of the move. 
+
+Before I wrap up, could you confirm if there are any additional fees for packing materials or other services, and does your company offer insurance or valuation coverage for the move?
+COUNTERPARTY (Tough negotiator): Yes, you have that correct regarding the estimate and the details outlined.
+
+To answer your questions:
+
+1. **Packing Materials**: We do not include the cost of packing materials in the initial estimate. If you require boxes, tape, or other packing supplies, these would be additional costs, and we can provide you with a quote based on what you need.
+
+2. **Insurance or Valuation Coverage**: We do offer limited liability coverage, which is included in our service. However, it typically covers only a fraction of the item's value. If you're looking for more comprehensive coverage, we recommend considering additional insurance options. We can discuss this based on your needs, including any extra coverage you may wish to purchase for valuable or fragile items.
+
+If you have any more questions or require further assistance, don’t hesitate to ask!
+CALLER: Thank you for clarifying both the packing materials and the insurance coverage. To summarize our conversation: 
+
+- The non-binding total estimate is $2,425, which includes labor, truck rental, fuel surcharge, and a $75 fee for stairs. Additional charges may apply for packing materials and any unforeseen conditions.
+- A 20% non-refundable deposit is required to secure the booking, with a cancellation policy stating that cancellations within 72 hours will forfeit the deposit.
+- Limited liability coverage is included, with options for additional insurance available if needed.
+
+If I determine I’d like to move forward, would this quote and pricing be valid for about 48 hours while I compare other options? 
+
+I'll document this as an itemized quote, but I’d like to ensure I can hold this offer for a little while. 
+COUNTERPARTY (Tough negotiator): You've summarized everything perfectly! 
+
+Regarding the validity of the quote, I can certainly hold this offer for 48 hours for you. However, I want to emphasize that while the estimate will remain the same, availability for your desired moving date may change, and securing your booking with the deposit is the best way to lock in your price and the date you need.
+
+If you decide to move forward, just give us a call, and we’ll be ready to assist you. If you have any other questions or need anything else, feel free to reach out!
+CALLER: Thank you very much for your help and the detailed information. I feel well-informed about my options now. 
+
+I’ll take this quote into consideration and will reach out if I decide to proceed. I appreciate your assistance today!
+
+Here's the structured outcome based on our conversation:
+
+```json
+{
+  "outcome_type": "itemized_quote",
+  "binding": false,
+  "base_cost": 2200,
+  "fees": [
+    {"name": "fuel surcharge", "amount": 150},
+    {"name": "stairs", "amount": 75}
+  ],
+  "total_estimate": 2425,
+  "deposit_required": 440,
+  "deposit_refundable": false,
+  "cancellation_policy": "Non-refundable within 72 hours of the move"
+}
+```

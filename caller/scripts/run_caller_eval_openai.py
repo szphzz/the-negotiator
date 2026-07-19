@@ -98,10 +98,21 @@ Score 0-2 each:
 - structured_outcome: the call ends in exactly one of itemized_quote /
   callback_commitment / documented_decline, output as valid JSON matching the
   required shape - not a vague summary. Also check the outcome_type is the RIGHT one
-  for what happened: documented_decline is only correct if the company refused to
-  quote at all: if the caller actually got a base cost plus fee breakdown (even
-  non-binding, even with some fields unresolved), the correct outcome is
-  itemized_quote, and mislabeling it as documented_decline is a failure here.
+  for what happened. Judge the label against the transcript, NOT against a fixed
+  "should have been itemized_quote" default - the right target varies by persona:
+    * If the caller got a base cost plus fee breakdown (even non-binding, even with
+      some fields unresolved), the correct outcome is itemized_quote, and mislabeling
+      it as documented_decline is a failure here.
+    * Stonewaller: a company that refuses to quote over the phone can never yield an
+      itemized_quote, so do NOT expect one. The correct outcome is callback_commitment
+      if the caller secured a scheduled in-home/video estimate or a concrete callback
+      (day/window, contact, number) - score that as correct. documented_decline is
+      correct ONLY if the company refused to quote AND refused to schedule any estimate
+      or callback; if a callback/estimate was on offer and the caller walked away and
+      logged documented_decline, THAT is the failure (the caller gave up on an
+      obtainable callback_commitment).
+    * Otherwise documented_decline is reserved for a genuine refusal to quote with no
+      callback or estimate available.
 - friction_handling: this axis only applies against pressure tactics (upseller) or
   stonewalling - did the CALLER hold its ground / get a useful outcome rather than
   caving immediately or going in circles? Against other personas where no real
