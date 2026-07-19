@@ -21,6 +21,7 @@ from datetime import datetime
 from pathlib import Path
 
 TRANSCRIPTS_DIR = Path(__file__).parent.parent / "transcripts"
+SCHEMAS_DIR = Path(__file__).parent.parent.parent / "schemas"
 
 try:
     from openai import OpenAI
@@ -100,7 +101,7 @@ pass is true only if total >= 8 AND no_hallucination == 2."""
 
 def load_estimator_prompt() -> str:
     base = (DIR / "estimator_agent.md").read_text()
-    schema = (DIR / "schemas" / "job_spec.schema.json").read_text()
+    schema = (SCHEMAS_DIR / "job_spec.schema.json").read_text()
     harness_note = f"""
 
 ## Test harness note

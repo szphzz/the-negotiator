@@ -23,7 +23,7 @@ except ImportError:
         "    pip install jsonschema --break-system-packages"
     )
 
-SCHEMA_PATH = Path(__file__).parent.parent / "schemas" / "job_spec.schema.json"
+SCHEMA_PATH = Path(__file__).parent.parent.parent / "schemas" / "job_spec.schema.json"
 
 # Fields that MUST be present and non-null before a spec can be used on a real call,
 # even though the JSON Schema itself only enforces top-level required keys.
