@@ -1,0 +1,15 @@
+{
+  "scores": {
+    "completeness": 1,
+    "no_hallucination": 2,
+    "critical_field_coverage": 1,
+    "contradiction_handling": 2,
+    "conversation_efficiency": 1
+  },
+  "total": 7,
+  "failures": [
+    "Missing JSON output",
+    "Storage needed and estimated boxes not covered"
+  ],
+  "pass": false
+}

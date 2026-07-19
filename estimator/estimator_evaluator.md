@@ -2,7 +2,7 @@
 
 Feed this the transcript + the estimator's extracted JSON + the persona's known ground
 truth (you wrote the ground truth when defining the persona in
-04_customer_simulator.md). Use it to catch bad extractions fast, across many test runs,
+customer_simulator.md). Use it to catch bad extractions fast, across many test runs,
 without eyeballing each one yourself.
 
 ## System prompt

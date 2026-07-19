@@ -1,0 +1,16 @@
+{
+  "scores": {
+    "completeness": 1,
+    "no_hallucination": 2,
+    "critical_field_coverage": 1,
+    "contradiction_handling": 2,
+    "conversation_efficiency": 1
+  },
+  "total": 7,
+  "failures": [
+    "No extracted JSON produced.",
+    "Critical fields like distance_miles and large_items miss from confirmed details.",
+    "Conversation contains unnecessary repetitions after confirmation."
+  ],
+  "pass": false
+}

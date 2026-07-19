@@ -99,8 +99,28 @@ pass is true only if total >= 8 AND no_hallucination == 2."""
 
 
 def load_estimator_prompt() -> str:
-    path = DIR / "estimator_agent.md"
-    return path.read_text()
+    base = (DIR / "estimator_agent.md").read_text()
+    schema = (DIR / "schemas" / "job_spec.schema.json").read_text()
+    harness_note = f"""
+
+## Test harness note
+You have no logging tool in this environment. Instead, once the user confirms the
+summary, emit the final job spec as a single fenced code block like:
+
+```json
+{{ ... }}
+```
+
+matching this schema:
+
+```json
+{schema}
+```
+
+Output that code block and nothing else after it — no further pleasantries or
+sign-off text in that message.
+"""
+    return base + harness_note
 
 
 def chat(client, system: str, messages: list) -> str:
@@ -185,7 +205,7 @@ def save_run(persona_key: str, transcript: str, extracted: dict, grading: dict) 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--persona", choices=["A", "B", "C"], required=True)
-    parser.add_argument("--turns", type=int, default=10)
+    parser.add_argument("--turns", type=int, default=30)
     parser.add_argument("--show-transcript", action="store_true")
     args = parser.parse_args()
 

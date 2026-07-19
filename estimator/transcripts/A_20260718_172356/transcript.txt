@@ -1,0 +1,154 @@
+ESTIMATOR: Sure, let's begin. Can you please provide the address and zip code for the location you'll be moving from?
+CUSTOMER: Yes, I'm moving from 123 Main Street, Apartment 4B, Springfield, Zip Code 54321.
+ESTIMATOR: Thank you. What type of dwelling is your current residence? Is it an apartment, a house, or something else?
+CUSTOMER: It's a 2-bedroom apartment on the 2nd floor.
+ESTIMATOR: Great, and does your building have an elevator?
+CUSTOMER: No, it does not have an elevator.
+ESTIMATOR: Got it, so there would be stairs involved. How many flights of stairs are there to reach your apartment?
+CUSTOMER: There is one flight of stairs to reach my apartment.
+ESTIMATOR: Thank you for that. Can the moving truck park within approximately 75 feet of the building entrance?
+CUSTOMER: Yes, the moving truck can park within 75 feet of the building entrance.
+ESTIMATOR: Wonderful. Now, could you please provide the address and zip code for the destination where you are moving to?
+CUSTOMER: Sure, I'm moving to 456 Elm Street, Apartment 2A, Greenville, Zip Code 67890.
+ESTIMATOR: Thank you. What type of dwelling will your new residence be? An apartment, house, or something else?
+CUSTOMER: It will be a 1-bedroom apartment.
+ESTIMATOR: And on which floor is your new apartment located?
+CUSTOMER: It's located on the 1st floor.
+ESTIMATOR: Does the building have an elevator or will there be any stairs involved?
+CUSTOMER: Yes, the building has an elevator.
+ESTIMATOR: Great, thank you. Now, will the moving truck be able to park within 75 feet of the entrance at your new location as well?
+CUSTOMER: Yes, the moving truck will be able to park within 75 feet of the entrance at the new location.
+ESTIMATOR: Perfect. Now, moving on to the inventory, you mentioned your current home has 2 bedrooms. Are there any other rooms such as bathrooms, living room, office, kitchen, garage, basement, attic, or storage unit?
+CUSTOMER: Yes, there are two bathrooms, a living room, and a kitchen. There are no office, garage, basement, attic, or storage unit.
+ESTIMATOR: Thank you for the details. Let's go through each room to identify any large or bulky items. Starting with the living room, do you have large items like a sofa, entertainment center, or anything similar?
+CUSTOMER: In the living room, I have a sofa.
+ESTIMATOR: Great, thank you. Does the sofa require disassembly for the move, or can it be moved as is?
+CUSTOMER: The sofa can be moved as is; it doesn't require disassembly.
+ESTIMATOR: Thanks for clarifying. Next, let's talk about the bedrooms. Do you have any large items in either of the bedrooms, such as beds, dressers, or desks?
+CUSTOMER: Yes, I have a queen bed and a dresser in one of the bedrooms. The other bedroom doesn't have any large items.
+ESTIMATOR: Thank you. Does the queen bed require disassembly for the move?
+CUSTOMER: Yes, the queen bed will need to be disassembled for the move.
+ESTIMATOR: Got it, thank you. Moving on to the kitchen, do you have any large appliances or bulky items such as a refrigerator, dishwasher, or microwave?
+CUSTOMER: Yes, I have a refrigerator in the kitchen.
+ESTIMATOR: Thank you. Does the refrigerator require any special handling or disassembly for the move?
+CUSTOMER: No special handling or disassembly is required for the refrigerator. It can be moved as is.
+ESTIMATOR: Great, thank you for that. Next, for the bathrooms, are there any large items that need to be moved?
+CUSTOMER: No, there are no large items in the bathrooms that need to be moved.
+ESTIMATOR: Understood. Now, could you provide a rough estimate of the total number of boxes you'll be moving?
+CUSTOMER: I have about 20 boxes to move.
+ESTIMATOR: Thank you. Do you have any fragile or high-value items that require special attention, such as art, antiques, or electronics?
+CUSTOMER: No, I don't have any fragile or high-value items that require special attention.
+ESTIMATOR: Great, now let's discuss the service level you'll need. Are you interested in full-service moving, labor-only, packing included, or self-pack?
+CUSTOMER: I'm interested in full-service moving.
+ESTIMATOR: Do you need the movers to provide packing materials, or do you already have them?
+CUSTOMER: I already have packing materials.
+ESTIMATOR: Understood. Do you require any storage services for your belongings, either short-term or long-term?
+CUSTOMER: No, I don't require any storage services.
+ESTIMATOR: Thank you. Lastly, what is your planned move date, and is there any flexibility with that date?
+CUSTOMER: The move date is flexible, sometime in the next month.
+ESTIMATOR: Thanks for sharing. Before summarizing, would you like to have liability or valuation coverage included in the moving service?
+CUSTOMER: Yes, I would like to have basic liability coverage included in the moving service.
+ESTIMATOR: Great, thank you for all the information. Let me summarize everything we have so far:
+
+- **Origin**: 
+  - Address: 123 Main Street, Apartment 4B, Springfield, Zip Code 54321
+  - Dwelling Type: Apartment
+  - Floor: 2nd
+  - Elevator: No
+  - Stairs: 1 flight
+  - Truck Parking: Within 75 feet
+
+- **Destination**: 
+  - Address: 456 Elm Street, Apartment 2A, Greenville, Zip Code 67890
+  - Dwelling Type: Apartment
+  - Floor: 1st
+  - Elevator: Yes
+  - Truck Parking: Within 75 feet
+
+- **Inventory**:
+  - 2 Bedrooms: Queen bed (requires disassembly), dresser
+  - Living Room: Sofa (no disassembly required)
+  - Kitchen: Refrigerator (no special handling)
+  - 20 boxes
+  - No fragile/high-value items
+
+- **Service Level**:
+  - Full-service moving
+  - Bringing own packing materials
+  - No storage needed
+  - Basic liability coverage
+
+- **Move Date**: Flexible within the next month
+
+- **Access Conditions**:
+  - No long carry or parking permit required
+  
+Please confirm if all of these details are correct or if there are any changes you'd like to make.
+CUSTOMER: Everything is correct, and I'm done. Thank you!
+ESTIMATOR: ```json
+{
+  "origin": {
+    "address": "123 Main Street, Apartment 4B, Springfield",
+    "zip": "54321",
+    "dwelling_type": "apartment",
+    "floor": 2,
+    "elevator": false
+  },
+  "destination": {
+    "address": "456 Elm Street, Apartment 2A, Greenville",
+    "zip": "67890",
+    "dwelling_type": "apartment",
+    "floor": 1,
+    "elevator": true
+  },
+  "distance_miles": null,
+  "move_date": null,
+  "date_flexible": true,
+  "inventory": {
+    "num_bedrooms": 2,
+    "large_items": [
+      {
+        "name": "sofa",
+        "quantity": 1,
+        "requires_disassembly": false
+      },
+      {
+        "name": "queen bed",
+        "quantity": 1,
+        "requires_disassembly": true
+      },
+      {
+        "name": "dresser",
+        "quantity": 1,
+        "requires_disassembly": false
+      },
+      {
+        "name": "refrigerator",
+        "quantity": 1,
+        "requires_disassembly": false
+      }
+    ],
+    "estimated_boxes": 20,
+    "estimated_cubic_feet": null,
+    "estimated_weight_lbs": null,
+    "fragile_or_high_value_items": []
+  },
+  "access_conditions": {
+    "origin_stairs_flights": 1,
+    "destination_stairs_flights": 0,
+    "origin_long_carry": false,
+    "destination_long_carry": false,
+    "parking_permit_required": false,
+    "narrow_doorways_or_hallways": false
+  },
+  "service_level": {
+    "service_type": "full_service",
+    "packing_materials_needed": false,
+    "storage_needed": false,
+    "storage_duration_days": null,
+    "insurance_valuation_coverage": true
+  },
+  "user_confirmed": true,
+  "spec_version_hash": "123456789abcdef"
+}
+```
