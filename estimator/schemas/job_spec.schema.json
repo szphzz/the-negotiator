@@ -35,7 +35,7 @@
       "type": "object",
       "description": "This is what makes an estimate binding rather than bait. Incomplete inventory is the #1 cause of day-of upcharges.",
       "properties": {
-        "num_bedrooms": { "type": "integer" },
+        "num_bedrooms": { "type": "integer", "description": "Bedroom count at the ORIGIN dwelling (the one being packed and vacated), not the destination." },
         "large_items": {
           "type": "array",
           "items": {
@@ -74,7 +74,7 @@
       "type": "object",
       "properties": {
         "service_type": { "type": "string", "enum": ["full_service", "labor_only", "packing_included", "self_pack"] },
-        "packing_materials_needed": { "type": "boolean" },
+        "packing_materials_needed": { "type": "boolean", "description": "True only if the customer explicitly said they need boxes/tape/wrapping supplies provided, rather than using their own. Must never be inferred from service_type alone." },
         "storage_needed": { "type": "boolean" },
         "storage_duration_days": { "type": "integer" },
         "insurance_valuation_coverage": { "type": "boolean" }

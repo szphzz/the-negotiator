@@ -1,0 +1,16 @@
+{
+  "scores": {
+    "completeness": 0,
+    "no_hallucination": 0,
+    "critical_field_coverage": 0,
+    "contradiction_handling": 0,
+    "conversation_efficiency": 0
+  },
+  "total": 0,
+  "failures": [
+    "Missing destination details such as address and zip code.",
+    "Misrepresentation of the number of bedrooms in the destination property.",
+    "Lack of handling for the customer's preference regarding packing materials."
+  ],
+  "pass": false
+}

@@ -1,0 +1,17 @@
+{
+  "scores": {
+    "completeness": 0,
+    "no_hallucination": 0,
+    "critical_field_coverage": 0,
+    "contradiction_handling": 0,
+    "conversation_efficiency": 0
+  },
+  "total": 0,
+  "failures": [
+    "Missing origin and destination addresses in extracted JSON.",
+    "Num bedrooms not confirmed in the extraction.",
+    "Invalid handling of large items, not capturing all four items.",
+    "No handling of required fields as per schema."
+  ],
+  "pass": false
+}

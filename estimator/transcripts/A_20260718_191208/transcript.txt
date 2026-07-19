@@ -1,0 +1,220 @@
+ESTIMATOR: To get started, could you please provide me with your origin address, including the city and zip code? Also, tell me about your dwelling type (e.g., apartment, house, condo, etc.).
+CUSTOMER: My origin address is a 2-bedroom apartment. The city is [City Name], and the zip code is [Zip Code].
+ESTIMATOR: Thank you for that information. Could you please let me know what floor your apartment is on, and if there is an elevator in the building?
+CUSTOMER: My apartment is on the 2nd floor, and there is no elevator in the building.
+ESTIMATOR: Got it. Now, could you please provide me with your destination address, including the city and zip code? Also, let me know about the dwelling type for your new place.
+CUSTOMER: My destination is a 1-bedroom apartment. The city is [City Name], and the zip code is [Zip Code].
+ESTIMATOR: Thank you. What floor is your new apartment on, and does it have an elevator?
+CUSTOMER: My new apartment is on the 1st floor, and it does have an elevator.
+ESTIMATOR: Great! Now, could you give me an estimate of how many miles apart your origin and destination addresses are? Even a rough guess is fine—would you say it's more like 10 miles, or more like 100?
+CUSTOMER: The distance between my origin and destination addresses is about 45 miles.
+ESTIMATOR: Thank you for that information. Next, could you tell me if there are any stairs at your origin or destination? If yes, how many flights of stairs are there at each location? Additionally, can the moving truck park within approximately 75 feet of both entrances?
+CUSTOMER: There are stairs at my origin, which is 2 flights to get to my apartment on the 2nd floor. At my destination, there are no stairs since it's on the 1st floor. Yes, the moving truck can park within approximately 75 feet of both entrances.
+ESTIMATOR: Thank you for the details. Now, let’s move on to the inventory of items you’ll be moving. How many bedrooms and bathrooms does your current apartment have? Also, please let me know if there are any other distinct rooms like an office, garage, basement, attic, or storage unit.
+CUSTOMER: My current apartment has 2 bedrooms and 1 bathroom. There are no additional distinct rooms like an office, garage, basement, attic, or storage unit.
+ESTIMATOR: Thank you for that information. Now, let’s go room by room. Starting with the bedrooms, do you have any large or bulky items to mention, such as beds, dressers, or other furniture?
+CUSTOMER: Yes, in the bedrooms, I have a queen bed and a dresser.
+ESTIMATOR: Got it! Now, let's move on to the bathroom. Do you have any large items in there, such as a washer/dryer or any other bulky items?
+CUSTOMER: No, there are no large items in the bathroom.
+ESTIMATOR: Thank you. Now, let's check the common areas. Do you have any large or bulky items in the living room or kitchen, such as a sofa, dining table, or appliances?
+CUSTOMER: Yes, in the living room, I have a sofa. In the kitchen, I have a refrigerator.
+ESTIMATOR: Great! Now, let's discuss the items in your apartment collectively. For the queen bed, dresser, sofa, and refrigerator, do any of these need to be disassembled for the move?
+CUSTOMER: No, none of these items need to be disassembled for the move.
+ESTIMATOR: Thank you for the clarification. Now, can you give me a rough estimate of the total number of boxes you expect to have for this move? If you're unsure, I can help estimate it based on the items we've discussed.
+CUSTOMER: I expect to have about 20 boxes for this move.
+ESTIMATOR: Thank you. Now, do you have any fragile or high-value items that need special attention, such as art, antiques, or electronics?
+CUSTOMER: No, I don't have any fragile or high-value items that need special attention.
+ESTIMATOR: Got it! Now, let's discuss the service level for your move. Would you like full-service moving, labor-only, packing included, or would you prefer to self-pack?
+CUSTOMER: I would prefer full-service moving, including packing.
+ESTIMATOR: Thank you for that. Now, could you please provide me with your desired move date? Additionally, is this date flexible? If it's flexible, could you share an earliest date that would work for you or a specific week you're leaning toward?
+CUSTOMER: My desired move date is flexible. The earliest date that would work for me is within the next month, but I'm open to specific dates that may be available.
+ESTIMATOR: To pin down a concrete date, could you tell me the exact earliest date within the next month that you would like to move?
+CUSTOMER: The exact earliest date I would like to move is [specific date within the next month].
+ESTIMATOR: Thank you! Lastly, do you have any storage needs for this move? If so, how long do you expect to need storage?
+CUSTOMER: No, I do not have any storage needs for this move.
+ESTIMATOR: Thank you for all the information you've provided. Here’s a summary of what I have captured so far:
+
+**Origin:**
+- Address: 2-bedroom apartment in [City Name], [Zip Code]
+- Floor: 2nd
+- Elevator: No
+
+**Destination:**
+- Address: 1-bedroom apartment in [City Name], [Zip Code]
+- Floor: 1st
+- Elevator: Yes
+
+**Distance:** 45 miles
+
+**Access Conditions:**
+- Origin stairs: 2 flights
+- Destination stairs: None
+- Truck parking: Within 75 feet at both locations
+
+**Inventory:**
+- Bedrooms: 2
+- Bathrooms: 1
+- Other rooms: None
+- Large items: Queen bed (no disassembly), dresser (no disassembly), sofa (no disassembly), refrigerator (no disassembly)
+- Estimated boxes: 20
+- Fragile/high-value items: None
+
+**Service Level:**
+- Type: Full-service moving, including packing
+
+**Move Date:**
+- Desired move date: [specific date within the next month]
+- Date flexible: Yes
+
+**Storage Needs:** None
+
+Could you please confirm that everything is correct, or let me know if there are any changes?
+CUSTOMER: Everything is correct. I'm done. Thank you!
+ESTIMATOR: ```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MovingJobSpec",
+  "description": "Canonical structured spec for a residential move. Produced identically by voice interview or document intake. Confirmed by user before any outbound calls are made.",
+  "type": "object",
+  "required": [
+    "origin",
+    "destination",
+    "move_date",
+    "inventory",
+    "access_conditions",
+    "service_level"
+  ],
+  "properties": {
+    "origin": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "zip": {
+          "type": "string"
+        },
+        "dwelling_type": {
+          "type": "string",
+          "enum": [
+            "apartment",
+            "house",
+            "condo",
+            "townhouse",
+            "duplex",
+            "mobile_home",
+            "dormitory",
+            "storage_unit"
+          ]
+        },
+        "floor": {
+          "type": "integer"
+        },
+        "elevator": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "zip",
+        "dwelling_type",
+        "floor"
+      ]
+    },
+    "destination": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "zip": {
+          "type": "string"
+        },
+        "dwelling_type": {
+          "type": "string",
+          "enum": [
+            "apartment",
+            "house",
+            "condo",
+            "townhouse",
+            "duplex",
+            "mobile_home",
+            "dormitory",
+            "storage_unit"
+          ]
+        },
+        "floor": {
+          "type": "integer"
+        },
+        "elevator": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "zip",
+        "dwelling_type",
+        "floor"
+      ]
+    },
+    "distance_miles": 45,
+    "move_date": "[specific date within the next month]",
+    "date_flexible": true,
+    "inventory": {
+      "type": "object",
+      "description": "This is what makes an estimate binding rather than bait. Incomplete inventory is the #1 cause of day-of upcharges.",
+      "properties": {
+        "num_bedrooms": 2,
+        "large_items": [
+          {
+            "name": "queen bed",
+            "quantity": 1,
+            "requires_disassembly": false
+          },
+          {
+            "name": "dresser",
+            "quantity": 1,
+            "requires_disassembly": false
+          },
+          {
+            "name": "sofa",
+            "quantity": 1,
+            "requires_disassembly": false
+          },
+          {
+            "name": "refrigerator",
+            "quantity": 1,
+            "requires_disassembly": false
+          }
+        ],
+        "estimated_boxes": 20,
+        "estimated_cubic_feet": null,
+        "estimated_weight_lbs": null,
+        "fragile_or_high_value_items": []
+      }
+    },
+    "access_conditions": {
+      "type": "object",
+      "description": "The hidden-fee triggers: stairs and 'long carry' are the two most common day-of upcharges per the FMCSA data.",
+      "properties": {
+        "origin_stairs_flights": 2,
+        "destination_stairs_flights": 0,
+        "origin_long_carry": false,
+        "destination_long_carry": false,
+        "parking_permit_required": false,
+        "narrow_doorways_or_hallways": false
+      }
+    },
+    "service_level": {
+      "type": "object",
+      "properties": {
+        "service_type": "full_service",
+        "packing_materials_needed": true,
+        "storage_needed": false,
+        "storage_duration_days": null,
+        "insurance_valuation_coverage": false
+      }
+    },
+    "user_confirmed": true,
+    "spec_version_hash": null
+  }
+}
+```

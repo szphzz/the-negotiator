@@ -105,13 +105,20 @@ def load_estimator_prompt() -> str:
 
 ## Test harness note
 You have no logging tool in this environment. Instead, once the user confirms the
-summary, emit the final job spec as a single fenced code block like:
+summary, emit the final job spec as a single fenced code block containing a JSON
+*instance* — real data gathered in this conversation, not the schema itself:
 
 ```json
 {{ ... }}
 ```
 
-matching this schema:
+The reference schema below (JSON Schema, draft-07) describes the shape and field
+names to use. Do NOT copy its structure verbatim — it contains JSON-Schema keywords
+like "type", "properties", "required", "enum", and "$schema" that must NEVER appear
+in your output. Your output should contain only the actual field names (e.g.
+"address", "zip", "floor") mapped directly to real values (e.g. "123 Main St",
+"94110", 2) — never a nested "properties" wrapper or a type descriptor in place of
+a value.
 
 ```json
 {schema}
