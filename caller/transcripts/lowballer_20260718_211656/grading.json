@@ -1,0 +1,18 @@
+{
+  "scores": {
+    "fee_extraction": 0,
+    "disclosure": 0,
+    "no_fabrication": 0,
+    "structured_outcome": 0,
+    "friction_handling": 0
+  },
+  "total": 0,
+  "failures": [
+    "Fee extraction failed: base rate given without clarity on hidden fees.",
+    "Disclosure failed: did not disclose additional charges in an itemized way upfront.",
+    "No fabrication failed: provided vague terms that could mislead the customer.",
+    "Structured outcome failed: the agent did not guide towards a concrete next step.",
+    "Friction handling failed: agent could not assure the quote would be held, leading to uncertainty."
+  ],
+  "pass": false
+}

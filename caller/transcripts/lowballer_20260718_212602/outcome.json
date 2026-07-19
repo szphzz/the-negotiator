@@ -1,0 +1,27 @@
+{
+  "outcome_type": "itemized_quote",
+  "binding": false,
+  "base_cost": 1200,
+  "fees": [
+    {
+      "name": "fuel surcharge",
+      "amount": 100
+    },
+    {
+      "name": "long carry",
+      "amount": 150
+    },
+    {
+      "name": "overtime charge",
+      "amount": 50
+    }
+  ],
+  "total_estimate": null,
+  "deposit_required": null,
+  "deposit_refundable": true,
+  "cancellation_policy": "48 hours notice for full cancellation without penalty",
+  "follow_up": {
+    "contact_time": "later today or tomorrow",
+    "contact_person": "any representative"
+  }
+}

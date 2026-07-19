@@ -1,0 +1,61 @@
+CALLER: Hello, this is an AI calling on behalf of a customer named [customer name]. I'm looking to get a quote for a residential move scheduled for August 15, 2026. The move will start from Rock Hill, SC, zip code 29730, and end in Charlotte, NC, zip code 28202, which is a distance of about 45 miles.
+
+The details of the move are as follows: it involves a 2-bedroom apartment, with one flight of stairs at the origin and no stairs at the destination, which does have an elevator. 
+
+The inventory includes:
+- 1 sofa
+- 1 queen bed frame (which will need disassembly)
+- 1 refrigerator
+- Approximately 25 boxes
+- A few fragile or high-value items, including framed art and a TV.
+
+I would appreciate it if you could provide an itemized quote for this move. Thank you!
+COUNTERPARTY (Lowballer with hidden fees): Thank you for reaching out! For the residential move you described from Rock Hill, SC, to Charlotte, NC, I can offer a competitive quote of $1,200. This quote covers the basic costs associated with your move. 
+
+If you have any specific questions about potential additional fees, feel free to ask!
+CALLER: Thank you for the quote. Just to clarify, is that a binding or non-binding estimate? Additionally, could you provide details on what's included in that amount, such as labor, truck, fuel surcharge, and materials? 
+
+Also, will there be any separate charges for the stairs or long carry, and do you require a deposit that is refundable? What is your cancellation policy?
+COUNTERPARTY (Lowballer with hidden fees): The quote of $1,200 is a non-binding estimate, meaning the final cost may vary based on the actual circumstances of your move. The amount includes labor, the truck, and basic moving materials, but there are additional fees to consider.
+
+There is typically a fuel surcharge of around $100. If the truck cannot park close to your location, a "long carry" fee of approximately $150 may apply. Additionally, if the time taken for the move exceeds 3 hours, there will be a charge of $50 per hour for any extra time.
+
+Regarding the deposit, we usually do not require one, but it's best to confirm closer to your move date. Our cancellation policy allows you to cancel without penalty up to 24 hours before the scheduled move.
+
+If you have any further questions or need clarification, feel free to ask!
+CALLER: Thank you for the detailed information. Just to summarize:
+
+- The quote is a non-binding estimate of **$1,200**.
+- It includes:
+  - **Labor**
+  - **Truck**
+  - **Basic moving materials**
+- There are additional fees:
+  - **Fuel surcharge**: approximately **$100**
+  - **Long carry fee**: approximately **$150** (if applicable)
+  - **Overtime charge**: $50 per hour after 3 hours of work
+- A deposit is typically not required.
+- The cancellation policy allows for a cancellation without penalty if done at least **24 hours** before the scheduled move.
+
+If I have any further questions or need clarification, may I call back to confirm any details before the move, or is there someone I should ask for when I do?
+COUNTERPARTY (Lowballer with hidden fees): Yes, you've summarized everything accurately! If you have any further questions or need clarification before the move, feel free to call back anytime. You can speak with me or any of our dispatchers, and we'll be more than happy to assist you with any details you need. Thank you for considering Budget Move Solutions, and we look forward to helping with your move!
+CALLER: Thank you for your help and for the clear information. To summarize the outcome of this call:
+
+```json
+{
+  "outcome_type": "itemized_quote",
+  "binding": false,
+  "base_cost": 1200,
+  "fees": [
+    { "name": "fuel surcharge", "amount": 100 },
+    { "name": "long carry", "amount": 150 },
+    { "name": "overtime charge", "amount": 50, "condition": "after 3 hours of work" }
+  ],
+  "total_estimate": null,
+  "deposit_required": null,
+  "deposit_refundable": null,
+  "cancellation_policy": "24 hours notice"
+}
+```
+
+Thank you again, and have a great day!

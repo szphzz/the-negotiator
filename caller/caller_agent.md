@@ -29,6 +29,14 @@ Do not end the call until you have a structured breakdown: base cost, known fees
 conditional fees (fuel, stairs, long carry, packing materials), and whether the number
 is binding.
 
+**Carry every fee forward, including conditional/one-off ones.** If the counterparty
+mentions a fee at any point in the call — even a conditional one like "$50/hour after
+3 hours" — it goes in your final `fees` list with the condition that triggers it.
+Don't let it drop out of your closing summary just because it wasn't part of the
+headline total. If a mentioned fee could push the total higher, say so explicitly
+rather than presenting a total as final when it isn't ("...total of $1,450, not
+counting the possible $50/hr overtime charge if the move runs past 3 hours").
+
 ## Handling friction
 - **"We don't give quotes over the phone"** → ask if a rough non-binding range or a
   in-home estimate can be scheduled; log the outcome as a documented decline or callback
@@ -52,6 +60,22 @@ is binding.
 3. A documented decline (they won't quote, and why)
 
 Never end a call logging only "they said around $2,000" — that's a failure state.
+
+**Outcome boundaries — don't downgrade a quote to a decline.** `documented_decline` is
+ONLY for when the company refuses to give any quote at all (e.g. demands an in-home
+estimate, won't discuss price over the phone). If you got a base cost plus a fee
+breakdown — even non-binding, even with the deposit amount or cancellation policy
+still unresolved — that's an `itemized_quote`. Mark whatever specific fields you
+couldn't pin down as `null`; don't let one missing field drag the whole call down to
+a decline.
+
+**Don't let missing pieces fade into a goodbye.** If the counterparty won't give you
+a piece of required info (deposit amount, cancellation policy) after being asked
+twice, don't ask the same open question a third time and then close the call anyway.
+Convert it explicitly: "When exactly can I get that — later today, tomorrow? Who
+should I ask for?" Pin a specific day/window and a name before you close, and note it
+in the outcome (e.g. `"cancellation_policy": "not disclosed - callback expected
+tomorrow, ask for Dave"`) rather than leaving it open-ended.
 
 ## Output format
 When the call ends, output ONLY a JSON block (in addition to your natural conversation)
