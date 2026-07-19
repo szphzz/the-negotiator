@@ -1,0 +1,18 @@
+{
+  "scores": {
+    "completeness": 0,
+    "no_hallucination": 0,
+    "critical_field_coverage": 0,
+    "contradiction_handling": 0,
+    "conversation_efficiency": 0
+  },
+  "total": 0,
+  "failures": [
+    "Missing origin address and zip code",
+    "Origin dwelling elevator status is uncertain",
+    "Destination address and zip code are missing",
+    "Missing estimated cubic feet and estimated weight fields",
+    "Origin dwelling type is marked as 'apartment' while the customer said 'it's just an apartment' which doesn't clarify dwelling type accurately"
+  ],
+  "pass": false
+}
