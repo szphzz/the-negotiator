@@ -80,6 +80,35 @@ pip install openai jsonschema --break-system-packages
 export OPENAI_API_KEY=your_key_here
 ```
 
+## Voice demo (Estimator ↔ Customer, OpenAI Realtime API)
+
+ElevenLabs Agents isn't wired up yet, so [pipeline/voice/](pipeline/voice/) is a
+browser-based voice proof of concept built on OpenAI's Realtime API instead: two
+Realtime sessions (the Estimator and a simulated customer) hold a live voice
+conversation with **each other** — no human in the loop — reusing
+`estimator/estimator_agent.md` and `pipeline/run_pipeline.py`'s customer personas
+verbatim as each session's instructions, and ending when the Estimator calls a
+`submit_job_spec` tool with the confirmed spec (validated the same way
+`run_pipeline.py` validates its text-pipeline output).
+
+Turn-taking is driven explicitly by the browser page rather than relying on
+voice-activity-detection, since VAD tuned for human microphones is unreliable
+against synthetic AI speech — see `pipeline/voice/static/orchestrator.js`.
+
+```bash
+pip install flask --break-system-packages
+export OPENAI_API_KEY=your_key_here
+python pipeline/voice/server.py
+# open http://localhost:5050 (not 5000 - macOS's AirPlay Receiver squats on 5000)
+```
+
+This is a first milestone covering only the Estimator/Customer stage — the hard
+part (a generic two-agent voice bridge) proven on the simplest stage before
+extending it to Caller and Closer. See `pipeline/voice/prompts.py` and
+`pipeline/voice/tools.py` for how prompts/tool schemas are derived from the
+existing text-pipeline prompts and `schemas/job_spec.schema.json` rather than
+forked.
+
 ## Running the modules
 
 **Full pipeline** (Estimator → Caller → Closer → report, one command):
