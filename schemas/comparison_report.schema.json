@@ -29,8 +29,8 @@
             "type": ["string", "null"],
             "enum": ["price_matched", "partial_concession", "held_firm", "callback_commitment", "documented_decline", null]
           },
-          "total_estimate": { "type": "number", "description": "The final number used for ranking - negotiated_total if present, else original_total." },
-          "binding": { "type": "boolean" },
+          "total_estimate": { "type": ["number", "null"], "description": "The final number used for ranking - negotiated_total if present, else original_total. Null for callback_commitment/documented_decline, which have no total to rank." },
+          "binding": { "type": ["boolean", "null"], "description": "Null for callback_commitment/documented_decline, which have no quote to be binding or not." },
           "fees": {
             "type": "array",
             "items": {
@@ -71,7 +71,7 @@
             "description": "Paths or IDs pointing to the call transcript(s) this quote's data came from - the original Caller call and, if applicable, the Closer callback.",
             "items": { "type": "string" }
           },
-          "rank": { "type": "integer", "description": "1 = best deal. Ties broken by binding status, then by red_flag.flagged (unflagged ranks above flagged at the same price)." }
+          "rank": { "type": ["integer", "null"], "description": "1 = best deal. Ties broken by binding status, then by red_flag.flagged (unflagged ranks above flagged at the same price). Null for callback_commitment/documented_decline, which aren't ranked." }
         }
       }
     },

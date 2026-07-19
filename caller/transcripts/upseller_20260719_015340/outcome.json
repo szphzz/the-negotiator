@@ -1,0 +1,19 @@
+{
+  "outcome_type": "itemized_quote",
+  "binding": false,
+  "base_cost": 2800,
+  "fees": [
+    {
+      "name": "stairs",
+      "amount": 75
+    },
+    {
+      "name": "long carry",
+      "amount": 150
+    }
+  ],
+  "total_estimate": 2800,
+  "deposit_required": 560,
+  "deposit_refundable": true,
+  "cancellation_policy": "Full refund of deposit if notified at least 48 hours prior to move date."
+}

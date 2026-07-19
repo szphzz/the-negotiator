@@ -1,0 +1,156 @@
+ESTIMATOR: Let's start by confirming the details we have so far and filling in any missing information.
+
+What is the dwelling type of your origin address at 123 Main St, Sacramento? Is it a house, apartment, condo, townhouse, duplex, mobile home, dormitory, or storage unit?
+CUSTOMER: The dwelling type of my origin address at 123 Main St, Sacramento, is a 2-bedroom apartment.
+ESTIMATOR: Got it! Just to clarify, could you please confirm the floor number of your apartment at 123 Main St? And also, does your apartment have elevator access?
+CUSTOMER: My apartment at 123 Main St is on the 2nd floor, and it does not have elevator access.
+ESTIMATOR: Thank you for that information. Now let's confirm the details for your destination address at 456 Oak Ave, Los Angeles. What is the dwelling type there? Is it a house, apartment, condo, townhouse, duplex, mobile home, dormitory, or storage unit?
+CUSTOMER: The dwelling type at my destination address, 456 Oak Ave, Los Angeles, is a 1-bedroom apartment.
+ESTIMATOR: Great! Could you please confirm the floor number of your apartment at 456 Oak Ave? Also, does this apartment have elevator access?
+CUSTOMER: My apartment at 456 Oak Ave is on the 1st floor, and it does have elevator access.
+ESTIMATOR: Thank you for confirming that. Now, how many miles apart are your origin and destination addresses? If you're not sure, even a rough estimate is fine — is it more like 10 miles, or more like 100?
+CUSTOMER: The distance between my origin and destination addresses is about 385 miles.
+ESTIMATOR: Got it, thank you! Next, could you please provide me with your desired move date? Is it flexible, or do you have a specific date in mind? If you have a range in mind, please share an earliest date that works for you.
+CUSTOMER: My move date is flexible, but I would prefer the first Saturday of next month as a concrete date if needed.
+ESTIMATOR: To narrow it down, is the first Saturday of next month [specific date] your earliest possible move date, or is there a specific week you're leaning toward?
+CUSTOMER: The first Saturday of next month is my preferred move date, but I am flexible on the timing if needed.
+ESTIMATOR: Understood! I'll set the move date to the first Saturday of next month, and I'll mark it as flexible.
+
+Now, let's discuss your inventory. Can you tell me how many bedrooms you have in your origin apartment? You mentioned earlier it is a 2-bedroom apartment. Are there any other distinct rooms, like a living room, office, garage, basement, etc.?
+CUSTOMER: Yes, my origin apartment is a 2-bedroom apartment. It also has a living room, but there are no other distinct rooms like an office, garage, or basement.
+ESTIMATOR: Thank you for that information. Now, let's go through each room and identify any large or bulky items you have. 
+
+Starting with the bedrooms, can you list any large items such as beds, dressers, or other significant furniture?
+CUSTOMER: In the bedrooms, I have a queen bed and a dresser.
+ESTIMATOR: Great, I’ve noted that down. Now, let's move to the living room. Do you have any large items in there, such as a sofa, coffee table, entertainment center, or anything else?
+CUSTOMER: In the living room, I have a sofa and a flat-screen TV as a fragile/high-value item.
+ESTIMATOR: I've added those items to the list. 
+
+Now, regarding the large items you mentioned, will the queen bed, dresser, sofa, or flat-screen TV need to be disassembled for the move?
+CUSTOMER: Only the queen bed will need to be disassembled for the move. The dresser, sofa, and flat-screen TV do not require disassembly.
+ESTIMATOR: Thank you for clarifying that. Now that we’ve covered the bedrooms and living room, do you have any large or bulky items in any other areas, such as a kitchen, dining room, garage, basement, attic, or outdoor/patio space?
+CUSTOMER: In the kitchen, I have a refrigerator, but there are no other large or bulky items in other areas like a dining room, garage, basement, attic, or outdoor/patio space.
+ESTIMATOR: I've noted the refrigerator from the kitchen. 
+
+Now, does the refrigerator need to be disassembled for the move?
+CUSTOMER: No, the refrigerator does not need to be disassembled for the move.
+ESTIMATOR: Thank you for that. Now, can you provide me with a rough estimate of the total number of boxes you expect to have for this move? Alternatively, if you'd like, I can estimate it based on the items we've discussed.
+CUSTOMER: I expect to have about 20 boxes for this move.
+ESTIMATOR: Great, I've noted that you expect to have about 20 boxes. 
+
+Now, let's talk about your service level. What kind of service are you looking for: full-service, labor-only, packing included, or self-pack?
+CUSTOMER: I am looking for full-service, and I do need packing materials provided as well.
+ESTIMATOR: Thank you for that information. Now, let's discuss access conditions. 
+
+For your origin address at 123 Main St, are there any stairs? If yes, how many flights? And can the truck park within about 75 feet of the entrance?
+CUSTOMER: Yes, there are stairs at my origin address. It's a 2nd-floor walk-up with one flight of stairs. The truck can park within about 75 feet of the entrance.
+ESTIMATOR: Thank you! Now let's check the access conditions at your destination address at 456 Oak Ave. Are there any stairs? If yes, how many flights? And can the truck park within about 75 feet of the entrance there as well?
+CUSTOMER: There are no stairs at my destination address since it is on the 1st floor, and the truck can park within about 75 feet of the entrance.
+ESTIMATOR: Thank you for confirming that. 
+
+Before we wrap up, do you have any fragile or high-value items beyond the flat-screen TV that we need to account for? This could include items like artwork, antiques, jewelry, or anything similar.
+CUSTOMER: No, the flat-screen TV is the only fragile/high-value item I have to account for beyond other items.
+ESTIMATOR: Got it, I've noted that the flat-screen TV is your only fragile/high-value item. 
+
+Now, let's summarize everything we have captured so far:
+
+**Origin Address:**
+- Address: 123 Main St, Sacramento, CA
+- Zip: 95814
+- Dwelling Type: Apartment
+- Floor: 2
+- Elevator: No
+
+**Destination Address:**
+- Address: 456 Oak Ave, Los Angeles, CA
+- Zip: 90012
+- Dwelling Type: Apartment
+- Floor: 1
+- Elevator: Yes
+
+**Distance Miles:** 385
+
+**Move Date:** First Saturday of next month (flexible)
+
+**Inventory:**
+- Number of Bedrooms: 2
+- Large Items:
+  - Queen bed (requires disassembly)
+  - Dresser
+  - Sofa
+  - Refrigerator (does not require disassembly)
+- Estimated Boxes: 20
+- Fragile or High-Value Items: Flat-screen TV
+
+**Access Conditions:**
+- Origin: 1 flight of stairs; truck can park within 75 feet.
+- Destination: No stairs; truck can park within 75 feet.
+
+**Service Level:**
+- Service Type: Full-service
+- Packing Materials Needed: Yes
+
+Please review and confirm if everything is accurate or if there are any corrections needed.
+CUSTOMER: Everything you’ve summarized is accurate. I confirm that all details are correct, and I'm done. Thank you!
+ESTIMATOR: ```json
+{
+  "origin": {
+    "address": "123 Main St, Sacramento, CA",
+    "zip": "95814",
+    "dwelling_type": "apartment",
+    "floor": 2,
+    "elevator": false
+  },
+  "destination": {
+    "address": "456 Oak Ave, Los Angeles, CA",
+    "zip": "90012",
+    "dwelling_type": "apartment",
+    "floor": 1,
+    "elevator": true
+  },
+  "distance_miles": 385,
+  "move_date": "2023-11-04",
+  "date_flexible": true,
+  "inventory": {
+    "num_bedrooms": 2,
+    "large_items": [
+      {
+        "name": "queen bed",
+        "quantity": 1,
+        "requires_disassembly": true
+      },
+      {
+        "name": "dresser",
+        "quantity": 1
+      },
+      {
+        "name": "sofa",
+        "quantity": 1
+      },
+      {
+        "name": "refrigerator",
+        "quantity": 1,
+        "requires_disassembly": false
+      }
+    ],
+    "estimated_boxes": 20,
+    "fragile_or_high_value_items": [
+      "flat-screen TV"
+    ]
+  },
+  "access_conditions": {
+    "origin_stairs_flights": 1,
+    "destination_stairs_flights": 0,
+    "origin_long_carry": false,
+    "destination_long_carry": false,
+    "parking_permit_required": false,
+    "narrow_doorways_or_hallways": false
+  },
+  "service_level": {
+    "service_type": "full_service",
+    "packing_materials_needed": true
+  },
+  "user_confirmed": true,
+  "spec_version_hash": "example_hash_value"
+}
+```

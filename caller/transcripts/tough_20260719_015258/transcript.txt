@@ -1,0 +1,140 @@
+CALLER: Hello, this is an AI calling on behalf of a customer named [customer name]. I'm looking to get an itemized quote for a residential move scheduled for November 4th, 2023. 
+
+The move is from an apartment located at 123 Main St, Sacramento, CA 95814 to another apartment at 456 Oak Ave, Los Angeles, CA 90012. The total distance between the two locations is approximately 385 miles.
+
+The inventory for the move includes:
+- 1 queen bed (requires disassembly)
+- 1 dresser
+- 1 sofa
+- 1 refrigerator (does not require disassembly)
+- An estimated 20 boxes
+- A fragile flat-screen TV
+
+Additionally, there is 1 flight of stairs at the origin and no stairs at the destination. There are no long carry conditions or parking permits required.
+
+Could you provide me with a detailed quote for this move?
+COUNTERPARTY (Tough negotiator): Thanks for reaching out about your move on November 4th, 2023. Based on the details you've provided, I can give you an initial quote of $2,400 for the entire move.
+
+Here's the itemization of the fees:
+
+- **Base moving fee**: This includes the labor for packing and moving your items, such as the queen bed disassembly, the dresser, sofa, refrigerator, boxes, and fragile flat-screen TV.
+- **Fuel surcharge**: $150 for the 385-mile distance.
+- **Stairs fee**: Since you have one flight of stairs at the origin, there is an additional charge of $75.
+
+So, breaking it down, we have:
+- Base moving fee: $2,075
+- Fuel surcharge: $150
+- Stairs fee: $75
+- **Total: $2,400**
+
+Please keep in mind that we require a 20% deposit to secure your move, which is non-refundable within 72 hours of the scheduled date.
+
+If you have any competing quotes, let me know, and I'm willing to work with you. But keep in mind, the lowest I can go is around $2,200, and that's already a tight margin for us.
+CALLER: Thank you for the quote. Just to clarify a few details, can you confirm if this is a binding or non-binding estimate? Also, could you break down what's included in the base moving fee further? Specifically, can you confirm if it covers labor, the truck, and packing materials? 
+
+Additionally, is there a cancellation policy I should be aware of should I need to change the date or cancel? Thank you!
+COUNTERPARTY (Tough negotiator): The quote I've provided is not a binding estimate; it’s more of a preliminary quote based on the details you've shared. 
+
+Now, breaking down the base moving fee further:
+- **Labor**: It includes the time and effort for our team to safely pack and load your items, including disassembly of the queen bed and handling the fragile flat-screen TV with care.
+- **Truck**: The base fee covers the rental of the truck for transport, including insurance for your belongings during the move.
+- **Packing materials**: This does not cover packing materials. If you need boxes or packing supplies, that can be added on separately.
+
+Regarding our cancellation policy, if you need to change the date or cancel your move, keep in mind that the 20% deposit is non-refundable if cancelled within 72 hours of your move. If you cancel prior to the 72-hour mark, we can refund your deposit.
+
+If you have any other questions or concerns, feel free to ask!
+CALLER: Thank you for the detailed breakdown. Just to confirm, the total estimate sits at $2,400, which includes:
+
+- Base moving fee: $2,075 (includes labor, truck, and insurance, but not packing materials)
+- Fuel surcharge: $150
+- Stairs fee: $75
+- **Total estimate: $2,400**
+
+I noted that this is a non-binding estimate and that a 20% deposit is required to secure the move, which is non-refundable within 72 hours of the scheduled date.
+
+Before we wrap up, could you let me know if there are any additional charges for the packing materials, and if so, how those are estimated? Also, are there any conditions that may lead to added fees, such as overtime charges if the move takes longer than expected? Thank you!
+COUNTERPARTY (Tough negotiator): Yes, you've summarized the estimate correctly:
+
+- **Base moving fee**: $2,075 (includes labor, truck, and insurance but does not cover packing materials)
+- **Fuel surcharge**: $150
+- **Stairs fee**: $75
+- **Total estimate**: $2,400
+
+Now, regarding packing materials: we can provide boxes, bubble wrap, and other packing supplies at an additional cost. The pricing for those can vary, but typically, boxes range from $2 to $5 each depending on the size, and bubble wrap or packing tape will also have additional costs associated with them. If you need specific materials, we can discuss prices based on what you require.
+
+As for overtime charges, we generally do not charge extra unless the move takes significantly longer than anticipated. However, if there are substantial delays due to unforeseen circumstances (like excessive traffic or additional items not listed), we may need to assess a fee at our hourly rate, which would be outlined in your final confirmation. It’s important to provide us with as much detail about your inventory as possible to avoid any surprises.
+
+If there's anything else you'd like to clarify or discuss, please let me know!
+CALLER: Thank you for that clarification. Just to summarize again for accuracy:
+
+- **Total estimate**: $2,400 
+- **Base moving fee**: $2,075
+- **Fuel surcharge**: $150
+- **Stairs fee**: $75
+- **Packing materials**: Additional cost, boxes range from $2 to $5 each, plus costs for bubble wrap and tape. 
+
+You mentioned that there could be overtime charges if unforeseen circumstances arise, which would be assessed at your hourly rate as needed.
+
+Is there anything else you could confirm for me, such as whether a refundable deposit is required for this move? Or is it strictly non-refundable within the 72-hour window? Thank you!
+COUNTERPARTY (Tough negotiator): Your summary is accurate:
+
+- **Total estimate**: $2,400 
+- **Base moving fee**: $2,075
+- **Fuel surcharge**: $150
+- **Stairs fee**: $75
+- **Packing materials**: Additional cost, boxes range from $2 to $5 each, plus costs for bubble wrap and tape.
+
+Regarding the deposit, it is strictly non-refundable within 72 hours of the scheduled date. If you change or cancel the move prior to the 72-hour window, we can refund your deposit. 
+
+If you have any other questions or need further information, feel free to ask!
+CALLER: I appreciate the information you've provided. To confirm, here’s the complete breakdown of the quote for the move:
+
+- **Total estimate**: $2,400 (non-binding)
+- **Base moving fee**: $2,075 (includes labor, truck, and insurance, but excludes packing materials)
+- **Fuel surcharge**: $150
+- **Stairs fee**: $75
+- **Packing materials**: Additional cost, with boxes priced between $2 to $5 each, plus extra for bubble wrap and tape. 
+- **Deposit required**: 20% of total estimate ($480), which is non-refundable within 72 hours of the scheduled date, but refundable if cancelled more than 72 hours in advance.
+
+Could you please provide me with a direct contact number and a name in case I have further questions or need to follow up? Thank you for your assistance!
+COUNTERPARTY (Tough negotiator): Your breakdown is spot on:
+
+- **Total estimate**: $2,400 (non-binding)
+- **Base moving fee**: $2,075 (includes labor, truck, and insurance, but excludes packing materials)
+- **Fuel surcharge**: $150
+- **Stairs fee**: $75
+- **Packing materials**: Additional cost, with boxes priced between $2 to $5 each, plus extra for bubble wrap and tape.
+- **Deposit required**: 20% of total estimate ($480), which is non-refundable within 72 hours of the scheduled date, but refundable if cancelled more than 72 hours in advance.
+
+For further questions or to follow up, you can reach me directly at (555) 123-4567. My name is Jamie, and I'm here to help with whatever you need regarding your move.
+
+If you have any additional questions now or in the future, don't hesitate to get in touch. Thank you for considering Carolina Movers Co.!
+CALLER: Thank you, Jamie, for all the detailed information and your helpfulness throughout this process. I appreciate your time!
+
+To summarize the move quote one last time:
+- **Total estimate**: $2,400 (non-binding).
+- **Base moving fee**: $2,075.
+- **Fuel surcharge**: $150.
+- **Stairs fee**: $75.
+- **Packing materials**: Additional costs for boxes and supplies.
+- **Deposit required**: 20% ($480), non-refundable within 72 hours.
+
+If I have further questions, I can reach you at (555) 123-4567. Thank you again for your assistance!
+
+Here’s the final outcome of our call:
+
+```json
+{
+  "outcome_type": "itemized_quote",
+  "binding": false,
+  "base_cost": 2075,
+  "fees": [
+    {"name": "fuel surcharge", "amount": 150},
+    {"name": "stairs", "amount": 75},
+    {"name": "deposit", "amount": 480, "refundable": false}
+  ],
+  "total_estimate": 2400,
+  "packing_materials": "additional cost depends on requirement",
+  "cancellation_policy": "non-refundable within 72 hours"
+}
+```

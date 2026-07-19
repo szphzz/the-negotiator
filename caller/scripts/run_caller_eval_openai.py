@@ -19,6 +19,7 @@ Requires a confirmed job spec at schemas/examples/valid_spec_example.json (or po
 import argparse
 import json
 import re
+import shutil
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -198,6 +199,17 @@ def grade(client, persona_key: str, transcript: str, extracted: dict) -> dict:
     return result or {"error": "evaluator did not return valid JSON", "raw": result_text}
 
 
+def prune_old_transcripts(directory: Path, keep: int = 5) -> None:
+    """Delete all but the `keep` most recently created subfolders in `directory`."""
+    subdirs = sorted(
+        (d for d in directory.iterdir() if d.is_dir()),
+        key=lambda d: d.stat().st_mtime,
+        reverse=True,
+    )
+    for old_dir in subdirs[keep:]:
+        shutil.rmtree(old_dir)
+
+
 def save_run(persona_key: str, transcript: str, extracted: dict, grading: dict) -> Path:
     TRANSCRIPTS_DIR.mkdir(parents=True, exist_ok=True)
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -208,6 +220,7 @@ def save_run(persona_key: str, transcript: str, extracted: dict, grading: dict) 
     (run_dir / "outcome.json").write_text(json.dumps(extracted, indent=2) if extracted else "null")
     (run_dir / "grading.json").write_text(json.dumps(grading, indent=2))
 
+    prune_old_transcripts(TRANSCRIPTS_DIR)
     return run_dir
 
 

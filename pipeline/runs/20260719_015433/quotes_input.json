@@ -1,0 +1,110 @@
+[
+  {
+    "quote_id": "carolina",
+    "company_name": "Carolina Movers Co.",
+    "call_outcome_type": "itemized_quote",
+    "transcript_refs": [
+      "caller/transcripts/tough_20260719_015258/transcript.txt",
+      "closer/transcripts/round_20260719_015433/carolina/transcript.txt"
+    ],
+    "original_total": 2400,
+    "binding": false,
+    "fees": [
+      {
+        "name": "fuel surcharge",
+        "amount": 150
+      },
+      {
+        "name": "stairs",
+        "amount": 75
+      },
+      {
+        "name": "deposit",
+        "amount": 480,
+        "refundable": false
+      }
+    ],
+    "deposit_required": null,
+    "deposit_refundable": null,
+    "cancellation_policy": "non-refundable within 72 hours",
+    "negotiated_total": 2200,
+    "negotiation_outcome_type": "partial_concession",
+    "concessions": [
+      {
+        "item": "deposit",
+        "before": "20% non-refundable",
+        "after": "fully refundable"
+      }
+    ],
+    "red_flag": {
+      "flagged": false,
+      "reason": null
+    }
+  },
+  {
+    "quote_id": "budget",
+    "company_name": "Budget Move Solutions",
+    "call_outcome_type": "callback_commitment",
+    "transcript_refs": [
+      "caller/transcripts/lowballer_20260719_015312/transcript.txt"
+    ]
+  },
+  {
+    "quote_id": "premier",
+    "company_name": "Premier Relocation Services",
+    "call_outcome_type": "itemized_quote",
+    "transcript_refs": [
+      "caller/transcripts/upseller_20260719_015340/transcript.txt",
+      "closer/transcripts/round_20260719_015433/premier/transcript.txt"
+    ],
+    "original_total": 2800,
+    "binding": false,
+    "fees": [
+      {
+        "name": "stairs",
+        "amount": 75
+      },
+      {
+        "name": "long carry",
+        "amount": 150
+      }
+    ],
+    "deposit_required": 560,
+    "deposit_refundable": true,
+    "cancellation_policy": "Full refund of deposit if notified at least 48 hours prior to move date.",
+    "negotiated_total": 2800,
+    "negotiation_outcome_type": "held_firm",
+    "concessions": [],
+    "red_flag": {
+      "flagged": false,
+      "reason": null
+    }
+  },
+  {
+    "quote_id": "reliable",
+    "company_name": "Reliable Movers LLC",
+    "call_outcome_type": "callback_commitment",
+    "transcript_refs": [
+      "caller/transcripts/stonewaller_20260719_015351/transcript.txt"
+    ]
+  },
+  {
+    "quote_id": "quickhaul",
+    "company_name": "QuickHaul Express",
+    "call_outcome_type": "itemized_quote",
+    "source_note": "external quote, not gathered via The Caller - injected as a red-flag stress test",
+    "original_total": 950,
+    "binding": false,
+    "fees": [],
+    "negotiated_total": 950,
+    "negotiation_outcome_type": "held_firm",
+    "concessions": [],
+    "transcript_refs": [
+      "closer/transcripts/round_20260719_015433/quickhaul/transcript.txt"
+    ],
+    "red_flag": {
+      "flagged": true,
+      "reason": "$950 is 60% below the session median of $2,400"
+    }
+  }
+]

@@ -41,6 +41,7 @@ from run_closer_eval_openai import (
     TRANSCRIPTS_DIR,
     extract_json_block,
     load_closer_prompt,
+    prune_old_transcripts,
     run_conversation,
 )
 
@@ -168,6 +169,7 @@ def save_round(final_state: dict, calls: list) -> Path:
         "final_quotes": final_state["quotes"],
     }
     (round_dir / "round_summary.json").write_text(json.dumps(summary, indent=2))
+    prune_old_transcripts(TRANSCRIPTS_DIR)
     return round_dir
 
 

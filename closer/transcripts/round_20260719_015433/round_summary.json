@@ -1,0 +1,46 @@
+{
+  "call_order": [
+    "premier",
+    "quickhaul",
+    "carolina"
+  ],
+  "final_current_best_offer": {
+    "quote_id": "carolina",
+    "company_name": "Carolina Movers Co.",
+    "total": 2200,
+    "binding": false,
+    "source": "negotiated"
+  },
+  "final_quotes": {
+    "carolina": {
+      "company_name": "Carolina Movers Co.",
+      "total": 2200,
+      "binding": false,
+      "red_flag": {
+        "flagged": false,
+        "reason": null
+      },
+      "source": "negotiated"
+    },
+    "premier": {
+      "company_name": "Premier Relocation Services",
+      "total": 2800,
+      "binding": false,
+      "red_flag": {
+        "flagged": false,
+        "reason": null
+      },
+      "source": "negotiated"
+    },
+    "quickhaul": {
+      "company_name": "QuickHaul Express",
+      "total": 950,
+      "binding": false,
+      "red_flag": {
+        "flagged": true,
+        "reason": "$950 is 60% below the session median of $2,400"
+      },
+      "source": "negotiated"
+    }
+  }
+}

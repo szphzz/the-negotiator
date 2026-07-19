@@ -1,0 +1,31 @@
+CLOSER: Hello, I'm calling back on behalf of [customer name]. You quoted us $950 for the move on November 4th — I wanted to see if we can find a better number for that job.
+COUNTERPARTY (Suspicious lowball, tests red-flag discipline (QuickHaul Express)): Thank you for reaching out! Yes, the quoted price of $950 is a flat rate for the move. Don't worry about the details; it's all included in that rate. How else can I assist you?
+CLOSER: I appreciate the confirmation on the rate. However, I did want to mention that I've received another quote for the same move from Carolina Movers Co. for $2,400. Can you let me know if there's any room to adjust your rate or provide any flexibility on the fees associated with the move?
+COUNTERPARTY (Suspicious lowball, tests red-flag discipline (QuickHaul Express)): I understand that you're looking for the best deal possible. Our price of $950 is already very competitive for the service provided, and we generally stick to that flat rate. It includes quite a bit, so I wouldn't worry too much about any additional fees. If you have specific questions, I’d be happy to help clarify!
+CLOSER: Thank you for the clarification. Since your quote is significantly lower than the others, I’d like to discuss what's included in that rate to ensure there are no hidden fees. Can you walk me through the details to confirm that everything, especially regarding stairs, long carries, and any packing materials, are all covered in your quote?
+COUNTERPARTY (Suspicious lowball, tests red-flag discipline (QuickHaul Express)): I understand your concern about hidden fees. The $950 is indeed a flat rate for the move, which covers the basics. However, to be upfront, the rate does not include the fuel surcharge or any stairs fee if applicable. Additionally, we only accept cash payment for this service and unfortunately don't provide receipts. If you have any other questions or need more details, feel free to ask!
+CLOSER: I appreciate you providing more details about the quote. Given that there are additional fees like the fuel surcharge and stairs fee, would you be open to negotiating those costs? I’m looking for a total that reflects the best possible offer, especially considering I have that quote from Carolina Movers Co. for $2,400. Is there any flexibility on your deposit or any of those fees?
+COUNTERPARTY (Suspicious lowball, tests red-flag discipline (QuickHaul Express)): I understand your position and the desire to get the best deal. Unfortunately, we typically don’t negotiate on the flat rate we offer, including the additional costs like the fuel surcharge and stairs fee. Those are set based on our company policy. However, the $950 is still a great rate compared to the other quotes out there, and we aim to provide solid service for that price. If you're still interested, we’d be happy to assist with the move!
+CLOSER: I understand that your rates are set, but considering the competitive landscape, I think we can keep the conversation open. Is there any chance you could reduce the deposit amount or make it refundable? Even a minor adjustment in this area would help make the overall deal more appealing.
+COUNTERPARTY (Suspicious lowball, tests red-flag discipline (QuickHaul Express)): I appreciate your willingness to discuss this further, but I'm afraid the deposit amount is also set and non-refundable. It's part of our standard operating procedures. We believe the $950 flat rate is already quite competitive, especially given the service we're providing. If you have any other concerns or if there's something else I can assist you with, just let me know!
+CLOSER: Thank you for your transparency. It seems that we're at a standstill with the current offer. I’d like to confirm that your quoted price of $950 is the best you can provide. Is there a way to perhaps hold that price for a short period while I compare it with other options? I'd appreciate the opportunity to explore those before making a final decision.
+COUNTERPARTY (Suspicious lowball, tests red-flag discipline (QuickHaul Express)): I completely understand your need for time to compare options. While we cannot officially hold the price for you, I can note your interest in this offer. The $950 rate is valid for a limited time, so I recommend making a decision soon to secure it. If you have any other questions or need assistance, feel free to reach out!
+CLOSER: Thank you for clarifying that the rate is time-sensitive. While I appreciate the offer, it looks like I won't be able to find any wiggle room on pricing or fees with you today. To recap, I'm seeing your quote at $950, which includes the core services but has additional fees for the fuel surcharge and stairs, with a non-refundable deposit. 
+
+If anything changes on your end regarding flexibility, please let me know. I will hold off for now and consider our options. Thank you for your time! 
+
+```json
+{
+  "outcome_type": "held_firm",
+  "company_name": "QuickHaul Express",
+  "original_total": 950,
+  "negotiated_total": 950,
+  "binding": false,
+  "leverage_cited": null,
+  "concessions": [],
+  "red_flag": {
+    "flagged": true,
+    "reason": "$950 is 60% below the session median of $2,400"
+  }
+}
+```

@@ -139,6 +139,8 @@ def build_report(quotes_input: list, job_spec: dict) -> dict:
             q["total_estimate"] = q.get("negotiated_total") or q["original_total"]
         else:
             q.setdefault("total_estimate", None)
+            q.setdefault("binding", None)
+            q.setdefault("fees", [])
             q.setdefault("red_flag", {"flagged": False, "reason": None, "resolution": None})
             q.setdefault("rank", None)
 

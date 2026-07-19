@@ -1,0 +1,60 @@
+{
+  "origin": {
+    "address": "123 Main St, Sacramento, CA",
+    "zip": "95814",
+    "dwelling_type": "apartment",
+    "floor": 2,
+    "elevator": false
+  },
+  "destination": {
+    "address": "456 Oak Ave, Los Angeles, CA",
+    "zip": "90012",
+    "dwelling_type": "apartment",
+    "floor": 1,
+    "elevator": true
+  },
+  "distance_miles": 385,
+  "move_date": "2023-11-04",
+  "date_flexible": true,
+  "inventory": {
+    "num_bedrooms": 2,
+    "large_items": [
+      {
+        "name": "queen bed",
+        "quantity": 1,
+        "requires_disassembly": true
+      },
+      {
+        "name": "dresser",
+        "quantity": 1
+      },
+      {
+        "name": "sofa",
+        "quantity": 1
+      },
+      {
+        "name": "refrigerator",
+        "quantity": 1,
+        "requires_disassembly": false
+      }
+    ],
+    "estimated_boxes": 20,
+    "fragile_or_high_value_items": [
+      "flat-screen TV"
+    ]
+  },
+  "access_conditions": {
+    "origin_stairs_flights": 1,
+    "destination_stairs_flights": 0,
+    "origin_long_carry": false,
+    "destination_long_carry": false,
+    "parking_permit_required": false,
+    "narrow_doorways_or_hallways": false
+  },
+  "service_level": {
+    "service_type": "full_service",
+    "packing_materials_needed": true
+  },
+  "user_confirmed": true,
+  "spec_version_hash": "a8509316552c9d95"
+}

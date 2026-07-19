@@ -1,0 +1,40 @@
+CALLER: Hello, this is an AI calling on behalf of a customer to gather a quote for a residential move. The move is scheduled for November 4th, 2023, and it will be from an apartment located at 123 Main St, Sacramento, CA 95814 to another apartment at 456 Oak Ave, Los Angeles, CA 90012, which is a distance of 385 miles.
+
+The job includes moving items from a 2-bedroom apartment, which contains a queen bed that requires disassembly, a dresser, a sofa, and a refrigerator. The customer also plans to pack about 20 boxes and has a fragile flat-screen TV to be moved.
+
+There is one flight of stairs at the origin, but no stairs at the destination, and there are no long carry requirements or parking permits needed.
+
+Could you provide an itemized quote for this move?
+COUNTERPARTY (Stonewaller): Thank you for calling Reliable Movers LLC! I appreciate you sharing the details of the move. However, we do not provide quotes over the phone. Our policy requires an in-home or video estimate to evaluate all factors accurately and provide you with the best possible quote.
+
+Would you like to schedule an in-home or video estimate for your move on November 4th? I can assist you with that!
+CALLER: I understand that you require an in-home or video estimate to provide a quote. Yes, I would like to schedule that estimate. Could you please provide me with a specific day and time for the estimate, as well as a contact name to ask for?
+COUNTERPARTY (Stonewaller): Great! I'm glad to help you schedule that estimate. Could you please provide me with your availability for the estimate? I’ll do my best to find a suitable time that works for you.
+
+As for the contact name, you can simply ask for me, the office manager at Reliable Movers LLC. Once I have your preferred times, we can finalize the appointment!
+CALLER: Thank you! I’ll be flexible with timing to make it easier. How about scheduling the estimate for either tomorrow or the day after? Specifically, I’d like to know if you have availability in the afternoon on either day. Could you confirm a specific time?
+
+So to clarify, I’ll be asking for you, the office manager, when I call back for the estimate.
+COUNTERPARTY (Stonewaller): Thank you for your flexibility! Let me check our schedule for availability in the afternoon for the next two days. 
+
+For tomorrow, we have openings at 1:00 PM and 3:00 PM. For the following day, we have a slot available at 2:00 PM. Could you let me know which time would work best for you? 
+
+And yes, just ask for me, the office manager, when you call back for the estimate. I look forward to helping you with your move!
+CALLER: Let's schedule the estimate for tomorrow at 1:00 PM. That works perfectly for me. 
+
+Just to confirm, I will be calling back tomorrow at 1:00 PM to ask for you, the office manager at Reliable Movers LLC. Thank you for your assistance!
+COUNTERPARTY (Stonewaller): Perfect! I've scheduled your estimate for tomorrow at 1:00 PM. Feel free to call back at that time and just ask for me, the office manager at Reliable Movers LLC. 
+
+Thank you for your cooperation, and I look forward to assisting you with your move tomorrow! If you have any other questions in the meantime, don’t hesitate to ask. Have a great day!
+CALLER: Thank you for your help! I appreciate you scheduling the estimate for tomorrow at 1:00 PM and providing your name to ask for. I have everything I need right now. 
+
+Have a great day, and I look forward to speaking with you again tomorrow! 
+
+```json
+{
+  "outcome_type": "callback_commitment",
+  "callback_by": "tomorrow 1pm",
+  "contact_name": "office manager",
+  "contact_number": null
+}
+```

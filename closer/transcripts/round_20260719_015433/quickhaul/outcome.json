@@ -1,0 +1,13 @@
+{
+  "outcome_type": "held_firm",
+  "company_name": "QuickHaul Express",
+  "original_total": 950,
+  "negotiated_total": 950,
+  "binding": false,
+  "leverage_cited": null,
+  "concessions": [],
+  "red_flag": {
+    "flagged": true,
+    "reason": "$950 is 60% below the session median of $2,400"
+  }
+}

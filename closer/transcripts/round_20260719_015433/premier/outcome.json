@@ -1,0 +1,18 @@
+{
+  "outcome_type": "held_firm",
+  "company_name": "Premier Relocation Services",
+  "original_total": 2800,
+  "negotiated_total": 2800,
+  "binding": false,
+  "leverage_cited": {
+    "competitor_total": 2400,
+    "competitor_binding": false,
+    "description": "competing quote from Carolina Movers Co. for the same move"
+  },
+  "concessions": [],
+  "fees": [],
+  "red_flag": {
+    "flagged": false,
+    "reason": null
+  }
+}

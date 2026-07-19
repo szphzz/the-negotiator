@@ -1,0 +1,43 @@
+CLOSER: Hello! I'm calling on behalf of [customer name]. You quoted us $2,800 for the move on November 4th — I'm calling back to see if we can find a better number. 
+
+I also wanted to mention that I have a competing quote for $2,400 from Carolina Movers Co. for the same move. Can you match or beat that?
+COUNTERPARTY (Firm, holds price (Premier Relocation Services)): Thank you for reaching out! I appreciate you considering Premier Relocation Services for your move. Our quote of $2,800 reflects the high level of service we provide, and I can't match a bare-bones quote like the one from Carolina Movers Co. 
+
+However, I understand that you're looking for some adjustments. As a goodwill gesture, I can drop the $150 guaranteed delivery window fee from our total. This would bring your new total to $3,500. Would that work for you?
+CLOSER: I appreciate your willingness to adjust the fee, but the new total of $3,500 is still above the competing quote from Carolina Movers Co. at $2,400. 
+
+Could you consider matching that $2,400 number instead? I believe you offer great services, and I’d prefer to go with you if we can align on price.
+COUNTERPARTY (Firm, holds price (Premier Relocation Services)): I understand your position, and I truly appreciate your preference for Premier Relocation Services. However, I can't match the $2,400 quote from Carolina Movers Co. Our price of $2,800 reflects the quality and level of service we provide. 
+
+I can keep our base price and drop the guaranteed delivery window fee, bringing you to $3,500, but I can't go lower than that. I hope you can see the value in choosing us for your relocation. Is there anything else I can assist you with or clarify?
+CLOSER: I appreciate your explanation regarding the quality of service, and I completely understand where you're coming from. However, the difference between $2,800 and $2,400 is substantial. 
+
+As it stands, I’d really like to find a solution that allows us to work together. Would you be able to waive any other fees, perhaps the fuel surcharge, or is there room to discuss a more flexible deposit structure? Even a small concession could help bridge the gap.
+COUNTERPARTY (Firm, holds price (Premier Relocation Services)): I completely understand that the price difference is significant, and I appreciate your desire to work with us. However, I have to stand firm on the base price of $2,800 as well as the other add-ons. I cannot waive the fuel surcharge or adjust the deposit structure at this time. 
+
+The best I can do is drop the guaranteed delivery window fee, bringing your total to $3,500. I truly believe that our services justify the investment, and I hope you'll consider the value we offer. Let me know how you'd like to proceed!
+CLOSER: Thank you for clarifying your position. I appreciate your commitment to quality service, but unfortunately, the total of $3,500 is still higher than the competing quote from Carolina Movers Co. at $2,400. 
+
+It seems that the price won’t be adjusted at this time, which I understand. I’ll need to discuss this with my customer to see what their preferences are moving forward. 
+
+Thank you for your time and assistance today! 
+COUNTERPARTY (Firm, holds price (Premier Relocation Services)): Thank you for understanding, and I appreciate you considering Premier Relocation Services for your move. I completely respect your need to discuss this with your customer. If you have any further questions or if there's anything else I can assist with, please feel free to reach out. I hope we have the opportunity to work together, and I wish you the best with your decision. Have a great day!
+CLOSER: Thank you! I appreciate your understanding and support. I’ll follow up with my customer and let you know if we have any further questions or if we decide to move forward. Have a great day as well! 
+
+```json
+{
+  "outcome_type": "held_firm",
+  "company_name": "Premier Relocation Services",
+  "original_total": 2800,
+  "negotiated_total": 2800,
+  "binding": false,
+  "leverage_cited": {
+    "competitor_total": 2400,
+    "competitor_binding": false,
+    "description": "competing quote from Carolina Movers Co. for the same move"
+  },
+  "concessions": [],
+  "fees": [],
+  "red_flag": { "flagged": false, "reason": null }
+}
+```
