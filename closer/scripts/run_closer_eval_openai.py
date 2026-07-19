@@ -235,6 +235,40 @@ def grade(client, scenario_key: str, transcript: str, extracted: dict) -> dict:
     return result or {"error": "evaluator did not return valid JSON", "raw": result_text}
 
 
+def check_unresolved_offer(transcript: str, extracted: dict | None, original_total: float | None) -> list:
+    """Deterministic safety net for the 'never let a concrete number go unlogged' rule
+    in closer_agent.md. Catches the case where the counterparty stated a real dollar
+    figure below the original total somewhere on the call, but the extracted outcome
+    still claims no movement happened at all (held_firm / documented_decline with
+    negotiated_total left null or unchanged). This is a heuristic - it flags for human
+    review rather than silently rewriting the outcome, since a $ mention isn't always
+    the final offer (it could be a fee being discussed, not the total)."""
+    if not extracted or original_total is None:
+        return []
+
+    counterparty_lines = [line for line in transcript.splitlines() if line.startswith("COUNTERPARTY")]
+    amounts = []
+    for line in counterparty_lines:
+        amounts.extend(float(m.replace(",", "")) for m in re.findall(r"\$([\d,]+(?:\.\d+)?)", line))
+    lower_offers = [a for a in amounts if a < original_total]
+    if not lower_offers:
+        return []
+
+    outcome_type = extracted.get("outcome_type")
+    negotiated_total = extracted.get("negotiated_total")
+    no_movement_logged = negotiated_total is None or negotiated_total == extracted.get("original_total")
+
+    if outcome_type in ("held_firm", "documented_decline") and no_movement_logged:
+        return [
+            f"Counterparty stated ${lower_offers[-1]:,.0f} on the call (below the "
+            f"${original_total:,.0f} original), but the outcome logs '{outcome_type}' "
+            f"with negotiated_total={negotiated_total!r} - a concrete offer may have "
+            f"been left unresolved. See closer_agent.md: 'Never let a concrete number "
+            f"go unlogged.'"
+        ]
+    return []
+
+
 def save_run(scenario_key: str, transcript: str, extracted: dict, grading: dict) -> Path:
     TRANSCRIPTS_DIR.mkdir(parents=True, exist_ok=True)
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -267,6 +301,17 @@ def main():
 
     print("\n--- GRADING ---")
     result = grade(client, args.scenario, transcript, extracted)
+
+    target_key = SCENARIOS[args.scenario]["target_quote_key"]
+    original_quote = GATHERED_QUOTES.get(target_key)
+    original_total = original_quote["original_total"] if original_quote else None
+    consistency_warnings = check_unresolved_offer(transcript, extracted, original_total)
+    if consistency_warnings:
+        result["consistency_warnings"] = consistency_warnings
+        print("\n--- CONSISTENCY CHECK (deterministic, not the LLM grader) ---")
+        for warning in consistency_warnings:
+            print(f"  - {warning}")
+
     print(json.dumps(result, indent=2))
 
     run_dir = save_run(args.scenario, transcript, extracted, result)

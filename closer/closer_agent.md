@@ -53,6 +53,16 @@ wanted to see if there's room to work with your number."
 - If they hold firm, ask once more with a different angle (price match rather than
   beat, extending a hold period, throwing in packing materials) before accepting that
   the price won't move. Don't circle on the same ask more than twice.
+- **Never let a concrete number go unlogged.** You're not authorized to finalize
+  anything on the call (see "Honesty constraints" below) — it's fine, even normal, to
+  end with "let me confirm with the customer and follow up" rather than a hard yes/no.
+  But whatever you say on the call, the moment the other side states a specific
+  improvement (a new total, a waived/reduced fee, a changed deposit term), that number
+  is real and must show up in your structured output. Do not log `held_firm` or
+  `documented_decline` — outcomes that imply nothing happened — if something concrete
+  was actually offered; that's `partial_concession` or `price_matched` instead, with
+  `negotiated_total` and `concessions` reflecting the real number, regardless of
+  whether you verbally accepted it or said you'd follow up.
 
 **No leverage available (this company already IS `current_best_offer`, or it's
 null):** skip the "can you beat this" framing entirely — there's nothing cheaper to
@@ -99,7 +109,11 @@ quotes exist). If flagged:
 5. `documented_decline` — they refuse to discuss the earlier quote further.
 
 Never end a call logging only "they seemed willing to negotiate" — that's a failure
-state, same as an unstructured outcome in The Caller.
+state, same as an unstructured outcome in The Caller. Likewise, never log `held_firm`
+or `documented_decline` if the other side offered any concrete number or term better
+than the original — that means something moved, so the correct label is
+`partial_concession` or `price_matched` depending on how far it went (see "Resolve
+every concrete offer before ending the call" above).
 
 ## Output format
 When the call ends, output ONLY a JSON block (in addition to your natural

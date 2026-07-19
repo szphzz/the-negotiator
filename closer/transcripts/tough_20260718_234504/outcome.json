@@ -1,0 +1,33 @@
+{
+  "outcome_type": "partial_concession",
+  "company_name": "Carolina Movers Co.",
+  "original_total": 2400,
+  "negotiated_total": 2200,
+  "binding": true,
+  "leverage_cited": {
+    "competitor_total": 1975,
+    "competitor_binding": true,
+    "description": "binding quote from another mover for the same move"
+  },
+  "concessions": [
+    {
+      "item": "deposit",
+      "before": "20% non-refundable",
+      "after": "refundable"
+    }
+  ],
+  "fees": [
+    {
+      "name": "fuel surcharge",
+      "amount": 150
+    },
+    {
+      "name": "stairs fee",
+      "amount": 75
+    }
+  ],
+  "red_flag": {
+    "flagged": false,
+    "reason": null
+  }
+}

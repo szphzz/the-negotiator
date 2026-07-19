@@ -1,0 +1,29 @@
+CLOSER: Hello, this is an AI assistant calling on behalf of the customer. I'm reaching out regarding the earlier quote you provided. You quoted us $2,400 for the move on August 15, 2026 — I'm calling back to see if we can find a better number.
+COUNTERPARTY (Will match if pushed (Carolina Movers Co.)): Hello! Thank you for following up. I understand that you're looking for a better rate. We quoted $2,400 plus $150 for fuel and $75 for stairs, which is a solid rate considering the services included. If you have a competing quote in the range of $1,975 to $2,000, that’s definitely a tight margin for us to work with. Can you share more about that quote?
+CLOSER: I appreciate your prompt response. I do have a binding quote of $1,975 from another mover for the same move. Could you beat that number or at least match it? I believe it would be beneficial for both sides to find a solution that works.
+COUNTERPARTY (Will match if pushed (Carolina Movers Co.)): I understand where you're coming from, and I appreciate you sharing that quote. However, we have a consistent quality of service that comes with our pricing. If you can hold firm at that number, I could bring our offer down to $2,200 while still maintaining the quality and reliability that we pride ourselves on. Would that work for you?
+CLOSER: Thank you for the offer of $2,200. While I appreciate the willingness to negotiate, I still have the quote for $1,975. Is there any flexibility on the overall rate or possibly on fees like the fuel surcharge or stairs fee? Getting closer to that $1,975 would be ideal for me to consider moving forward with your company.
+COUNTERPARTY (Will match if pushed (Carolina Movers Co.)): I understand that you're looking for the best possible deal, and I appreciate your position. While I can't go below $2,200 for the overall rate, I'm willing to make the deposit refundable rather than non-refundable as a gesture of goodwill. This way, if anything changes on your end, you'll have that flexibility. Would that help you feel more comfortable in moving forward with us at $2,200?
+CLOSER: I appreciate your flexibility on the deposit. The offer of a refundable deposit is a nice touch; however, the total of $2,200 is still above the competing quote I mentioned. Is there any possibility to further adjust the total price, or possibly waive other fees, such as the $150 fuel surcharge? Any additional movement would help me consider your offer more seriously.
+COUNTERPARTY (Will match if pushed (Carolina Movers Co.)): I completely understand your position and appreciate your consideration. Unfortunately, I can't waive the fuel surcharge as it's a necessary part of our operating costs, and I can't lower the total below $2,200. Our rates reflect our commitment to providing a reliable and high-quality moving service. I hope you can understand that. If you decide to proceed with us, I can definitely offer the refundable deposit option. Is that something you might be willing to accept?
+CLOSER: Thank you for clarifying the situation. I understand your stance on the fuel surcharge and the overall pricing. As it stands, I'm unable to commit to the $2,200 with the given circumstances. If there are no further adjustments available on the price or fees, I may have to consider other options. Could we possibly explore a callback if any changes do come through on your end?
+COUNTERPARTY (Will match if pushed (Carolina Movers Co.)): I completely understand and respect your decision. If you decide to explore other options, that’s perfectly fine. I would be happy to keep the lines of communication open. If there are any changes or adjustments in the future, I can certainly reach out to you. Please don't hesitate to call back if you have any other questions or if there's anything else we can do for you. Thank you for considering Carolina Movers Co., and I hope we have the chance to work together!
+CLOSER: Thank you for your understanding. I appreciate the willingness to keep communication open. At this moment, I will evaluate the other options available. If anything changes, I will definitely reach back out. Thank you for your time today! 
+
+```json
+{
+  "outcome_type": "documented_decline",
+  "company_name": "Carolina Movers Co.",
+  "original_total": 2400,
+  "negotiated_total": null,
+  "binding": true,
+  "leverage_cited": {
+    "competitor_total": 1975,
+    "competitor_binding": true,
+    "description": "binding quote from another mover for the same move"
+  },
+  "concessions": [],
+  "fees": [],
+  "red_flag": { "flagged": false, "reason": null }
+}
+```
