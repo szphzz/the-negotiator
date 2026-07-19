@@ -1,4 +1,4 @@
-# The Negotiator
+# Negotiating Moves in California Using Voice Agents
 
 Submission for **Challenge 01: The Negotiator**, Hack-Nation's 6th Global AI Hackathon
 (in collaboration with MIT Club of Northern California, MIT Club of Germany, and
