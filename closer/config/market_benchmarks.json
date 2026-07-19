@@ -1,0 +1,48 @@
+{
+  "vertical": "residential_moving",
+  "description": "Vertical-specific negotiation and red-flag parameters. Swap this file (and job_spec.schema.json) to retarget the whole system at a different phone-priced market - the agents and eval scripts should not need code changes.",
+
+  "red_flag_rule": {
+    "description": "A quote is flagged as a potential red flag, not a win, when either condition holds.",
+    "session_comparison": {
+      "priority": "primary - use this whenever 3 or more quotes have been gathered for the same job spec",
+      "threshold_pct_below_median": 30,
+      "method": "flag any quote whose total_estimate is 30% or more below the median total_estimate of all quotes gathered for this job"
+    },
+    "static_benchmark_fallback": {
+      "priority": "fallback - use only when fewer than 3 quotes exist for this job",
+      "source": "FMCSA consumer guidance + moveBuddha aggregated quotes for comparable in-state residential moves",
+      "note": "Ranges below are illustrative starting points for a ~45-mile, 2-bedroom, standard-service move (the Rock Hill -> Charlotte reference case). Replace with your own benchmark data source per market size and distance band before relying on this in production.",
+      "reference_range_usd": { "low": 1158, "high": 6506, "median_estimate": 2200 },
+      "threshold_pct_below_reference_median": 30
+    }
+  },
+
+  "negotiation_levers": [
+    "cite a specific competing binding quote and ask to match or beat it",
+    "ask for a price match without naming the competitor",
+    "push on deposit percentage and refundability",
+    "push on fuel surcharge and stairs/long-carry fees specifically, not just the total",
+    "ask for packing materials or an extra service thrown in at no charge instead of a price cut",
+    "ask whether today's number is honored for 48-72 hours to allow comparison shopping"
+  ],
+
+  "fee_taxonomy": [
+    "fuel_surcharge",
+    "stairs_fee",
+    "long_carry_fee",
+    "overtime_hourly_rate",
+    "packing_materials",
+    "deposit",
+    "cancellation_fee",
+    "insurance_valuation_coverage"
+  ],
+
+  "outcome_types": [
+    "price_matched",
+    "partial_concession",
+    "held_firm",
+    "callback_commitment",
+    "documented_decline"
+  ]
+}

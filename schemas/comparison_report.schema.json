@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ComparisonReport",
+  "description": "The Closer's final output: every gathered quote (pre- and post-negotiation), ranked, with transcript evidence and a recommended deal in plain language.",
+  "type": "object",
+  "required": ["job_spec_version_hash", "quotes", "recommended_quote_id", "recommendation_explanation", "generated_at"],
+  "properties": {
+    "job_spec_version_hash": {
+      "type": "string",
+      "description": "Must match the spec_version_hash of the confirmed job spec used on every call - proves all quotes are for the same job."
+    },
+    "quotes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["quote_id", "company_name", "call_outcome_type", "total_estimate", "binding", "fees", "red_flag", "transcript_refs", "rank"],
+        "properties": {
+          "quote_id": { "type": "string" },
+          "company_name": { "type": "string" },
+          "company_phone": { "type": "string" },
+          "call_outcome_type": {
+            "type": "string",
+            "enum": ["itemized_quote", "callback_commitment", "documented_decline"],
+            "description": "The Caller's original outcome type for this company."
+          },
+          "original_total": { "type": "number", "description": "Total from The Caller's call, before negotiation." },
+          "negotiated_total": { "type": ["number", "null"], "description": "Total after The Closer's callback, if a negotiation call occurred." },
+          "negotiation_outcome_type": {
+            "type": ["string", "null"],
+            "enum": ["price_matched", "partial_concession", "held_firm", "callback_commitment", "documented_decline", null]
+          },
+          "total_estimate": { "type": "number", "description": "The final number used for ranking - negotiated_total if present, else original_total." },
+          "binding": { "type": "boolean" },
+          "fees": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "amount": { "type": "number" },
+                "condition": { "type": "string", "description": "e.g. 'only if truck can't park within 75ft' - required for conditional fees." }
+              },
+              "required": ["name", "amount"]
+            }
+          },
+          "concessions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "item": { "type": "string" },
+                "before": { "type": "string" },
+                "after": { "type": "string" }
+              }
+            }
+          },
+          "deposit_required": { "type": ["number", "null"] },
+          "deposit_refundable": { "type": ["boolean", "null"] },
+          "cancellation_policy": { "type": ["string", "null"] },
+          "red_flag": {
+            "type": "object",
+            "required": ["flagged"],
+            "properties": {
+              "flagged": { "type": "boolean" },
+              "reason": { "type": ["string", "null"] },
+              "resolution": { "type": ["string", "null"], "description": "What the Closer found when it probed a flagged quote - e.g. confirmed missing fees, or reassured after questioning." }
+            }
+          },
+          "transcript_refs": {
+            "type": "array",
+            "description": "Paths or IDs pointing to the call transcript(s) this quote's data came from - the original Caller call and, if applicable, the Closer callback.",
+            "items": { "type": "string" }
+          },
+          "rank": { "type": "integer", "description": "1 = best deal. Ties broken by binding status, then by red_flag.flagged (unflagged ranks above flagged at the same price)." }
+        }
+      }
+    },
+    "recommended_quote_id": { "type": "string", "description": "quote_id of the recommended deal - not necessarily the lowest total_estimate if it's flagged or non-binding." },
+    "recommendation_explanation": {
+      "type": "string",
+      "description": "Plain-language explanation of why this quote is recommended, citing specific transcript evidence (e.g. 'lowest binding total after negotiation; QuickHaul's lower number was flagged as missing fuel and stairs fees, confirmed in callback transcript')."
+    },
+    "generated_at": { "type": "string", "format": "date-time" }
+  }
+}

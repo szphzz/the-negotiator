@@ -1,0 +1,36 @@
+CALLER: Hello, this is an AI assistant calling on behalf of a customer named [customer name]. I’m looking to get a quote for a residential move scheduled for August 15, 2026. 
+
+The move is from an apartment located at 123 Main St, Rock Hill, SC 29730, which is on the 2nd floor without an elevator, to another apartment at 456 Oak Ave, Charlotte, NC 28202, which is on the 1st floor with an elevator. The distance between the two locations is approximately 45 miles.
+
+The inventory includes:
+- 2 bedrooms worth of belongings,
+- 1 sofa (does not require disassembly),
+- 1 queen bed frame (requires disassembly),
+- 1 refrigerator (does not require disassembly),
+- An estimated 25 boxes,
+- Fragile or high-value items including framed art and a TV.
+
+Additionally, there is 1 flight of stairs at the origin and a long carry at the destination. I would like to get an itemized quote for this move. Could you help me with that?
+COUNTERPARTY (Stonewaller): Thank you for reaching out! I appreciate the details you provided about the upcoming move. However, I want to let you know that at Reliable Movers LLC, we do not provide quotes over the phone. To give you the most accurate estimate, we require either an in-home or a video estimate.
+
+Would you like to schedule an in-home estimate, or we can set up a video estimate at your convenience? Please let me know what works best for you!
+CALLER: I understand that you require an in-home or video estimate to provide a quote. I would like to schedule one of those options to move forward. Could you let me know your availability for an in-home or video estimate? Additionally, who should I ask for when I follow up, and what is the best contact number for that?
+COUNTERPARTY (Stonewaller): Great! I’d be happy to help you schedule an in-home or video estimate. Could you please provide me with a few times that work for you, and I will do my best to accommodate your schedule?
+
+As for follow-ups, you can ask for me, the office manager, and you can reach me directly at this number. I will ensure that all your information is noted so we can provide you with the best service possible. Just let me know your available times, and we’ll get everything set up!
+CALLER: Thank you for your assistance! I am available for an in-home or video estimate on any day within the next week. Could we possibly schedule for this coming Tuesday at either 10 AM or 2 PM? 
+
+Please confirm if that works for you, and I will note that I should ask for you, the office manager, when I follow up.
+COUNTERPARTY (Stonewaller): Thank you for your flexibility! Let's go ahead and schedule your estimate for this coming Tuesday at 10 AM. I’ll make a note of that. 
+
+If anything changes or if you have any further questions, feel free to reach out. And yes, when you follow up, please ask for me, the office manager. I’m looking forward to helping you with your move!
+CALLER: Thank you for scheduling the estimate for this coming Tuesday at 10 AM. I appreciate your assistance. I’ll be sure to ask for you, the office manager, when I follow up. 
+
+I look forward to the estimate and the possibility of working with Reliable Movers LLC. Have a great day! 
+
+{
+  "outcome_type": "callback_commitment",
+  "callback_by": "Tuesday at 10 AM",
+  "contact_name": "office manager",
+  "contact_number": "provided"
+}
