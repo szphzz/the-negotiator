@@ -1,0 +1,123 @@
+CALLER: Hello, I'm calling on behalf of a customer named [customer name]. I'm looking to get a quote for a residential move scheduled for August 15, 2026. The origin zip is 29730, located in Rock Hill, SC, and the destination zip is 28202, in Charlotte, NC. The distance between the two locations is approximately 45 miles.
+
+The move involves a two-bedroom apartment. The inventory includes one sofa, one queen bed frame that requires disassembly, and one refrigerator. The customer has an estimated 25 boxes, including fragile items like framed art and a TV.
+
+At the origin, there is one flight of stairs, and at the destination, there is an elevator but a long carry involved. There is no long carry at the origin. They require full-service moving with packing materials needed and insurance valuation coverage.
+
+Could you provide an itemized quote for this move?
+COUNTERPARTY (Hard-sell upseller): Thank you for reaching out! I'd be happy to provide you with a quote for your customer's upcoming move. Based on the details you've provided, here’s an initial estimate:
+
+**Base moving cost:** $2,800
+
+As you requested full-service moving, here are some recommended add-ons to ensure a smooth and secure move:
+
+1. **Full-value insurance coverage:** This provides extensive coverage for valuable items. (+$300)
+2. **"White glove" packing service:** This includes careful packing of all items, especially those fragile ones like the framed art and TV. (+$400)
+3. **Guaranteed delivery window:** This offers assurance on the timing of the move. (+$150)
+
+So when you total it up, the complete estimate, including all add-ons, would come to **$3,650**.
+
+Now, I want to mention that we only have one truck left available this week, and I'd recommend that your customer books today to lock this rate in. Would your customer like to proceed with the booking? If you have any questions or hesitations, I'm here to help!
+CALLER: Thank you for the information. Just to clarify, could you provide more details about the estimate? 
+
+Is that a binding or non-binding estimate? Also, could you break down what's included in that base cost, specifically regarding labor, truck, fuel surcharge, and materials? Are there any separate charges for the stairs or the long carry? 
+
+Additionally, is there a deposit required, and is it refundable? Lastly, could you tell me about your cancellation policy?
+COUNTERPARTY (Hard-sell upseller): I appreciate your thoroughness! Let me clarify the details of the estimate and break everything down for you:
+
+### Estimate Type
+- The quoted price of **$2,800** is a **non-binding estimate**. This means the final cost could vary based on the actual weight or volume of the items moved and any additional services selected.
+
+### Base Cost Breakdown
+The base cost of **$2,800** typically includes:
+- **Labor:** Professional movers for handling the loading, transporting, and unloading of the items.
+- **Truck Rental:** Vehicle suited for the 45-mile move distance with adequate space for your items.
+- **Fuel Surcharge:** This is usually included in the base charge to account for fuel costs incurred during transit.
+- **Materials:** Basic moving supplies for loading and securing items, though premium packing materials are typically an add-on.
+
+### Additional Charges
+- **Stairs at Origin:** Since there is one flight of stairs at the origin, there could be a nominal fee included in the base price to account for that; however, typically no separate charge.
+- **Long Carry at Destination:** The long carry at the destination may lead to an additional charge if it requires more labor hours. That would be assessed at the time of the move.
+
+### Deposit and Cancellation
+- **Deposit Requirement:** A deposit is required to confirm the booking, and this is normally around 20% of the total estimated cost.
+- **Refund Policy:** The deposit is generally refundable if the cancellation is made within a specific time frame (usually 48 hours before the move).
+- **Cancellation Policy:** If canceled outside of that window, there may be a small cancellation fee.
+
+Given that we only have one truck left this week, I'd highly encourage your customer to consider booking today to lock in this estimate. I can only hold this price for another **10 minutes** before it needs to be reassessed. How would you like to proceed?
+CALLER: I appreciate the detailed breakdown! Just to confirm, you mentioned that the total estimate of **$2,800** is a non-binding estimate. 
+
+To summarize:
+- Includes labor and truck costs, with the fuel surcharge typically included as well.
+- The stairs at the origin are accounted for in the base price, and the long carry charge will be assessed at the time of the move.
+- A deposit is required, which is refundable if canceled within 48 hours, with a possible cancellation fee if the notice is less than that.
+
+Could you please specify the amount of the deposit required? And is there anything else that might impact the final pricing that we should be aware of? Once I have the final details, I'll let you know how we want to proceed!
+COUNTERPARTY (Hard-sell upseller): Absolutely, you've summarized everything perfectly! 
+
+To clarify further: 
+- The **deposit required** to secure the booking is typically **20% of the total estimated cost**. For the $2,800 estimate, that would be **$560**.
+
+As for any additional factors that might impact the final pricing:
+- **Additional Items:** If there are more items or larger pieces than initially estimated, that could affect the overall cost.
+- **Special Requests:** Any unique requirements, like moving specialty items (e.g., pianos or large safes), may incur extra charges.
+- **Access Issues:** If there are unexpected access issues that weren't mentioned (like a steep incline or difficult parking), that could be discussed closer to the moving date.
+
+It's essential to confirm these aspects during a pre-move evaluation, but typically these considerations are covered during the initial quote. 
+
+Since we have one truck left this week, I recommend acting quickly to secure this rate. We can only hold this price for another **10 minutes**. How would you like to proceed? If you're not ready to book, I can certainly schedule a callback to continue this conversation!
+CALLER: Thank you for the clarification regarding the deposit and potential factors affecting the final pricing. For the pricing structure: 
+
+- Deposit: **$560** based on the $2,800 estimate.
+- Follow-up assessment on any additional items or special requests during a pre-move evaluation.
+
+Since I am gathering quotes for my customer, I need to compare some options before proceeding with any booking. Could you confirm if the quoted price will still hold if my customer decides within **48 hours**? 
+
+If so, I’d like to schedule a follow-up callback to finalize any decisions after reviewing all the quotes. Can I get a specific window for when to expect your call?
+COUNTERPARTY (Hard-sell upseller): I completely understand the need to compare options before making a decision. 
+
+To confirm: the quoted price of **$2,800** can generally hold for **48 hours** as long as the booking is not confirmed within that timeframe. However, please note that the availability of our trucks could change, and the price might be reassessed if the call is made after that period.
+
+As for scheduling a follow-up callback, I'm happy to do that! Could you confirm a good time for us to reach out? We can schedule a callback for the same time tomorrow, or let me know a specific time that works best for you. 
+
+We want to ensure your customer has all the information they need to make a decision!
+CALLER: Thank you for confirming that the quoted price can hold for 48 hours, with the caveat regarding truck availability. 
+
+I'd like to schedule a callback for tomorrow around **2 PM** to discuss further and finalize any decisions. Could you please provide the name of the contact person who will be receiving the call, as well as the best phone number to reach them?
+COUNTERPARTY (Hard-sell upseller): Absolutely, I can schedule a callback for tomorrow at **2 PM**. 
+
+Please provide me with the name of the contact person who will be receiving the call, as well as the best phone number to reach them, and I’ll ensure our representative is ready to discuss further and assist with any questions. 
+
+We look forward to touching base and helping with your customer’s moving needs!
+CALLER: Thank you for your willingness to schedule a callback! The contact name will be [customer name], and the best phone number to reach them is **555-0100**.
+
+I appreciate your assistance, and I'm looking forward to reviewing the call in more detail tomorrow at 2 PM. Thank you for your help! 
+
+Here’s a summary of our call outcome:
+- Scheduled a callback for tomorrow at 2 PM.
+- Contact name: [customer name].
+- Contact number: 555-0100.
+
+Thank you again for your time!
+COUNTERPARTY (Hard-sell upseller): Thank you for providing all the details! I have successfully scheduled a callback for tomorrow at **2 PM** with **[customer name]** at **555-0100**. 
+
+Here’s a quick summary of our call outcome:
+- **Callback Scheduled:** Tomorrow at 2 PM.
+- **Contact Name:** [customer name].
+- **Contact Number:** 555-0100.
+
+I appreciate your time and look forward to discussing this further. If you have any more questions before the call, feel free to reach out. Have a great day, and we’ll be in touch tomorrow!
+CALLER: Thank you for confirming the callback schedule. I appreciate your assistance in gathering all the necessary details for my customer’s move. 
+
+If any questions arise in the meantime, I will reach out. Otherwise, I look forward to the follow-up call tomorrow at 2 PM. 
+
+Have a great day! 
+
+```json
+{
+  "outcome_type": "callback_commitment",
+  "callback_by": "tomorrow 2pm",
+  "contact_name": "[customer name]",
+  "contact_number": "555-0100"
+}
+```

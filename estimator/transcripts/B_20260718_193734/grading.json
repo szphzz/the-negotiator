@@ -1,0 +1,15 @@
+{
+  "scores": {
+    "completeness": 1,
+    "no_hallucination": 0,
+    "critical_field_coverage": 0,
+    "contradiction_handling": 0,
+    "conversation_efficiency": 1
+  },
+  "total": 3,
+  "failures": [
+    "Missing confirmation for some required fields such as estimated cubic feet and estimated weight lbs in the extracted JSON.",
+    "Inaccurate handling of stairs at origin, conflicting information, with the ground truth indicating 2 floors but the transcript implying up to 3 flights."
+  ],
+  "pass": false
+}

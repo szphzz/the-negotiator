@@ -1,0 +1,398 @@
+{
+  "search_request": {
+    "origin": {
+      "address": "123 Main St, Rock Hill, SC",
+      "zip": "29730"
+    },
+    "destination": {
+      "address": "456 Oak Ave, Charlotte, NC",
+      "zip": "28202"
+    },
+    "search_date": "2026-07-19"
+  },
+  "search_summary": {
+    "target_company_count": 5,
+    "maximum_company_count": 10,
+    "companies_returned": 5,
+    "review_source": "Google Places API (Place Details)",
+    "max_reviews_per_company": 40,
+    "review_age_limit_years": 2,
+    "search_status": "complete",
+    "note": "Company/candidate search is complete (34 candidates found, 5 selected for variety). Review collection per company is capped at 5 by the Google Places API itself (a hard platform limit, not a search shortfall) — see review_collection_status and limitations below."
+  },
+  "companies": [
+    {
+      "company_id": "MOV_001",
+      "company_name": "Smooth Move",
+      "contact": {
+        "address": "1461 Dave Lyle Blvd, Rock Hill, SC 29730, USA",
+        "phone": "(803) 366-6683",
+        "website": "http://gosmoothmove.com/"
+      },
+      "company_type": {
+        "classification": "local",
+        "local_moves": true,
+        "long_distance_moves": false,
+        "interstate_moves": false,
+        "service_area_verified": true
+      },
+      "google_profile": {
+        "rating": 4.9,
+        "total_review_count": 697,
+        "reviews_requested": 40,
+        "reviews_collected": 5,
+        "review_collection_status": "partial",
+        "oldest_review_collected": "6 months ago",
+        "newest_review_collected": "a month ago"
+      },
+      "reputation_analysis": {
+        "common_complaints": [],
+        "common_compliments": [
+          "professional, courteous, hardworking crews",
+          "careful handling of furniture, no damage",
+          "punctual / early arrival",
+          "flexible with date changes and delays",
+          "willing to repair prior damage caused by a previous mover"
+        ],
+        "pricing": {
+          "pricing_mentions_found": true,
+          "positive_price_mentions": ["\"There were no hidden fees\""],
+          "negative_price_mentions": [],
+          "hidden_fee_mentions": 0,
+          "quote_increase_mentions": 0,
+          "final_price_higher_than_quote_mentions": 0,
+          "pricing_pattern_summary": "low_evidence: only one explicit pricing comment in the sample, and it was positive (no hidden fees)."
+        },
+        "service": {
+          "damage_mentions": 0,
+          "missing_item_mentions": 0,
+          "late_arrival_mentions": 0,
+          "late_delivery_mentions": 0,
+          "cancellation_mentions": 0,
+          "communication_complaints": 0,
+          "communication_praise": 2,
+          "professionalism_praise": 5,
+          "careful_handling_praise": 4
+        },
+        "overall_summary": "All 5 sampled reviews were 5-star with no complaints; consistent praise for careful, professional, punctual crews. One review specifically credits Smooth Move with repairing damage from a prior (different) moving company."
+      },
+      "reviews": [
+        { "review_rating": 5, "review_date": "a month ago", "review_text": "Smooth Move made our moving experience truly go smoothly! Kelvin, Riley, Nathan, and Justin were so kind, helpful, and hardworking. They made sure that all of our furniture was well protected and packaged, worked efficiently, and finished in a timely manner.", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } },
+        { "review_rating": 5, "review_date": "2 months ago", "review_text": "After my original moving company canceled on me just two days before my move... Smooth Move stepped in right away... showed up with 6 guys and 2 trucks... professional, courteous, and extremely efficient.", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } },
+        { "review_rating": 5, "review_date": "a month ago", "review_text": "Local move was hassle free and quick. We had issue with our closing on new house which delayed the move in for a day, but Smooth Move was very accommodating and held our stuff one more night.", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } },
+        { "review_rating": 5, "review_date": "6 months ago", "review_text": "Nate, the coordinator did a great job, very responsive and had flexibility when we needed to change our date... crew arrived on time (early), had an organizational system, took good care of my items.", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } },
+        { "review_rating": 5, "review_date": "5 months ago", "review_text": "Nothing was broken and they even repaired my dresser which was broken by my previous movers... There were no hidden fees.", "signals": { "pricing_mentioned": true, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "missing_fields": ["long_distance_moves confirmation beyond website homepage text"],
+        "limitations": ["Only 5 of 697 total Google reviews were sampled (Places API hard cap), so reputation patterns are directionally indicative, not exhaustive."]
+      },
+      "sources": {
+        "google_reviews": "Google Places API (Place Details)",
+        "official_website": "http://gosmoothmove.com/"
+      }
+    },
+    {
+      "company_id": "MOV_002",
+      "company_name": "Two Men and a Truck Moving",
+      "contact": {
+        "address": "725 Cherry Rd #142, Rock Hill, SC 29732, USA",
+        "phone": "(803) 430-6809",
+        "website": "https://twomenandatruck.com/movers/sc/rock-hill"
+      },
+      "company_type": {
+        "classification": "national",
+        "local_moves": true,
+        "long_distance_moves": null,
+        "interstate_moves": null,
+        "service_area_verified": false
+      },
+      "google_profile": {
+        "rating": 4.5,
+        "total_review_count": 364,
+        "reviews_requested": 40,
+        "reviews_collected": 5,
+        "review_collection_status": "partial",
+        "oldest_review_collected": "a year ago",
+        "newest_review_collected": "2 months ago"
+      },
+      "reputation_analysis": {
+        "common_complaints": [
+          "property damage (tree branch, walls, floors, bed hardware, fireplace, flooring)",
+          "missed arrival window / late start",
+          "uneven crew effort (\"one member helped 20%\")",
+          "scheduling/deposit dispute (date sold after deposit taken)",
+          "hourly billing running far longer than expected on a flat-rate-sized job"
+        ],
+        "common_compliments": [
+          "professional, courteous crew (on the jobs that went well)",
+          "disassembly/reassembly of furniture",
+          "on-time arrival (on the jobs that went well)"
+        ],
+        "pricing": {
+          "pricing_mentions_found": true,
+          "positive_price_mentions": [],
+          "negative_price_mentions": ["hourly job (~$2,000) took 7 hours to load a 1,000 sq ft home, far longer than expected"],
+          "hidden_fee_mentions": 0,
+          "quote_increase_mentions": 0,
+          "final_price_higher_than_quote_mentions": 1,
+          "pricing_pattern_summary": "low_evidence on hidden fees specifically, but one clear case of hourly billing inflating the effective final cost via slow/inefficient crew work."
+        },
+        "service": {
+          "damage_mentions": 3,
+          "missing_item_mentions": 0,
+          "late_arrival_mentions": 1,
+          "late_delivery_mentions": 0,
+          "cancellation_mentions": 0,
+          "communication_complaints": 0,
+          "communication_praise": 0,
+          "professionalism_praise": 2,
+          "careful_handling_praise": 1
+        },
+        "overall_summary": "Mixed: 3 of 5 sampled reviews report property damage (tree branch, walls, floors, bed hardware, or a fireplace/flooring) — a repeated_pattern, not an isolated incident, within this small sample. The other 2 reviews are strongly positive on crew professionalism."
+      },
+      "reviews": [
+        { "review_rating": 2, "review_date": "a year ago", "review_text": "Crew missed the original arrival window, showed up at 10:30 instead of by 9:00 AM. Backed the truck into a tree, broke a branch. Numerous damages to shelves, bed, walls, floors. Crew forgot their tools and stripped screws on my bed.", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": true, "lateness": true, "communication_issue": false, "positive_service": false } },
+        { "review_rating": 1, "review_date": "4 months ago", "review_text": "Gave my credit card for a deposit and as soon as it processed she said sorry, that day has been taken... ended up busting my electric fireplace and ripping up flooring in my new place.", "signals": { "pricing_mentioned": true, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": true, "lateness": false, "communication_issue": true, "positive_service": false } },
+        { "review_rating": 1, "review_date": "3 months ago", "review_text": "Paid nearly $2,000... driver knocked down large tree branches with the truck... one mover went to the bathroom for at least 20 minutes while on the clock. Billed hourly, took the team 7 hours to load a 1,000 sq ft home.", "signals": { "pricing_mentioned": true, "price_amounts_found": [2000], "hidden_fees": false, "quote_increase": true, "damage": true, "lateness": false, "communication_issue": false, "positive_service": false } },
+        { "review_rating": 5, "review_date": "7 months ago", "review_text": "The two movers (Donald and Chris) were outstanding, professional and demonstrated exceptional customer service! The entire process was seamless.", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } },
+        { "review_rating": 5, "review_date": "2 months ago", "review_text": "Arrived on time and were so careful with all of our belongings. Helped disassemble our bed and put it back together once moved.", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "missing_fields": ["long_distance_moves", "interstate_moves"],
+        "limitations": [
+          "Only 5 of 364 total Google reviews were sampled (Places API hard cap).",
+          "Official website returned HTTP 403 to automated fetch, so long-distance/interstate service capability could not be verified from the site; not asserted from reviews either since none mentioned it."
+        ]
+      },
+      "sources": {
+        "google_reviews": "Google Places API (Place Details)",
+        "official_website": null
+      }
+    },
+    {
+      "company_id": "MOV_003",
+      "company_name": "Allied Van Lines (Rock Hill agent: Carey Moving & Storage)",
+      "contact": {
+        "address": "500 Corporate Blvd #88, Rock Hill, SC 29730, USA",
+        "phone": "(803) 262-0999",
+        "website": "https://www.allied.com/local/Rock-Hill-Moving-Company"
+      },
+      "company_type": {
+        "classification": "national",
+        "local_moves": true,
+        "long_distance_moves": true,
+        "interstate_moves": true,
+        "service_area_verified": true
+      },
+      "google_profile": {
+        "rating": 4.4,
+        "total_review_count": 79,
+        "reviews_requested": 40,
+        "reviews_collected": 5,
+        "review_collection_status": "partial",
+        "oldest_review_collected": "11 months ago",
+        "newest_review_collected": "2 months ago"
+      },
+      "reputation_analysis": {
+        "common_complaints": [
+          "confusing manifest / miscommunication about which items were moving",
+          "late delivery on a cross-country move (about a month late) with a disputed inconvenience-fee calculation"
+        ],
+        "common_compliments": [
+          "accurate, no-surprise quotes (mentioned twice)",
+          "in-person on-site assessment before quoting",
+          "strong communication and follow-up from named coordinators"
+        ],
+        "pricing": {
+          "pricing_mentions_found": true,
+          "positive_price_mentions": ["\"no surprise fees or anything\"", "\"their quote was spot on\""],
+          "negative_price_mentions": ["$100/day inconvenience fee for late delivery only applied to 6 of 7 days actually inconvenienced"],
+          "hidden_fee_mentions": 0,
+          "quote_increase_mentions": 0,
+          "final_price_higher_than_quote_mentions": 0,
+          "pricing_pattern_summary": "low_evidence overall; the sample actually skews positive on pricing accuracy, with one dispute over how a late-delivery compensation fee was calculated (not the quote itself)."
+        },
+        "service": {
+          "damage_mentions": 0,
+          "missing_item_mentions": 0,
+          "late_arrival_mentions": 0,
+          "late_delivery_mentions": 1,
+          "cancellation_mentions": 0,
+          "communication_complaints": 1,
+          "communication_praise": 3,
+          "professionalism_praise": 3,
+          "careful_handling_praise": 0
+        },
+        "overall_summary": "Skews positive, with explicit praise for accurate quoting and in-person assessments (relevant given this is a national/interstate carrier). One low_evidence but notable complaint: a cross-country shipment arrived about a month late with a disputed partial-week compensation calculation."
+      },
+      "reviews": [
+        { "review_rating": 3, "review_date": "4 months ago", "review_text": "Your appraiser, Tammy, had a more than average confusing visit as we tried to separate my wife's belongings with mine... the preliminary manifest included items I had pointed out were not going on the move.", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": true, "positive_service": false } },
+        { "review_rating": 5, "review_date": "2 months ago", "review_text": "Ray IS the reason I chose Allied Carey for my interstate move because Ray visited my condo in Charlotte to meet me in person so an accurate quote could be provided.", "signals": { "pricing_mentioned": true, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } },
+        { "review_rating": 5, "review_date": "5 months ago", "review_text": "Long distance move from NC to MN... Their quote was spot on, no surprise fees or anything and by far the most reasonable quote we received.", "signals": { "pricing_mentioned": true, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } },
+        { "review_rating": 5, "review_date": "6 months ago", "review_text": "John was a blessing to work with, very professional. Crews on both ends of the move were also great.", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } },
+        { "review_rating": 1, "review_date": "11 months ago", "review_text": "Furniture was supposed to arrive between June 30 and July 9 but I did not receive it until July 31. They compensated me $100/day but only applied it to 6 of 7 days I was inconvenienced.", "signals": { "pricing_mentioned": true, "price_amounts_found": [100], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": true, "communication_issue": false, "positive_service": false } }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "missing_fields": [],
+        "limitations": ["Only 5 of 79 total Google reviews were sampled (Places API hard cap)."]
+      },
+      "sources": {
+        "google_reviews": "Google Places API (Place Details)",
+        "official_website": "https://www.allied.com/local/Rock-Hill-Moving-Company"
+      }
+    },
+    {
+      "company_id": "MOV_004",
+      "company_name": "Hornet Moving",
+      "contact": {
+        "address": "6161 Brookshire Blvd, Charlotte, NC 28216, USA",
+        "phone": "(704) 620-2154",
+        "website": "https://hornetmovingnc.com/"
+      },
+      "company_type": {
+        "classification": "local",
+        "local_moves": true,
+        "long_distance_moves": false,
+        "interstate_moves": false,
+        "service_area_verified": true
+      },
+      "google_profile": {
+        "rating": 4.9,
+        "total_review_count": 6093,
+        "reviews_requested": 40,
+        "reviews_collected": 5,
+        "review_collection_status": "partial",
+        "oldest_review_collected": "5 months ago",
+        "newest_review_collected": "2 weeks ago"
+      },
+      "reputation_analysis": {
+        "common_complaints": [],
+        "common_compliments": [
+          "fast and efficient crews, even in extreme heat",
+          "careful handling of belongings",
+          "professional and friendly named crew members",
+          "accommodating around a weather-related reschedule",
+          "furniture reassembly"
+        ],
+        "pricing": {
+          "pricing_mentions_found": false,
+          "positive_price_mentions": [],
+          "negative_price_mentions": [],
+          "hidden_fee_mentions": 0,
+          "quote_increase_mentions": 0,
+          "final_price_higher_than_quote_mentions": 0,
+          "pricing_pattern_summary": "No pricing mentions in the sampled reviews."
+        },
+        "service": {
+          "damage_mentions": 0,
+          "missing_item_mentions": 0,
+          "late_arrival_mentions": 0,
+          "late_delivery_mentions": 0,
+          "cancellation_mentions": 0,
+          "communication_complaints": 0,
+          "communication_praise": 1,
+          "professionalism_praise": 5,
+          "careful_handling_praise": 3
+        },
+        "overall_summary": "All 5 sampled reviews were 5-star with no complaints of any kind; consistent praise for fast, careful, professional crews across a very large total review base (6,093)."
+      },
+      "reviews": [
+        { "review_rating": 5, "review_date": "5 months ago", "review_text": "Jay and Jessie were incredible. They worked very quickly and efficiently... All of my furniture and bags arrived safely. They even helped reassemble my bed frame and massage chair.", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } },
+        { "review_rating": 5, "review_date": "a month ago", "review_text": "Jeremiah and Gustavo did an amazing job for us today. They were so polite, professional and helpful.", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } },
+        { "review_rating": 5, "review_date": "4 months ago", "review_text": "Art, Chris and Curtis absolutely knocked it out of the ball park... they were early, extremely courteous and kind. So fast and attentive to our needs, loading and unloading.", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } },
+        { "review_rating": 5, "review_date": "2 weeks ago", "review_text": "Chase, Gustavo, and Nyhiem moved us super quickly today on probably one of Charlotte's hottest days. They handled all of our items with exceptional care.", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } },
+        { "review_rating": 5, "review_date": "5 months ago", "review_text": "We did have to reschedule because of the snow storm but they were super apologetic even though it wasn't their fault. Gregory and Andre did a fantastic job!!", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "missing_fields": [],
+        "limitations": ["Only 5 of 6,093 total Google reviews were sampled (Places API hard cap) — an especially small fraction given this company's review volume."]
+      },
+      "sources": {
+        "google_reviews": "Google Places API (Place Details)",
+        "official_website": "https://hornetmovingnc.com/"
+      }
+    },
+    {
+      "company_id": "MOV_005",
+      "company_name": "You Move Me Charlotte",
+      "contact": {
+        "address": "4300 Revolution Pk Dr, Charlotte, NC 28217, USA",
+        "phone": "(704) 533-4808",
+        "website": "https://charlotte.youmoveme.com/"
+      },
+      "company_type": {
+        "classification": "national",
+        "local_moves": true,
+        "long_distance_moves": true,
+        "interstate_moves": true,
+        "service_area_verified": true
+      },
+      "google_profile": {
+        "rating": 4.9,
+        "total_review_count": 1113,
+        "reviews_requested": 40,
+        "reviews_collected": 5,
+        "review_collection_status": "partial",
+        "oldest_review_collected": "5 months ago",
+        "newest_review_collected": "a month ago"
+      },
+      "reputation_analysis": {
+        "common_complaints": [],
+        "common_compliments": [
+          "professional, punctual, courteous crews",
+          "efficient — finished faster than the original time estimate on more than one job",
+          "careful handling of specialty/high-value items (pianos)",
+          "furniture disassembly/reassembly",
+          "repeat customers"
+        ],
+        "pricing": {
+          "pricing_mentions_found": true,
+          "positive_price_mentions": ["\"reasonably priced\""],
+          "negative_price_mentions": [],
+          "hidden_fee_mentions": 0,
+          "quote_increase_mentions": 0,
+          "final_price_higher_than_quote_mentions": 0,
+          "pricing_pattern_summary": "low_evidence: a single positive pricing comment, no negative pricing signals."
+        },
+        "service": {
+          "damage_mentions": 0,
+          "missing_item_mentions": 0,
+          "late_arrival_mentions": 0,
+          "late_delivery_mentions": 0,
+          "cancellation_mentions": 0,
+          "communication_complaints": 0,
+          "communication_praise": 1,
+          "professionalism_praise": 5,
+          "careful_handling_praise": 3
+        },
+        "overall_summary": "All 5 sampled reviews were 5-star with no complaints; notable for two separate mentions of jobs finishing faster than originally estimated without loss of care, and explicit handling of a specialty item (piano)."
+      },
+      "reviews": [
+        { "review_rating": 5, "review_date": "3 months ago", "review_text": "Andrew and Curtiss were both very friendly and definitely earned their money moving two player pianos for me this morning.", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } },
+        { "review_rating": 5, "review_date": "5 months ago", "review_text": "From the initial quote to the final box being unloaded, the entire experience was outstanding. They arrived exactly on time, were courteous and respectful throughout.", "signals": { "pricing_mentioned": true, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } },
+        { "review_rating": 5, "review_date": "a month ago", "review_text": "I've used You Move Me twice within the last year. They were reasonably priced, easy to schedule with, courteous and did a great job.", "signals": { "pricing_mentioned": true, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } },
+        { "review_rating": 5, "review_date": "a month ago", "review_text": "Jamieson, Brennan, Tymar, and Zack helped us with our move... completing what was estimated to be an 8 hour move in just 4 hours, without sacrificing attention to detail.", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } },
+        { "review_rating": 5, "review_date": "a month ago", "review_text": "“You Move Me” is the best moving company I have ever worked with... prompt, professional, courteous, and had a sense of humor too.", "signals": { "pricing_mentioned": false, "price_amounts_found": [], "hidden_fees": false, "quote_increase": false, "damage": false, "lateness": false, "communication_issue": false, "positive_service": true } }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "missing_fields": [],
+        "limitations": ["Only 5 of 1,113 total Google reviews were sampled (Places API hard cap)."]
+      },
+      "sources": {
+        "google_reviews": "Google Places API (Place Details)",
+        "official_website": "https://charlotte.youmoveme.com/"
+      }
+    }
+  ],
+  "limitations": [
+    "The Google Places API caps Place Details reviews at 5 per business regardless of how many total reviews exist — this is a hard platform limit, not a search shortfall. webscraper_agent.md's target of up to 40 reviews/company could not be met for any company in this run; every company is marked review_collection_status: \"partial\" as a result.",
+    "Long-distance/interstate service capability was verified via official website content where accessible (3 of 5 companies) or via explicit review text (Allied Van Lines); Two Men and a Truck's website blocked automated fetching (HTTP 403), so that field is left null/unverified rather than guessed.",
+    "34 total candidates were found near the origin and destination; 5 were selected for variety (mix of local independents and national franchises, and a deliberately lower-rated national brand for contrast) rather than simply the top 5 by rating, per the agent's Company Variety guidance."
+  ]
+}

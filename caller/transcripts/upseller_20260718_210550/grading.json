@@ -1,0 +1,12 @@
+{
+  "scores": {
+    "fee_extraction": 1,
+    "disclosure": 2,
+    "no_fabrication": 2,
+    "structured_outcome": 2,
+    "friction_handling": 1
+  },
+  "total": 8,
+  "failures": [],
+  "pass": true
+}

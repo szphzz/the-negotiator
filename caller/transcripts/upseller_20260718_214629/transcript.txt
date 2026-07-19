@@ -1,0 +1,80 @@
+CALLER: Hello, this is an AI calling on behalf of a customer named [customer name]. I'm looking to get a quote for a residential move scheduled for August 15, 2026. The origin zip code is 29730, located in Rock Hill, SC, and the destination zip code is 28202 in Charlotte, NC, which is a distance of 45 miles.
+
+The move involves a two-bedroom apartment. Here's a breakdown of the inventory: 
+
+- Large items include:
+  - 1 sofa (no disassembly required)
+  - 1 queen bed frame (requires disassembly)
+  - 1 refrigerator (no disassembly required)
+- An estimated 25 boxes will be moved.
+- There are fragile or high-value items like framed art and a TV.
+
+Access conditions at the origin include one flight of stairs, while the destination has no stairs but does have a long carry requirement. This customer is looking for full-service moving, including packing materials and insurance valuation coverage.
+
+Could you please provide an itemized quote for this move?
+COUNTERPARTY (Hard-sell upseller): Thank you for reaching out for a quote with Premier Relocation Services! I can provide a detailed quote based on your requirements for the move from Rock Hill, SC, to Charlotte, NC.
+
+For your two-bedroom apartment move, the base price will be **$2,800**. This includes the transportation of your items along with our standard packing materials.
+
+Now, to ensure your move goes as smoothly as possible, I recommend considering a few valuable add-ons:
+
+1. **Full-value insurance coverage**: This is essential, especially since you mentioned fragile items like framed art and a TV. It’s an additional **$300**.
+2. **"White glove" packing service**: This option includes careful packing of your belongings by our professional team. It would be an extra **$400**.
+3. **Guaranteed delivery window**: If you want to ensure that your items arrive on a specific date, we can offer this service for an additional **$150**.
+
+Now, I just wanted to let you know that we only have one truck left available this week, and to lock in this rate, I would highly recommend booking today. 
+
+If you're comparing quotes, I can hold this price for you, but only if you book within the next **10 minutes**. What do you think?
+CALLER: Thank you for the information! However, I need to clarify a few points before moving forward. 
+
+Is the base price of $2,800 a binding or non-binding estimate? Could you also provide a breakdown of what's included in this quote—specifically, labor, truck costs, fuel surcharge, and materials? 
+
+Additionally, are there any separate charges for the one flight of stairs at the origin or the long carry at the destination? 
+
+I’d also like to know if there is a deposit required, and whether it is refundable. Lastly, what’s your cancellation policy?
+
+Once I have all of that, I can help finalize the decision.
+COUNTERPARTY (Hard-sell upseller): I’m glad you’re seeking clarification! Let me break everything down for you.
+
+The base price of **$2,800** is a **non-binding estimate**, meaning it can vary based on the actual weight of your items and any additional services you may need. Here’s what it includes:
+
+- **Labor**: Our professional team for loading and unloading your items.
+- **Truck costs**: Transportation of your belongings from origin to destination.
+- **Fuel surcharge**: This is included in the base rate.
+- **Materials**: Standard packing materials for your move are covered.
+
+Regarding the stairs and long carry charges: there is a potential additional fee for the one flight of stairs at your origin, as we factor in extra labor for those kinds of access conditions. The long carry at the destination might also incur a slight charge depending on the exact distance.
+
+As for a deposit, we typically require a **10% deposit** of the total estimated cost to secure your booking, which is **refundable** up to a certain point—generally until one week before your scheduled move.
+
+Our cancellation policy states that if you cancel within 48 hours of your move date, the deposit is forfeited. However, if you cancel outside of that window, your deposit will be returned in full.
+
+I know it sounds like a lot to consider, but securing your truck as soon as possible is crucial. If you're interested, I really recommend that you make a decision within the next **10 minutes** to lock in this rate, as I can’t hold it much longer. If you need more time, we can arrange a callback. Just let me know how you’d like to proceed!
+CALLER: I appreciate the detailed breakdown! 
+
+To summarize:
+- The base price is a **non-binding estimate** of **$2,800** which includes labor, truck costs, fuel surcharge, and standard packing materials.
+- There may be additional charges for the one flight of stairs at the origin and the long carry at the destination, though exact amounts weren't specified.
+- A **10% deposit** of the total estimated cost is required, which is **refundable** up until one week before the move. 
+- The cancellation policy allows for full deposit return if canceled outside of the 48-hour window before the move date.
+
+Since I’m gathering quotes and comparing options, I will need some time to consider this offer. Would it be possible to schedule a callback in a few hours to discuss this further? What’s a good time for someone to reach out to me?
+COUNTERPARTY (Hard-sell upseller): Absolutely, I completely understand that you want to take some time to consider your options! I can certainly arrange a callback for you to discuss this further.
+
+Please let me know what time works best for you today, and I will ensure that one of our team members reaches out at that time. Just remember, while I won’t be able to lock in the quoted rate until you confirm your booking, I’m happy to provide you with any additional information during the call to help with your decision. What time should we schedule that callback?
+CALLER: Thank you! I would appreciate a callback at **4 PM** today. Could you please note that the contact should reach out to [customer name] at this number: [customer phone number]? 
+
+That way, I can get more information and clarify remaining questions before making a decision. Thank you for your assistance!
+COUNTERPARTY (Hard-sell upseller): You're very welcome! I’ve noted that you’d like a callback at **4 PM** today for [customer name] at the number [customer phone number]. Our team will reach out to you then to answer any further questions and provide more information to help you with your decision.
+
+If you have any other questions in the meantime or need to make any changes to the callback, feel free to let us know. Thank you for considering Premier Relocation Services, and I look forward to speaking with you again soon!
+CALLER: Thank you for your help! I will look forward to the callback at 4 PM today. I appreciate the information provided and your patience in answering all my questions. Have a great day!
+
+```json
+{
+  "outcome_type": "callback_commitment",
+  "callback_by": "today at 4 PM",
+  "contact_name": "[customer name]",
+  "contact_number": "[customer phone number]"
+}
+```

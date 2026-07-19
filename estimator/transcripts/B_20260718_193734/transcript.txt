@@ -1,0 +1,282 @@
+ESTIMATOR: To get started, could you please provide me with the origin address of your current residence, including the zip code?
+CUSTOMER: Sure, it's just a normal apartment.
+ESTIMATOR: I need the complete address, including the street name and number, along with the zip code. Could you please provide that?
+CUSTOMER: Um, it's on Maple Street. The zip code is 12345.
+ESTIMATOR: Thank you! I have your origin address as Maple Street, zip code 12345. Can you please confirm the dwelling type? Is it an apartment, as you mentioned earlier?
+CUSTOMER: Yes, it's an apartment.
+ESTIMATOR: Great! Now, could you please tell me what floor your apartment is on? And does your apartment have an elevator?
+CUSTOMER: I think there's some stairs? Not sure about the exact number. And no, I don't think there's an elevator.
+ESTIMATOR: Got it, no elevator. Just to clarify, could you provide a rough estimate of how many flights of stairs there are? This helps in understanding access conditions for the move.
+CUSTOMER: Uh, I think it’s about two flights of stairs? Maybe three?
+ESTIMATOR: Thank you for that information! I'll note it as roughly two to three flights of stairs. 
+
+Now, could you provide me with the destination address where you are moving, including the zip code?
+CUSTOMER: It's just a normal apartment, too.
+ESTIMATOR: I need the complete address for the destination as well, including the street name and number, along with the zip code. Could you provide that, please?
+CUSTOMER: It's on Oak Avenue. The zip code is 67890.
+ESTIMATOR: Thank you! I have your destination address as Oak Avenue, zip code 67890, and it's also an apartment. 
+
+Can you tell me what floor this apartment is on and whether it has an elevator?
+CUSTOMER: It's on the first floor, and yes, it has an elevator.
+ESTIMATOR: Great! So the destination is a first-floor apartment with an elevator. 
+
+Now, could you please estimate how many miles apart the origin and destination addresses are? If you're unsure, even a rough guess would be helpful.
+CUSTOMER: I think it's about 45 miles.
+ESTIMATOR: Thank you for that information! I'll note the distance as approximately 45 miles.
+
+Next, can you let me know if there are any stairs at the destination apartment as well? Also, will the truck be able to park within about 75 feet of both entrances?
+CUSTOMER: No stairs at the destination apartment. It should be easy for the truck to park within 75 feet of the entrances, I think.
+ESTIMATOR: Got it! So at the destination, there are no stairs, and the truck should be able to park within 75 feet of the entrances.
+
+Now, let's move on to the size of your home. How many bedrooms and bathrooms does your apartment have? Additionally, are there any other distinct rooms such as an office, garage, basement, or storage unit?
+CUSTOMER: It's a 2-bedroom apartment. Just normal apartment stuff, really.
+ESTIMATOR: Thank you for that information! So, we have a 2-bedroom apartment. Just to clarify, could you confirm how many bathrooms there are?
+CUSTOMER: Oh right, I think there’s one bathroom.
+ESTIMATOR: Thank you! So we have a 2-bedroom, 1-bathroom apartment. Are there any other distinct rooms like an office, garage, or anything else you’d like to mention?
+CUSTOMER: No, just the normal apartment stuff. No extra rooms like an office or garage.
+ESTIMATOR: Understood—just the 2 bedrooms and 1 bathroom. 
+
+Now let's go through some larger items you may have. Starting with the living room, do you have any large items such as a sofa, coffee table, or entertainment center? If so, could you please specify?
+CUSTOMER: Just normal apartment stuff. 
+ESTIMATOR: I understand. Let's specify a bit more for large items. Do you have a sofa? Any bulky chairs, tables, or recliners? Please let me know about any large items in your living room.
+CUSTOMER: Yes, I have a sofa.
+ESTIMATOR: Thank you! How many sofas do you have in your apartment? And does the sofa need to be disassembled for the move?
+CUSTOMER: Just one sofa. No, it doesn't need to be disassembled.
+ESTIMATOR: Great! So, we have one sofa that does not require disassembly.
+
+Moving on to the bedrooms, do you have any large items in your bedrooms, such as beds or dressers? If so, please specify the number and whether they need disassembly.
+CUSTOMER: Yeah, I have a queen bed and a dresser.
+ESTIMATOR: Thank you! For the queen bed, does it need to be disassembled for the move? And how about the dresser—does it require disassembly as well?
+CUSTOMER: The queen bed does need to be disassembled, but the dresser does not.
+ESTIMATOR: Got it! So, you have:
+
+- **One queen bed** that needs to be disassembled.
+- **One dresser** that does not need disassembly.
+
+Now, do you have any large items in the bathroom, like a washer/dryer, or any other large bulky items elsewhere in the apartment, such as a kitchen appliance (refrigerator, microwave), or items in a garage or basement?
+CUSTOMER: Just normal apartment stuff, but I do have a fridge in the kitchen.
+ESTIMATOR: Thank you for mentioning the fridge. Does the refrigerator need to be disassembled for the move?
+CUSTOMER: No, the refrigerator doesn’t need to be disassembled.
+ESTIMATOR: Great! So, we have the following large items:
+
+- **One queen bed** that needs to be disassembled.
+- **One dresser** that does not need disassembly.
+- **One sofa** that does not need disassembly.
+- **One refrigerator** that does not need disassembly.
+
+Next, could you provide a rough estimate of the total number of boxes you expect to have for packing?
+CUSTOMER: I think I’ll have about 20 boxes.
+ESTIMATOR: Thank you! I’ll note that you expect to have approximately 20 boxes.
+
+Now, do you have any fragile or high-value items, such as art, antiques, or electronics, that we should be aware of?
+CUSTOMER: Just normal apartment stuff. No special items like art or antiques.
+ESTIMATOR: Understood—no fragile or high-value items to note.
+
+Now, could you please specify your desired service level for the move? Would you prefer full-service, labor-only, packing included, or self-pack?
+CUSTOMER: I’m not sure. Maybe just labor-only?
+ESTIMATOR: Got it! So, you would like the labor-only service.
+
+Next, could you tell me your desired move date? Is it flexible, or do you have a specific date in mind?
+CUSTOMER: I have a specific date in mind, but I’ll have to check.
+ESTIMATOR: I understand that you need to confirm the date. Could you please provide me with the earliest date that works for you, or a specific week you are leaning toward? This will help ensure we have everything set for a binding quote.
+CUSTOMER: I think sometime next month would work, but I’ll need to double-check the exact date. 
+ESTIMATOR: I appreciate that, but I need a specific date to proceed. Could you provide the earliest date that would work or a particular week during the month? If you're uncertain, is there a specific day you’re considering? This information is crucial for a binding quote.
+CUSTOMER: Okay, how about the 15th of next month? I think that could work.
+ESTIMATOR: Thank you for providing that! I’ll note your move date as the 15th of next month. 
+
+Lastly, do you have any storage needs for this move, either before or after?
+CUSTOMER: No, I don't need any storage.
+ESTIMATOR: Got it! To summarize, here's what I have for your moving job:
+
+**Origin Address:**
+- Address: Maple Street
+- Zip Code: 12345
+- Dwelling Type: Apartment
+- Floor: 2-3 flights of stairs
+- Elevator: No
+
+**Destination Address:**
+- Address: Oak Avenue
+- Zip Code: 67890
+- Dwelling Type: Apartment
+- Floor: 1
+- Elevator: Yes
+
+**Distance:** Approximately 45 miles
+
+**Inventory:**
+- Bedrooms: 2
+- Bathrooms: 1
+- Large Items:
+  - Sofa: 1 (does not require disassembly)
+  - Queen bed: 1 (requires disassembly)
+  - Dresser: 1 (does not require disassembly)
+  - Refrigerator: 1 (does not require disassembly)
+- Estimated Boxes: 20
+- Fragile or High-Value Items: None
+
+**Access Conditions:**
+- Origin stairs flights: 2-3
+- Destination stairs flights: 0
+- Origin long carry: No
+- Destination long carry: No
+
+**Service Level:**
+- Labor-only
+
+**Move Date:** 15th of next month
+
+**Storage Needed:** No
+
+Please confirm if everything is accurate or if there are any corrections needed.
+CUSTOMER: That looks accurate to me. No corrections needed.
+ESTIMATOR: Thank you for confirming! Here’s the final structured job spec:
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MovingJobSpec",
+  "description": "Canonical structured spec for a residential move. Produced identically by voice interview or document intake. Confirmed by user before any outbound calls are made.",
+  "type": "object",
+  "required": ["origin", "destination", "move_date", "inventory", "access_conditions", "service_level"],
+  "properties": {
+    "origin": {
+      "type": "object",
+      "properties": {
+        "address": { "type": "string" },
+        "zip": { "type": "string" },
+        "dwelling_type": { "type": "string", "enum": ["apartment", "house", "condo", "townhouse", "duplex", "mobile_home", "dormitory", "storage_unit"] },
+        "floor": { "type": "integer" },
+        "elevator": { "type": "boolean" }
+      },
+      "required": ["zip", "dwelling_type", "floor"]
+    },
+    "destination": {
+      "type": "object",
+      "properties": {
+        "address": { "type": "string" },
+        "zip": { "type": "string" },
+        "dwelling_type": { "type": "string", "enum": ["apartment", "house", "condo", "townhouse", "duplex", "mobile_home", "dormitory", "storage_unit"] },
+        "floor": { "type": "integer" },
+        "elevator": { "type": "boolean" }
+      },
+      "required": ["zip", "dwelling_type", "floor"]
+    },
+    "distance_miles": { "type": "number" },
+    "move_date": { "type": "string", "format": "date" },
+    "date_flexible": { "type": "boolean" },
+    "inventory": {
+      "type": "object",
+      "description": "This is what makes an estimate binding rather than bait. Incomplete inventory is the #1 cause of day-of upcharges.",
+      "properties": {
+        "num_bedrooms": { "type": "integer" },
+        "large_items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string", "examples": ["sofa", "piano", "refrigerator", "treadmill"] },
+              "quantity": { "type": "integer" },
+              "requires_disassembly": { "type": "boolean" }
+            }
+          }
+        },
+        "estimated_boxes": { "type": "integer" },
+        "estimated_cubic_feet": { "type": "number" },
+        "estimated_weight_lbs": { "type": "number" },
+        "fragile_or_high_value_items": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "access_conditions": {
+      "type": "object",
+      "description": "The hidden-fee triggers: stairs and 'long carry' are the two most common day-of upcharges per the FMCSA data.",
+      "properties": {
+        "origin_stairs_flights": { "type": "integer" },
+        "destination_stairs_flights": { "type": "integer" },
+        "origin_long_carry": { "type": "boolean", "description": "True if truck cannot park within ~75ft of entrance" },
+        "destination_long_carry": { "type": "boolean" },
+        "parking_permit_required": { "type": "boolean" },
+        "narrow_doorways_or_hallways": { "type": "boolean" }
+      }
+    },
+    "service_level": {
+      "type": "object",
+      "properties": {
+        "service_type": { "type": "string", "enum": ["full_service", "labor_only", "packing_included", "self_pack"] },
+        "packing_materials_needed": { "type": "boolean" },
+        "storage_needed": { "type": "boolean" },
+        "storage_duration_days": { "type": "integer" },
+        "insurance_valuation_coverage": { "type": "boolean" }
+      }
+    },
+    "user_confirmed": {
+      "type": "boolean",
+      "description": "Must be true before this spec is used in any outbound call. Set only after the user reviews and approves."
+    },
+    "spec_version_hash": {
+      "type": "string",
+      "description": "Hash of this object at confirmation time. Every call must log which hash it used, proving verbatim reuse."
+    }
+  },
+  "origin": {
+    "address": "Maple Street",
+    "zip": "12345",
+    "dwelling_type": "apartment",
+    "floor": 2,
+    "elevator": false
+  },
+  "destination": {
+    "address": "Oak Avenue",
+    "zip": "67890",
+    "dwelling_type": "apartment",
+    "floor": 1,
+    "elevator": true
+  },
+  "distance_miles": 45,
+  "move_date": "2023-11-15",
+  "date_flexible": false,
+  "inventory": {
+    "num_bedrooms": 2,
+    "large_items": [
+      {
+        "name": "sofa",
+        "quantity": 1,
+        "requires_disassembly": false
+      },
+      {
+        "name": "queen bed",
+        "quantity": 1,
+        "requires_disassembly": true
+      },
+      {
+        "name": "dresser",
+        "quantity": 1,
+        "requires_disassembly": false
+      },
+      {
+        "name": "refrigerator",
+        "quantity": 1,
+        "requires_disassembly": false
+      }
+    ],
+    "estimated_boxes": 20,
+    "fragile_or_high_value_items": []
+  },
+  "access_conditions": {
+    "origin_stairs_flights": 3,
+    "destination_stairs_flights": 0,
+    "origin_long_carry": false,
+    "destination_long_carry": false
+  },
+  "service_level": {
+    "service_type": "labor_only",
+    "packing_materials_needed": false,
+    "storage_needed": false
+  },
+  "user_confirmed": true,
+  "spec_version_hash": "not-computed"
+}
+```

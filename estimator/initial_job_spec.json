@@ -1,0 +1,23 @@
+{
+  "origin": {
+    "address": "123 Main St, Sacramento, CA",
+    "zip": "95814",
+    "dwelling_type": null,
+    "floor": null,
+    "elevator": null
+  },
+  "destination": {
+    "address": "456 Oak Ave, Los Angeles, CA",
+    "zip": "90012",
+    "dwelling_type": null,
+    "floor": null,
+    "elevator": null
+  },
+  "distance_miles": null,
+  "move_date": null,
+  "date_flexible": null,
+  "inventory": null,
+  "access_conditions": null,
+  "service_level": null,
+  "user_confirmed": false
+}

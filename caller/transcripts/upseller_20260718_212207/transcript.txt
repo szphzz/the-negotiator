@@ -1,0 +1,126 @@
+CALLER: Hello, I'm calling on behalf of a customer named [customer name] to gather a quote for a residential move. The move is scheduled for August 15, 2026, with an origin zip code of 29730 in Rock Hill, SC, and a destination zip code of 28202 in Charlotte, NC. The distance between these locations is approximately 45 miles.
+
+The job involves moving from a second-floor apartment with one flight of stairs and no elevator to a first-floor apartment that does have an elevator. The inventory includes 2 bedrooms worth of items, specifically 1 sofa, 1 queen bed frame (which will require disassembly), and 1 refrigerator. In addition, there will be around 25 boxes, including some fragile items like framed art and a TV.
+
+Please let me know if you can provide an itemized quote based on this information.
+COUNTERPARTY (Hard-sell upseller): Thank you for reaching out to Premier Relocation Services! I can provide you with a quote based on the details you’ve shared for the move scheduled on August 15, 2026.
+
+For your move from Rock Hill, SC to Charlotte, NC, the base quote is **$2,800**. This includes transportation, loading, and unloading of your items.
+
+To ensure a smooth and secure move, we highly recommend some add-ons:
+
+1. **Full-value insurance coverage:** This protects your belongings at their full value. It’s an additional **$300**. 
+2. **"White Glove" packing service:** Our team will carefully pack all your items, especially your fragile items like the framed art and TV, for **$400**. 
+3. **Guaranteed delivery window:** This ensures your items arrive within a specified time frame, giving you peace of mind. This comes at an additional **$150**. 
+
+Now, I must say, we only have one truck left available for that week, and with our excellent rates, I recommend booking today to lock in this price! 
+
+If you're considering other quotes, I can only hold this price for you for the next **10 minutes**. Would you like to proceed with booking, or do you need any more information?
+CALLER: I appreciate the details you've provided on the quote. However, I need to ask for a bit more clarity on this estimate to ensure it's fully itemized. 
+
+Is the base quote of **$2,800** a binding or non-binding estimate? Could you also outline what's included in that amount, specifically whether it covers labor, truck, fuel surcharge, and any materials?
+
+Additionally, I'm curious if there are separate charges for the stairs (since there’s one flight of stairs at the origin), the long carry at the destination, and any packing materials, especially given the fragile items.
+
+Lastly, could you clarify if there's a deposit required, and is it refundable? What is your cancellation policy? 
+
+Thank you for your help with this!
+COUNTERPARTY (Hard-sell upseller): I appreciate your thoroughness in wanting to understand the quote better! Here’s how it breaks down:
+
+The base quote of **$2,800** is a **non-binding estimate**. This amount includes transportation, loading, unloading, and labor for standard items. Here’s what is specifically covered in that estimate:
+
+- **Labor:** This covers the movers handling your items during pick-up and drop-off.
+- **Truck:** The cost incorporates the use of our moving truck for transport.
+- **Fuel surcharge:** This is included in the base quote, so there won't be any additional fuel fees.
+- **Basic materials:** This covers standard moving blankets and dollies but does not cover packing materials for fragile items.
+
+Regarding the additional charges:
+
+- **Stairs:** There is an additional charge for moving items up/down one flight of stairs, which is typically a standard fee that ranges depending on the volume of items.
+- **Long carry:** If there's a significant distance from the parking area to your apartment, there may be an additional fee for that as well.
+- **Packing materials:** We offer packing supplies, especially for fragile items, at an extra cost if you choose not to utilize the “White Glove” packing service.
+
+As for the deposit, a deposit is indeed required to secure your booking, and it is typically **non-refundable**. If your plans change and you need to cancel, we require notification at least **48 hours** in advance to avoid additional charges.
+
+If you’d like, I can provide further details or specific fees. Remember, I can only hold this price for you for the next **10 minutes**, so let me know if you want to proceed or if you have more questions!
+CALLER: Thank you for the detailed breakdown. I appreciate that clarity. 
+
+To summarize your quote: 
+- The base cost is **$2,800**, which is a non-binding estimate that covers labor, truck rental, and fuel surcharge, with basic materials included.
+- There will be additional charges for the stairs (due to the flight at the origin) and potentially for the long carry at the destination, with packing materials available at an extra cost. 
+- A deposit is required, and it is non-refundable, with a cancellation policy that requires **48 hours' notice**.
+
+Could you provide a specific amount for the additional charges related to the stairs and long carry? That way, I can have a complete view of all the possible costs involved.
+COUNTERPARTY (Hard-sell upseller): I'm glad you found the breakdown helpful! Here’s how the additional charges typically work:
+
+- **Stairs Charge:** For moving items from a second-floor apartment down one flight of stairs, there is generally an additional charge of **$100**. This fee reflects the increased labor involved.
+
+- **Long Carry Charge:** If your new apartment is more than 75 feet from where our truck can park, there’s usually a charge of around **$75**. This price can vary based on the distance, so if you could provide the approximate distance, I can give you a more accurate figure.
+
+So, to summarize the quote with the potential additional charges included:
+- Base cost: **$2,800**
+- Stairs charge: **$100**
+- Long carry charge: **$75** (subject to confirmation based on distance)
+
+This brings your total potential estimates to around **$2,975** plus any packing materials or services you decide to include.
+
+Remember, this is a time-sensitive offer as our availability is limited. If you're ready to move forward or if you have more questions, let me know!
+CALLER: Thank you for that clarification on the additional charges. I appreciate your detailed responses.
+
+Now to summarize the total potential estimates we've discussed:
+- **Base cost:** $2,800 (non-binding estimate)
+- **Stairs charge:** $100
+- **Long carry charge:** $75 (subject to confirmation based on distance)
+
+This brings the total estimate to approximately **$2,975**. 
+
+Could you confirm if there are any charges for packing materials or other services if I choose to go without the "White Glove" packing service? Additionally, how firm is this quoted amount; will it still be valid if I need to respond in a day or two rather than within the 10 minutes you initially mentioned? 
+
+This information will help me finalize my comparison with other quotes. Thank you!
+COUNTERPARTY (Hard-sell upseller): I’m glad the information has been helpful for you! 
+
+Regarding your questions:
+
+1. **Packing Materials Charges:** If you choose not to utilize the "White Glove" packing service, you would incur separate charges for packing materials. Here's a rough estimate:
+   - **Boxes:** Typically around **$5 to $10** per box, depending on size.
+   - **Packing paper:** Approximately **$30** for a roll.
+   - **Bubble wrap:** This would usually be around **$25**.
+   - **Tape:** About **$10** for several rolls.
+
+The overall cost for packing materials can vary based on how many boxes you need and the specific items that require protection. 
+
+2. **Validity of the Quote:** Unfortunately, this quoted amount is time-sensitive. The **$2,975** estimate is only guaranteed if you book within the next **10 minutes**. However, I understand that you may need some time to compare quotes, so if you’re not ready today, I can offer you a callback. This way, I can remind you of your quote and any other options if you decide to go with us.
+
+Let me know how you’d like to proceed or if you have any other questions!
+CALLER: Thank you for the information about the packing materials and the urgency of the quote. I appreciate your understanding.
+
+Since I need a little time to consider my options and compare quotes, could we schedule a callback to revisit this quote before I make a decision? Please provide me with the details of who I would speak with, the time for the callback, and a direct number to reach out. That way, I can ensure I don't miss out on your offer. Thank you!
+COUNTERPARTY (Hard-sell upseller): I completely understand the need for time to compare quotes, and I'm here to help you with that process! 
+
+While I cannot schedule a callback directly or provide specific contact details, I recommend that you keep our information handy. I can make a note to remind our team to follow up with you in a couple of days. 
+
+If you’d like to revisit this quote or have any further questions, simply call our main line at **(555) 123-4567**. You can mention you were discussing a quote for a move scheduled on August 15, 2026, and reference this conversation to expedite your inquiry.
+
+Feel free to call back at your convenience, and we’ll be here to assist you! Thank you for considering Premier Relocation Services, and I hope to hear from you soon.
+CALLER: I appreciate your understanding and willingness to assist. However, I need a specific callback commitment so that I can have a clearer timeline for when to expect a follow-up. 
+
+Could you provide a specific time frame for when your team can reach out to me? For example, is there someone who can call me back tomorrow around 2 PM? This would help me stay organized while I weigh my options. Thank you!
+COUNTERPARTY (Hard-sell upseller): I completely understand your need for a specific timeframe for a callback, and I want to ensure you have that clarity. While I can’t schedule a callback directly, I recommend that you expect a follow-up from our team sometime tomorrow. 
+
+If you could provide your preferred number, I can have someone from our customer service team reach out to you tomorrow around **2 PM**. That way, you’ll have the information you need to help with your decision!
+
+Please let me know if that would work for you or if there's another time that suits you better. Thank you again for considering Premier Relocation Services!
+CALLER: Thank you for your willingness to arrange a callback. I would like to have someone from your customer service team reach out to me tomorrow around 2 PM. 
+
+You can reach me at **(555) 0100**. This will allow me to discuss any further questions and the previously mentioned quote for the move. 
+
+Thank you for your assistance, and I look forward to speaking with your team tomorrow! 
+
+```json
+{
+  "outcome_type": "callback_commitment",
+  "callback_by": "tomorrow 2pm",
+  "contact_name": "Customer",
+  "contact_number": "555-0100"
+}
+```

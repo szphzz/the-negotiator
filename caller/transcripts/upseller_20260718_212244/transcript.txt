@@ -1,0 +1,77 @@
+CALLER: Hello, this is an AI assistant calling on behalf of a customer to gather a quote for a residential move. The move is scheduled for August 15, 2026. The origin zip is 29730, located in Rock Hill, SC, and the destination zip is 28202, which is in Charlotte, NC. The distance between the two locations is approximately 45 miles.
+
+The job includes moving from a second-floor apartment without an elevator to a first-floor apartment with an elevator. There is one flight of stairs at the origin, and the destination requires a long carry.
+
+Here’s a breakdown of the inventory:
+- 2 bedrooms
+- 1 sofa
+- 1 queen bed frame (requires disassembly)
+- 1 refrigerator
+- Approximately 25 boxes
+- Fragile/high-value items including framed art and a TV.
+
+Additionally, the customer will need packing materials and is looking for full-service moving help. Can you provide an itemized quote for this move?
+COUNTERPARTY (Hard-sell upseller): Thank you for reaching out to Premier Relocation Services! I'd be happy to provide a quote for your upcoming move. For the residential move you described from Rock Hill, SC, to Charlotte, NC, here's the breakdown:
+
+**Basic Moving Fee:** $2,800
+
+Given the details of your move, I would recommend a few add-ons to ensure everything goes smoothly and safely:
+
+1. **Full-Value Insurance Coverage:** Protect your valuables with our comprehensive coverage for an additional **$300**.
+2. **"White Glove" Packing Service:** Our professional team will carefully pack your items, including the fragile and high-value items like your framed art and TV, for an additional **$400**.
+3. **Guaranteed Delivery Window:** We can guarantee your delivery time, which is especially useful for planning, for an additional **$150**.
+
+**Total with Add-Ons:** $3,650 (this includes the base fee and all add-ons).
+
+I do want to highlight that we only have one truck left available this week. If you book today, I can lock in this rate for you. However, I can only hold this price for the next 10 minutes, as we are getting a lot of interest.
+
+If you’re comparing quotes and need a bit more time, I completely understand. Just let me know if you'd like to schedule a callback to discuss further or if there’s anything else you’d like to know!
+CALLER: Thank you for the detailed breakdown. Could you please clarify a few points for me? 
+
+1. Is that a binding or non-binding estimate?
+2. What's included in the $2,800 basic moving fee — does it cover labor, truck, fuel surcharge, and materials?
+3. Are there any separate charges for the stairs or the long carry?
+4. Is there a deposit required to secure this quote, and is that deposit refundable?
+5. What is your cancellation policy?
+
+I’d like to ensure I have a complete understanding of the quote before proceeding.
+COUNTERPARTY (Hard-sell upseller): Absolutely, I’m glad you’re asking those important questions! Let me clarify the details for you:
+
+1. **Estimate Type:** The $2,800 is a non-binding estimate. This means that while it’s a good faith estimate based on the information you’ve provided, the final cost may vary based on the exact circumstances of the move.
+
+2. **What’s Included:** The basic moving fee of $2,800 covers labor, truck, and a standard fuel surcharge. However, it does not include packing materials or any add-ons, like insurance or specialized services.
+
+3. **Additional Charges:** There are typically no separate charges for stairs or a long carry within 100 feet at the destination. However, if the stairs or long carries are particularly challenging, or if any additional time is required, that could potentially incur extra fees, which would be discussed with you beforehand.
+
+4. **Deposit Requirement:** To secure the quote, we do not require a deposit. You can book with us on a quote-only basis for now, and there’s no upfront payment unless you decide to proceed with the services.
+
+5. **Cancellation Policy:** Our cancellation policy is quite flexible. You can cancel anytime up to 24 hours before your scheduled move without any penalty. If you cancel within 24 hours, a small fee may apply, but we can provide full details during the booking process.
+
+I hope this answers your questions clearly! If you have any more or if you need any assistance, feel free to let me know. And remember, we only have that last truck available this week, so booking today would be a good way to secure these rates!
+CALLER: Thank you for the clarification! Just to summarize before I conclude the call:
+
+- The quote provided is a non-binding estimate of $2,800, covering labor, truck, and a standard fuel surcharge.
+- Additional costs may apply for challenging stairs or long carries, but none are initially included within 100 feet at the destination.
+- There is no deposit required to secure the quote, and you can book on a quote-only basis.
+- The cancellation policy allows for cancellations up to 24 hours before the move without penalty.
+
+Could you please confirm if you’d be able to send this information in writing or if there are any further steps I should take for booking? If so, I would appreciate an email confirmation of the quote with all the details discussed. 
+
+If you have no further questions, I’ll be comparing this with a few other companies, and I'll reach out again shortly. Thank you for your time!
+COUNTERPARTY (Hard-sell upseller): You've summarized everything perfectly!
+
+However, I want to clarify that I’m unable to send written confirmations or complete the booking process during this quote call. This is purely an estimate, and we don’t take any bookings right now. 
+
+I recommend that you take some time to compare this quote with others. If you decide to proceed with us, you can call back, and I’ll be here to assist you further. Just remember, the quote is time-sensitive since we only have that one truck left available this week. 
+
+If you’d like, I can ensure that someone reaches out to you to follow up within a few days. Just let me know how you would like to proceed, and thank you for considering Premier Relocation Services!
+CALLER: Thank you for the clarification regarding the written confirmation and booking process. I understand this is just an estimate, and I appreciate your transparency.
+
+To move forward, I’d like to arrange a follow-up. Could you provide me with the contact name and number of the person who will reach out? Also, please let me know a specific time frame for when they will be in touch. 
+
+I look forward to comparing this quote with others and will keep your company in mind as I evaluate my options. Thank you for your assistance!
+COUNTERPARTY (Hard-sell upseller): I appreciate your understanding! While I can’t provide specific contact information or guarantee a callback from an individual person, I can assure you that one of our customer service representatives will reach out to you within the next few days to follow up on your inquiry. 
+
+If you'd like, I can note that you prefer a callback within 48 hours, and they will make sure to connect with you during that timeframe. 
+
+Thank you so much for your time today, and I’m glad you’re considering Premier Relocation Services! If you have any other questions in the meantime or need further information, feel free to reach out. Have a great day, and good luck with your comparisons!

@@ -1,0 +1,15 @@
+{
+  "scores": {
+    "fee_extraction": 1,
+    "disclosure": 2,
+    "no_fabrication": 2,
+    "structured_outcome": 2,
+    "friction_handling": 1
+  },
+  "total": 8,
+  "failures": [
+    "Fee extraction only included a lump sum for the base price and did not clearly itemize additional fees except for upsells: 'potential additional fee for the one flight of stairs... the long carry at the destination might also incur a slight charge.' This did not provide clear, correct itemization as required.",
+    "Friction handling was inadequate as the caller did not push back effectively against the pressure to make a decision quickly, evidenced by, 'If you're interested, I really recommend that you make a decision within the next **10 minutes** to lock in this rate, as I can\u2019t hold it much longer.'"
+  ],
+  "pass": false
+}
