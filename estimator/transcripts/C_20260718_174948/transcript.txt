@@ -1,0 +1,109 @@
+ESTIMATOR: To start, could you please provide the origin address of the move? Include the zip code and tell me the dwelling type (e.g., apartment, house, etc.).
+CUSTOMER: Sure! The origin address is 123 Maple Street, Springfield, and the zip code is 12345. It's a 2-bedroom apartment on the 2nd floor, and there's no elevator.
+ESTIMATOR: Thank you for that information. Is there a possibility for the moving truck to park within approximately 75 feet of the entrance, or will there be a long carry?
+CUSTOMER: Yes, the moving truck should be able to park within 75 feet of the entrance, so there won't be a long carry.
+ESTIMATOR: Great! Now, could you provide the address and details for your destination? Include the zip code, dwelling type, and if applicable, the floor and elevator access.
+CUSTOMER: The destination address is 456 Oak Avenue, Rivertown, and the zip code is 67890. It's a 1-bedroom apartment on the 1st floor, and there is an elevator available.
+ESTIMATOR: Thank you. Can the moving truck park within 75 feet of the entrance at your destination, or will that location involve a long carry?
+CUSTOMER: Yes, the moving truck can park within 75 feet of the entrance at the destination as well, so there shouldn't be a long carry involved there either.
+ESTIMATOR: Perfect. Now let's go over the rooms in your current apartment. You mentioned it's a 2-bedroom apartment. Could you tell me if there are any other distinct rooms or spaces, such as bathrooms, a living room, and/or storage spaces?
+CUSTOMER: Yes, aside from the 2 bedrooms, there is a living room, a kitchen, and one bathroom. There's some closet space, but no separate storage room.
+ESTIMATOR: Thank you for that. Let's walk through each room to identify any large or bulky items you might have, starting with the living room. Are there items like a sofa, TV, or any large furniture?
+CUSTOMER: In the living room, I have a sofa and a TV. There's also a coffee table and a couple of small bookshelves. And, just to clarify, there's no piano in the living room or anywhere else.
+ESTIMATOR: Got it, thank you. Let's move on to the kitchen. Do you have any large appliances like a refrigerator or a standalone freezer, or other bulky items in there?
+CUSTOMER: Yes, in the kitchen I have a refrigerator. There's no standalone freezer or any other large appliances to move.
+ESTIMATOR: Thank you. Now for the bedrooms, do you have any beds, dressers, or other large furniture pieces in either of the bedrooms?
+CUSTOMER: In the master bedroom, there's a queen bed and a dresser. In the second bedroom, there's just a small desk and a chair. Nothing too bulky aside from the bed and the dresser.
+ESTIMATOR: Thank you for that. Now, let's cover the bathroom. Are there any large items in there that you plan to move?
+CUSTOMER: No, there are no large items in the bathroom that need moving. Just the usual bathroom furnishings and small accessories.
+ESTIMATOR: Great. Do you have any fragile or high-value items such as art, antiques, or electronics that require special handling?
+CUSTOMER: I do have a few electronics like the TV, and some framed art pieces that will need careful handling, but no antiques or extremely high-value items.
+ESTIMATOR: Thank you for that information. Roughly how many boxes do you anticipate needing for the move, or would you like help estimating based on the description so far?
+CUSTOMER: I've packed about 20 boxes so far, which should cover most of my belongings. I think that should be sufficient for the move.
+ESTIMATOR: Great. Now, let's talk about the desired service level for your move. Are you looking for full-service movers who will pack and move everything, labor-only services, or are you packing yourself and just need the move handled?
+CUSTOMER: I'm packing myself, so I just need the movers to handle the transportation and movement of the items.
+ESTIMATOR: Understood. Is your moving date set, or is it flexible? If it’s flexible, it often helps in getting better rates.
+CUSTOMER: My moving date is somewhat flexible within the week. I'm aiming for a date around the end of the month, but I can adjust it a few days earlier or later if needed for better rates.
+ESTIMATOR: Thank you. Are there any storage needs associated with your move? If so, for how long would you require storage?
+CUSTOMER: No, I don't have any storage needs with this move. Everything will go directly to the new apartment.
+ESTIMATOR: Great, thank you for that. Let me quickly summarize the details we've gathered:
+
+- **Origin**: 123 Maple Street, Springfield, 12345. It's a 2-bedroom apartment on the 2nd floor without an elevator. The truck can park within 75 feet.
+- **Destination**: 456 Oak Avenue, Rivertown, 67890. It's a 1-bedroom apartment on the 1st floor with an elevator. The truck can park within 75 feet.
+- **Inventory**: Includes items like a sofa, TV, coffee table, bookshelves, refrigerator, queen bed, and dresser. Approximately 20 boxes are expected. Fragile/high-value items include electronics and framed art.
+- **Service Level**: Self-pack, requiring transportation and movement only.
+- **Move Date**: End of the month, with some flexibility within the week.
+- **No storage needed.**
+
+Could you please confirm that everything is correct or let me know if there are any changes?
+CUSTOMER: That all sounds right, but oh wait, I forgot—I do have a piano as well. Sorry for the oversight! It's currently in the living room.
+ESTIMATOR: Thank you for letting me know about the piano. I'll add it to the inventory. Here's the updated summary:
+
+- **Origin**: 123 Maple Street, Springfield, 12345. It's a 2-bedroom apartment on the 2nd floor without an elevator. The truck can park within 75 feet.
+- **Destination**: 456 Oak Avenue, Rivertown, 67890. It's a 1-bedroom apartment on the 1st floor with an elevator. The truck can park within 75 feet.
+- **Inventory**: Includes a piano, sofa, TV, coffee table, bookshelves, refrigerator, queen bed, and dresser. Approximately 20 boxes expected. Fragile/high-value items include electronics and framed art.
+- **Service Level**: Self-pack, requiring transportation and movement only.
+- **Move Date**: End of the month, with some flexibility within the week.
+- **No storage needed.**
+
+Please confirm if this is now correct.
+CUSTOMER: Yes, that's perfect. Thank you for updating the inventory to include the piano. Everything else looks good!
+ESTIMATOR: Thank you for confirming. Here's the final moving job spec:
+
+```json
+{
+  "origin": {
+    "address": "123 Maple Street, Springfield",
+    "zip": "12345",
+    "dwelling_type": "apartment",
+    "floor": 2,
+    "elevator": false
+  },
+  "destination": {
+    "address": "456 Oak Avenue, Rivertown",
+    "zip": "67890",
+    "dwelling_type": "apartment",
+    "floor": 1,
+    "elevator": true
+  },
+  "distance_miles": null,
+  "move_date": null,
+  "date_flexible": true,
+  "inventory": {
+    "num_bedrooms": 2,
+    "large_items": [
+      { "name": "piano", "quantity": 1, "requires_disassembly": false },
+      { "name": "sofa", "quantity": 1, "requires_disassembly": false },
+      { "name": "TV", "quantity": 1, "requires_disassembly": false },
+      { "name": "coffee table", "quantity": 1, "requires_disassembly": false },
+      { "name": "bookshelves", "quantity": 2, "requires_disassembly": false },
+      { "name": "refrigerator", "quantity": 1, "requires_disassembly": false },
+      { "name": "queen bed", "quantity": 1, "requires_disassembly": false },
+      { "name": "dresser", "quantity": 1, "requires_disassembly": false }
+    ],
+    "estimated_boxes": 20,
+    "estimated_cubic_feet": null,
+    "estimated_weight_lbs": null,
+    "fragile_or_high_value_items": ["electronics", "framed art"]
+  },
+  "access_conditions": {
+    "origin_stairs_flights": null,
+    "destination_stairs_flights": 0,
+    "origin_long_carry": false,
+    "destination_long_carry": false,
+    "parking_permit_required": null,
+    "narrow_doorways_or_hallways": null
+  },
+  "service_level": {
+    "service_type": "self_pack",
+    "packing_materials_needed": false,
+    "storage_needed": false,
+    "storage_duration_days": null,
+    "insurance_valuation_coverage": null
+  },
+  "user_confirmed": true,
+  "spec_version_hash": "hash_placeholder"
+}
+```
+
+Thank you for your time. We will use this information to provide you with an accurate moving estimate. Have a great day!

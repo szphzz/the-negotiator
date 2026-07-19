@@ -1,0 +1,16 @@
+{
+  "scores": {
+    "completeness": 0,
+    "no_hallucination": 2,
+    "critical_field_coverage": 1,
+    "contradiction_handling": 1,
+    "conversation_efficiency": 1
+  },
+  "total": 5,
+  "failures": [
+    "completeness: No JSON output provided.",
+    "critical_field_coverage: Did not cover 'distance_miles' and 'storage_needed'.",
+    "contradiction_handling: Customer mentioned no piano initially, which was a critical point in the note that was missed."
+  ],
+  "pass": false
+}

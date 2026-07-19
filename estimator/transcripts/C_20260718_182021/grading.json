@@ -1,0 +1,14 @@
+{
+  "scores": {
+    "completeness": 2,
+    "no_hallucination": 1,
+    "critical_field_coverage": 2,
+    "contradiction_handling": 2,
+    "conversation_efficiency": 2
+  },
+  "total": 9,
+  "failures": [
+    "distance_miles not extracted"
+  ],
+  "pass": false
+}

@@ -1,0 +1,20 @@
+ESTIMATOR: Great! Let's start by gathering some essential information about your move. Can you please provide the origin address from where you will be moving?
+CUSTOMER: Certainly! I'm moving from a 2-bedroom apartment on the 2nd floor with no elevator located at 123 Maple Avenue.
+ESTIMATOR: Thank you. Is there a possibility for the moving truck to park within approximately 75 feet of the entrance at 123 Maple Avenue?
+CUSTOMER: Yes, there should be enough space for the moving truck to park within 75 feet of the entrance.
+ESTIMATOR: Perfect, thanks for confirming that. Now, could you share the destination address where you'll be moving to?
+CUSTOMER: Sure! I'll be moving to a 1-bedroom apartment on the 1st floor with an elevator, located at 456 Oak Street.
+ESTIMATOR: Got it. Can the moving truck park within approximately 75 feet of the entrance at 456 Oak Street?
+CUSTOMER: Yes, there should be space for the moving truck to park within 75 feet of the entrance at my new place.
+ESTIMATOR: Great, thank you for confirming. Now, let's go through your current apartment room by room. Starting with the living room, do you have any large or bulky items like a sofa, sectional, or entertainment center?
+CUSTOMER: Yes, I have a sofa in the living room. No entertainment center; just the sofa. And just to mention, there's definitely no piano.
+ESTIMATOR: Thank you for that. Moving on to the kitchen, do you have any large appliances that need to be moved, like a refrigerator, washer, or dryer?
+CUSTOMER: Yes, I have a refrigerator that will need to be moved. No washer or dryer, though.
+ESTIMATOR: Thank you for specifying. Now, about your bedrooms, do you have any large furniture pieces such as beds, dressers, or wardrobes?
+CUSTOMER: Yes, I have a queen bed and a dresser in the bedroom. That's about it for the large furniture in the bedrooms.
+ESTIMATOR: Thank you for that. Are there any fragile or high-value items such as artwork, antiques, or electronics that you'd like to mention?
+CUSTOMER: I have some electronics like a TV and a computer setup that will need careful handling. No major artworks or antiques, though.
+ESTIMATOR: Got it. Now, let's talk about the service level you prefer. Are you interested in a full-service move where we handle everything, a labor-only service where we just do the heavy lifting, packing included, or would you prefer to pack your belongings yourself?
+CUSTOMER: I'd prefer to pack my belongings myself, so I would like a service where you handle the loading, transport, and unloading.
+ESTIMATOR: Understood. You prefer a service where you handle the packing, and we assist with loading, transport, and unloading. Now, do you have a specific moving date in mind, and is your date flexible? Sometimes, flexible dates can result in better rates.
+CUSTOMER: I'm aiming to move on the 15th of next month. My date is somewhat flexible, so I'm open to shifting a day or two if it helps with the rate.

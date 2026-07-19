@@ -1,0 +1,16 @@
+{
+  "scores": {
+    "completeness": 0,
+    "no_hallucination": 1,
+    "critical_field_coverage": 1,
+    "contradiction_handling": 1,
+    "conversation_efficiency": 0
+  },
+  "total": 3,
+  "failures": [
+    "Agent did not produce valid JSON output.",
+    "Incomplete extraction of all necessary fields.",
+    "Extracted data missed storage and piano details initially."
+  ],
+  "pass": false
+}
